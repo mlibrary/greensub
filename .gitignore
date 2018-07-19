@@ -1,6 +1,7 @@
 *.gem
 *.rbc
 /.config
+/config/
 /coverage/
 /InstalledFiles
 /pkg/
@@ -24,4 +25,3 @@
 /.bundle/
 /vendor/bundle
 /lib/bundler/man/
-
