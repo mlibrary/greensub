@@ -12,7 +12,7 @@ RSpec.describe Product do
       expect(test.name).to eq("Foo Means Fake")
     end
     it "has a host" do
-      expect(test.host).to eq("example")
+      expect(test.host.class).to eq(Host)
     end
   end
 end
