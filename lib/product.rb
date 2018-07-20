@@ -17,7 +17,7 @@ class Product
 
   def initialize(id)
     @id = id
-    data = YAML.load_file('config/products.yaml')
+    data = YAML.load_file('data/products.yaml')
     @external_id = data["#{@id}"]["external_id"]
     @name = data["#{@id}"]["name"]
 >>>>>>> Basic Product class and tests.
