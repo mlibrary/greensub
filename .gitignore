@@ -1,8 +1,8 @@
 *.gem
 *.rbc
 /.config
-/config/
 /coverage/
+/data/
 /InstalledFiles
 /pkg/
 /spec/reports/
@@ -11,6 +11,7 @@
 /test/version_tmp/
 /tmp/
 .rspec_status
+/.rubocop.yml
 
 # Used by dotenv library to load environment variables.
 # .env
