@@ -10,22 +10,11 @@ class Institution < Subscriber
   def initialize(id)
     @id=id
     @external_id = @id #unless we have a record that says otherwise....
-    if get_keycard
-      #stub
-    else
-      if $TESTING
-          @name = "Fake College, Testing, HI"
-      else
-          print "Instituion name: "
-          @name = gets.chomp
-      end
-    end
-
+    get_keycard
   end
 
   def get_keycard
     #stub
-    return false
   end
 
 end
