@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
-require 'faraday'
+
 
 class Host
   attr_accessor :name, :type, :base_uri, :token, :connection
@@ -12,18 +12,31 @@ class Host
     data = YAML.load_file('data/hosts.yaml')
     @base_uri = data["#{@name}"]["#{@type}"]["base_uri"]
     @token = data["#{@name}"]["#{@type}"]["token"]
+    puts "\nTOKEN = #{@token}\n"
     make_connection
   end
 
   def make_connection
-    @connection=Faraday.new(:url => @base_uri) do |conn|
-      conn.token_auth(@token)
-      conn.adapter Faraday.default_adapter
+    if(@name == 'heliotrope')
+      require 'turnsole'
+      Turnsole::HeliotropeService.default_options[:base_uri] = @base_uri if @base_uri
+      Turnsole::HeliotropeService.default_options[:headers][:authorization] = "Bearer #{@token}" if @token
+      @connection = Turnsole::HeliotropeService.new
+      p @connection
+    else
+      puts "No connection defined for service #{name}"
+      exit!(0)
     end
   end
 
-  def status(path='/')
-    res = @connection.get path
-    res.status
+  def products
+    puts "Listing all products on host #{@name} #{@type}"
+    @connection.products
   end
+
+  def lessees
+    puts "Listing all lessees with accounts at host #{@name} #{@type}"
+    @connection.lessees
+  end
+
 end

@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 require 'yaml'
+require 'json'
 require_relative 'host'
+
 
 class Product
   attr_accessor :id, :external_id, :name, :host, :components
@@ -16,7 +18,9 @@ class Product
 
   #Check to see if the host responds to this product
   def hosted?
-    conn = @host.connection
-    conn.get "/api/products/#{@external_id}.json"
+    @host.products
+    #convert res to json
+    #look for the result that means the prod is there
+    #if so, return true
   end
 end
