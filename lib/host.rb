@@ -45,4 +45,9 @@ class Host
     @connection.find_lessee(identifier: subscriber.external_id) ? true : false
   end
 
+  def add_subscriber(subscriber)
+    @connection.create_lessee(identifier: subscriber.external_id) ? true : false
+  rescue => err
+    puts err
+  end
 end

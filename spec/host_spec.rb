@@ -3,8 +3,6 @@
 require 'Host'
 require 'uri'
 
-$TESTING = true
-
 RSpec.describe Host do
   describe "Example Test Host" do
     test = Host.new('example','test')

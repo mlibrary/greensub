@@ -3,9 +3,9 @@
 require_relative '../lib/product'
 
 #Get params: inst_id, product_id, action
-inst_id = '2'
-product_id = 'heb'
-action = 'authz'
+inst_id = '111'
+product_id = 'yoyo'
+action = :authz
 $TESTING = true
 
 
@@ -19,24 +19,16 @@ end
 
 inst = Institution.new(inst_id)
 
-unless prod.host.knows_subscriber(inst)
-    #if action is to expire
-      #exit -- nothing to do
-    #else
-      #if greensub has a record for inst
-        #return false until we implement our datastore
-      #else
-        #if we can get the inst name from Keycard
-          #add name to Inst object
-        #else
-          #are we testing?
-            #supply a fake name
-          #else
-            #gets string from user
-        #end
+if ! prod.host.knows_subscriber(inst)
+    if action == :expire
+      puts "Institution is not on the host, so nothing to expire"
+      exit
+    elsif action == :authz
         #create Inst on Host
-      #end
-    #end
+        unless prod.host.add_subscriber(inst)
+          abort "Can't add subscriber at host"
+        end
+    end
 end
 
 #if action is to expire
