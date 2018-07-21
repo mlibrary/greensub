@@ -18,9 +18,6 @@ class Product
 
   #Check to see if the host responds to this product
   def hosted?
-    @host.products
-    #convert res to json
-    #look for the result that means the prod is there
-    #if so, return true
+    @host.hosted?(@external_id) ? true : false
   end
 end

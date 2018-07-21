@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
+require_relative 'subscriber'
 
 
 class Host
@@ -12,7 +13,6 @@ class Host
     data = YAML.load_file('data/hosts.yaml')
     @base_uri = data["#{@name}"]["#{@type}"]["base_uri"]
     @token = data["#{@name}"]["#{@type}"]["token"]
-    puts "\nTOKEN = #{@token}\n"
     make_connection
   end
 
@@ -22,21 +22,27 @@ class Host
       Turnsole::HeliotropeService.default_options[:base_uri] = @base_uri if @base_uri
       Turnsole::HeliotropeService.default_options[:headers][:authorization] = "Bearer #{@token}" if @token
       @connection = Turnsole::HeliotropeService.new
-      p @connection
     else
-      puts "No connection defined for service #{name}"
-      exit!(0)
+      @connection = nil
     end
+  end
+
+  def hosted?(product_id)
+    @connection.find_product(identifier: product_id) > 0 ? true : false
   end
 
   def products
     puts "Listing all products on host #{@name} #{@type}"
-    @connection.products
+    puts @connection.products
   end
 
   def lessees
     puts "Listing all lessees with accounts at host #{@name} #{@type}"
-    @connection.lessees
+    puts @connection.lessees
+  end
+
+  def knows_subscriber(subscriber)
+    @connection.find_lessee(identifier: subscriber.external_id) ? true : false
   end
 
 end
