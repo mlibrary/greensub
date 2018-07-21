@@ -10,10 +10,17 @@ class Product
 
   def initialize(id)
     @id = id
+    fetch_data
+  end
+
+  def fetch_data
+    #encapsulated here to allow for other possibilies later...
     data = YAML.load_file('data/products.yaml')
     @external_id = data["#{@id}"]["external_id"]
     @name = data["#{@id}"]["name"]
     @host = Host.new(data["#{@id}"]["host"])
+  rescue
+      abort "Nothing known about product #{id}"
   end
 
   #Check to see if the host responds to this product

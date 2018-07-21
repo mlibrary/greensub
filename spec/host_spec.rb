@@ -23,4 +23,9 @@ RSpec.describe Host do
       end
     end
   end
+  describe "Known bad host" do
+    it "fails gracefully if there's no data on the requested host" do
+      #How to test this without abort interrupting further tests?
+    end
+  end
 end

@@ -15,4 +15,9 @@ RSpec.describe Product do
       expect(test.host.class).to eq(Host)
     end
   end
+  describe "Known bad product" do
+    it "fails gracefully if there's no data on the requested product" do
+       #How to test this without abort interrupting further tests?
+    end
+  end
 end

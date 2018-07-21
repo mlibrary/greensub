@@ -10,10 +10,16 @@ class Host
   def initialize(name, type='test')
     @name = name
     @type = type
+    fetch_data
+    make_connection
+  end
+
+  def fetch_data
     data = YAML.load_file('data/hosts.yaml')
     @base_uri = data["#{@name}"]["#{@type}"]["base_uri"]
     @token = data["#{@name}"]["#{@type}"]["token"]
-    make_connection
+  rescue
+      abort "Nothing known about host #{@name} (#{@type})"
   end
 
   def make_connection
