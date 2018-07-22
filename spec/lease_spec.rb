@@ -1,9 +1,11 @@
 require 'date'
 require_relative '../lib/lease'
+require_relative '../lib/subscriber'
+require_relative '../lib/product'
 
 RSpec.describe Lease do
   describe "Lease"
-  lease = Lease.new(1, 'example')
+  lease = Lease.new(Product.new('heb'), Institution.new('1'))
   it "starts an open-ended lease when authorized" do
     lease.authorize
     expect(Date.parse(lease.starts)).to be <= Time.now.to_date

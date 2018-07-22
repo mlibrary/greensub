@@ -56,4 +56,12 @@ class Host
   rescue => err
     puts err
   end
+
+  def authorize(lease)
+    @connection.link(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
+  end
+
+  def unauthorize(lease)
+    @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
+  end
 end

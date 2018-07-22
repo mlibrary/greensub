@@ -7,7 +7,7 @@ require_relative '../lib/lease'
 #Get params: inst_id, product_id, action
 inst_id = '999'
 product_id = 'heb'
-action = :authz
+action = :expire
 $TESTING = true
 
 
@@ -18,7 +18,7 @@ unless product.hosted?
 end
 
 inst = Institution.new(inst_id)
-lease = Lease.new(product_id, inst_id)
+lease = Lease.new(product, inst)
 
 #if action is to expire
 case action
@@ -28,13 +28,11 @@ when :authz
       abort "Can't add subscriber at host"
     end
   end
+  lease.authorize
 when :expire
   if ! product.host.knows_subscriber(inst)
     puts "Institution is not on the host, so nothing to expire"
     exit
   end
+  lease.expire
 end
-    #de-authz the inst to this product at the host
-  #else
-    #authz the inst at the host
-#

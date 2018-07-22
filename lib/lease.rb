@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+require_relative 'product'
 
 class Lease
-  attr_accessor :id, :subscriber_id, :product_id, :starts, :expires
+  attr_accessor :id, :subscriber, :product, :starts, :expires
 
-  def initialize(subscr, product)
-    @subscriber_id = subscr
-    @product_id = product
+  def initialize(product, subscr)
+    @subscriber = subscr
+    @product = product
     fetch_data
   end
 
@@ -14,25 +15,30 @@ class Lease
     #maybe update other data members
   end
 
-  def authorize #synonym for an open-ended lease
+  def authorize #synonym for an immediate, open-ended lease
     #arguably, if a lease exists, we should keep the starts date
       #but since we're logging and not keeping a database, we'll just record
        #each distinct authorization
     @starts = Time.now.strftime('%F') #YYYY-MM-DD
     @expires = nil
+    product.host.authorize(self)
+    update_data
   end
 
-  def expire
-    #a lease can't begin after it ends
-    if @starts == nil || Date.parse(@starts) > Time.now.to_date
-        @starts = Date.today.strftime('%F')
+  def expire #synonym for immediate termination of lease (regardless of whether it's active)
+    unless @starts == nil
+      if Date.parse(@starts) > Time.now.to_date #a lease can't begin after it ends
+          @starts = Date.today.strftime('%F')
+      end
     end
 
     @expires = Time.now.strftime('%F') #YYYY-MM-DD
+    product.host.unauthorize(self)
+    update_data
   end
 
-  def status_at_host
-
+  def update_data
+    #just log it for now?
   end
 
 end
