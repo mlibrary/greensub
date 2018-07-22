@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Subscriber'
+require_relative '../lib/subscriber'
 
 RSpec.describe Institution do
   describe "Example Institution" do

@@ -1,6 +1,6 @@
 #frozen_string_literal: true
 
-require 'Host'
+require_relative '../lib/host'
 require 'uri'
 
 RSpec.describe Host do
