@@ -1,23 +1,34 @@
 # frozen_string_literal: true
-
+require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
 require_relative '../lib/lease'
 
-#Get params: inst_id, product_id, action
-inst_id = '999'
-product_id = 'heb'
-action = :expire
-$TESTING = true
+begin
+  opts = Slop.parse strict: true do |opt|
+    opt.string '-p', '--product', 'product id', required: true
+    opt.string '-s', '--subscriber', 'subscriber id (institution)', required: true
+    opt.bool   '-e', '--expire', 'Remove authorization (else )'
+    opt.bool   '-t', '--testing'
+    opt.bool   '-h', '--help' do
+      puts opts
+    end
+  end
+rescue Slop::Error => e
+  puts e
+  puts 'Try -h or --help'
+  exit
+end
 
+action = opts[:expire] ? :expire : :authz
 
-product = Product.new(product_id)
+product = Product.new( opts[:product] )
 unless product.hosted?
-  puts " Product #{product} does not have a host, quitting...."
+  puts " Product #{opts[:product]} does not have a host, quitting...."
   exit!(0)
 end
 
-inst = Institution.new(inst_id)
+inst = Institution.new( opts[:subscriber] )
 lease = Lease.new(product, inst)
 
 #if action is to expire
@@ -25,13 +36,13 @@ case action
 when :authz
   if ! product.host.knows_subscriber(inst)
     unless product.host.add_subscriber(inst)
-      abort "Can't add subscriber at host"
+      abort "Can't add subscriber #{opts[:subscriber] } at host #{product.host.id}"
     end
   end
   lease.authorize
 when :expire
   if ! product.host.knows_subscriber(inst)
-    puts "Institution is not on the host, so nothing to expire"
+    puts "Institution #{opts[:subscriber]} is not on host #{product.host.id}, so nothing to expire"
     exit
   end
   lease.expire
