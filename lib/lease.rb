@@ -16,25 +16,35 @@ class Lease
   end
 
   def authorize #synonym for an immediate, open-ended lease
-    #arguably, if a lease exists, we should keep the starts date
-      #but since we're logging and not keeping a database, we'll just record
-       #each distinct authorization
-    @starts = Time.now.strftime('%F') #YYYY-MM-DD
-    @expires = nil
-    product.host.authorize(self)
-    update_data
+    if product.hosted?
+      #arguably, if a lease exists, we should keep the starts date
+        #but since we're logging and not keeping a database, we'll just record
+         #each distinct authorization
+      @starts = Time.now.strftime('%F') #YYYY-MM-DD
+      @expires = nil
+      product.host.authorize(self)
+      update_data
+    else
+      puts "Product #{product.id} not on host #{product.host.id} (#{product.host.type})"
+      exit
+    end
   end
 
   def expire #synonym for immediate termination of lease (regardless of whether it's active)
-    unless @starts == nil
-      if Date.parse(@starts) > Time.now.to_date #a lease can't begin after it ends
-          @starts = Date.today.strftime('%F')
+    if product.hosted?
+      unless @starts == nil
+        if Date.parse(@starts) > Time.now.to_date #a lease can't begin after it ends
+            @starts = Date.today.strftime('%F')
+        end
       end
-    end
 
-    @expires = Time.now.strftime('%F') #YYYY-MM-DD
-    product.host.unauthorize(self)
-    update_data
+      @expires = Time.now.strftime('%F') #YYYY-MM-DD
+      product.host.unauthorize(self)
+      update_data
+    else
+      puts "Product #{product.id} not on host #{product.host.id} (#{product.host.type})"
+      exit
+    end
   end
 
   def update_data

@@ -20,7 +20,8 @@ class Product
     @name = data["#{@id}"]["name"]
     @host = Host.new(data["#{@id}"]["host"])
   rescue
-      abort "Nothing known about product #{id}"
+      puts "Nothing known about product #{@id}"
+      exit
   end
 
   #Check to see if the host responds to this product
