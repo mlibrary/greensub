@@ -4,6 +4,7 @@ require_relative '../lib/subscriber'
 require_relative '../lib/product'
 
 RSpec.describe Lease do
+  ENV['GREENSUB_TEST'] = '1'
   describe "Lease"
   lease = Lease.new(Product.new('heb'), Institution.new('1'))
   it "starts an open-ended lease when authorized" do

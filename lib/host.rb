@@ -7,9 +7,9 @@ require_relative 'subscriber'
 class Host
   attr_accessor :name, :type, :base_uri, :token, :connection
 
-  def initialize(name, type='test')
+  def initialize(name)
     @name = name
-    @type = type
+    @type = ENV['GREENSUB_TEST']=='1' ? :test : :prod
     fetch_data
     make_connection
   end
@@ -34,7 +34,8 @@ class Host
   end
 
   def hosted?(product_id)
-    @connection.find_product(identifier: product_id) > 0 ? true : false
+    return false if @connection == nil
+    @connection.find_product(identifier: product_id).to_i > 0 ? true : false
   end
 
   def products
@@ -58,10 +59,12 @@ class Host
   end
 
   def authorize(lease)
+    puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
     @connection.link(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
   end
 
   def unauthorize(lease)
+    puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
     @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
   end
 end

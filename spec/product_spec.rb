@@ -3,6 +3,7 @@
 require_relative '../lib/product'
 
 RSpec.describe Product do
+  ENV['GREENSUB_TEST'] = '1'
   describe "Example Product" do
     test = Product.new('test')
     it "has an external id" do

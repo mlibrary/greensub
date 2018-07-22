@@ -4,8 +4,9 @@ require_relative '../lib/host'
 require 'uri'
 
 RSpec.describe Host do
+  ENV['GREENSUB_TEST'] = '1'
   describe "Example Test Host" do
-    test = Host.new('example','test')
+    test = Host.new('example')
     it "has a base_uri" do
       expect(test.base_uri).to eq("https://test.example.com")
     end
@@ -17,7 +18,7 @@ RSpec.describe Host do
       expect(test.token).to eq("test.foo.bar.baz")
     end
     describe "Heliotrope" do
-      helio = Host.new('heliotrope','test')
+      helio = Host.new('heliotrope')
       it "responds to connection" do
         expect(helio.connection).to be_truthy
       end

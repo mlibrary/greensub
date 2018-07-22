@@ -21,8 +21,10 @@ rescue Slop::Error => e
 end
 
 action = opts[:expire] ? :expire : :authz
+ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 
 product = Product.new( opts[:product] )
+
 unless product.hosted?
   puts " Product #{opts[:product]} does not have a host, quitting...."
   exit!(0)
