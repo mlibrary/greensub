@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mlibrary/turnsole
+  revision: 9ae490a57d575edf46128adff9b3dbdf8d964d62
+  branch: master
+  specs:
+    turnsole (0.1.0)
+      httparty (~> 0.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,8 +54,6 @@ GEM
     ruby-progressbar (1.9.0)
     sequel (5.10.0)
     slop (4.6.2)
-    turnsole (0.1.0)
-      httparty (~> 0.16)
     unicode-display_width (1.4.0)
 
 PLATFORMS
@@ -61,7 +67,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 0.58)
   slop (~> 4.6)
-  turnsole (~> 0.1)
+  turnsole!
 
 BUNDLED WITH
    1.16.3
