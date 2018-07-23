@@ -48,23 +48,27 @@ class Host
     puts @connection.lessees
   end
 
-  def knows_subscriber(subscriber)
+  def knows_subscriber?(subscriber)
     @connection.find_lessee(identifier: subscriber.external_id) ? true : false
   end
 
   def add_subscriber(subscriber)
-    @connection.create_lessee(identifier: subscriber.external_id) ? true : false
+    @connection.create_lessee(identifier: subscriber.external_id)
   rescue => err
     puts err
   end
 
   def authorize(lease)
     puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    @connection.link(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
+    @connection.link(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id )
+  rescue => err
+      puts err
   end
 
   def unauthorize(lease)
     puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id ) ? true : false
+    @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id )
+  rescue => err
+      puts err
   end
 end
