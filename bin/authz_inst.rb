@@ -36,14 +36,16 @@ lease = Lease.new(product, inst)
 #if action is to expire
 case action
 when :authz
-  if ! product.host.knows_subscriber(inst)
-    unless product.host.add_subscriber(inst)
+  if ! product.host.knows_subscriber?(inst)
+    begin
+      product.host.add_subscriber(inst)
+    rescue
       abort "Can't add subscriber #{opts[:subscriber] } at host #{product.host.id}"
     end
   end
   lease.authorize
 when :expire
-  if ! product.host.knows_subscriber(inst)
+  if ! product.host.knows_subscriber?(inst)
     puts "Institution #{opts[:subscriber]} is not on host #{product.host.id}, so nothing to expire"
     exit
   end
