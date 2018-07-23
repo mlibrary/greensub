@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'bundler/setup'
 require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
