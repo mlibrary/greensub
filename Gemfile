@@ -14,4 +14,4 @@ gem 'rubocop', '~> 0.58'
 
 #gems specific to hosted services
 #gem 'turnsole', '~> 0.1' #heliotrope
-gem 'turnsole', git: 'https://github.com/mlibrary/turnsole', branch: 'master'
+gem 'turnsole', git: 'https://github.com/mlibrary/turnsole', ref: 'master'

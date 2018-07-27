@@ -27,6 +27,7 @@ class Host
       require 'turnsole'
       Turnsole::HeliotropeService.default_options[:base_uri] = @base_uri if @base_uri
       Turnsole::HeliotropeService.default_options[:headers][:authorization] = "Bearer #{@token}" if @token
+      Turnsole::HeliotropeService.default_options
       @connection = Turnsole::HeliotropeService.new
     else
       @connection = nil
@@ -34,22 +35,35 @@ class Host
   end
 
   def hosted?(product_id)
-    return false if @connection == nil
+    abort "No connection for #{product_id}" if @connection == nil
     @connection.find_product(identifier: product_id).to_i > 0 ? true : false
   end
 
   def products
     puts "Listing all products on host #{@name} #{@type}"
-    puts @connection.products
+    @connection.products
+  end
+
+  def component_in_product?(component, product)
+    res = @connection.component_products(handle: component.hosted_id)
+    res.detect { |e| e['identifier'] == product.external_id }
+  end
+
+  def create_product(product)
+    @connection.find_or_create_product(identifier: product.external_id)
   end
 
   def lessees
     puts "Listing all lessees with accounts at host #{@name} #{@type}"
-    puts @connection.lessees
+    @connection.lessees
   end
 
   def knows_subscriber?(subscriber)
-    @connection.find_lessee(identifier: subscriber.external_id) ? true : false
+    @connection.find_lessee(identifier: subscriber.external_id)
+  end
+
+  def knows_component?(component)
+    @connection.find_component(handle: component.hosted_id)
   end
 
   def add_subscriber(subscriber)
@@ -70,5 +84,19 @@ class Host
     @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id )
   rescue => err
       puts err
+  end
+
+  def link(product, component)
+    puts "Adding #{component.hosted_id} to #{product.external_id} on #{@name} (#{@type})"
+    p @connection.link_component(product_identifier: product.external_id, handle: component.hosted_id)
+  rescue => err
+    puts err
+  end
+
+  def unlink(product, component)
+    puts "Removing #{component.hosted_id} from #{product.external_id} on #{@name} (#{@type})"
+    @connection.unlink_component(product_identifier: product.external_id, handle: component.hosted_id)
+  rescue => err
+    puts err
   end
 end

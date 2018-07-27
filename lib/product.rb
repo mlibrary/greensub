@@ -3,6 +3,7 @@
 require 'yaml'
 require 'json'
 require_relative 'host'
+require_relative 'component'
 
 
 class Product
@@ -28,4 +29,25 @@ class Product
   def hosted?
     @host.hosted?(@external_id) ? true : false
   end
+
+  def create
+    @host.create_product(self)
+  end
+
+  def delete
+    @host.delete_product(self)
+  end
+
+  def add(component)
+    @host.link(self, component)
+  end
+
+  def remove(component)
+    @host.unlink(self, component)
+  end
+
+  def has_component?(component)
+    @host.component_in_product?(component, self)
+  end
+
 end
