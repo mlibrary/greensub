@@ -11,6 +11,7 @@ begin
     opt.string '-s', '--subscriber', 'subscriber id (institution)'
     opt.string '-f', '--file', 'file with a list of subscriber ids'
     opt.bool   '-e', '--expire', 'Remove authorization (else )'
+    opt.bool   '-n', '--nomail', "Suppress email to subscribers"
     opt.bool   '-t', '--testing'
     opt.bool   '-h', '--help' do
       puts opts
@@ -24,6 +25,7 @@ end
 
 action = opts[:expire] ? :expire : :authz
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
+ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
 product = Product.new( opts[:product] )
 
@@ -46,24 +48,16 @@ else
 end
 
 subscrs.each do |s|
-  inst = Institution.new( s )
-  lease = Lease.new(product, inst)
-
+  if s.include? '@'
+    subscr = Individual.new( s )
+  else
+    subscr = Institution.new( s )
+  end
+  lease = Lease.new(product, subscr)
   case action
-  when :authz
-    if ! product.host.knows_subscriber?(inst)
-      begin
-        product.host.add_subscriber(inst)
-      rescue
-        abort "Can't add subscriber #{s} at host #{product.host.id}"
-      end
-    end
-    lease.authorize
   when :expire
-    if ! product.host.knows_subscriber?(inst)
-      puts "Institution #{s} is not on host #{product.host.id}, so nothing to expire"
-      exit
-    end
-    lease.expire
+      lease.expire
+  when :authz
+      lease.authorize
   end
 end

@@ -7,12 +7,6 @@ class Component
     @product = prodObj
   end
 
-  def restrict
-    if hosted?
-
-    end
-  end
-
   def hosted?
     @product.host.knows_component?(self)
   end
