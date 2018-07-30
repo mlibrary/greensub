@@ -1,4 +1,4 @@
-require 'Greensub'
+require_relative '../lib/greensub'
 
 RSpec.describe Greensub do
   it "is alive" do

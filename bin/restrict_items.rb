@@ -44,8 +44,6 @@ else
   puts "No id defined, so can't restrict component"
 end
 
-p rows
-
 rows.each do |r|
   fields = r.split(/[,\s]+/) #handle both tabs and commas
   id = fields[0].tr_s('"', '').tr_s("''", '').strip

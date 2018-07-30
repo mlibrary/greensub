@@ -12,6 +12,8 @@ gem 'slop', '~> 4.6'
 gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 0.58'
 
+gem 'typhoeus', '~> 1.3'
+
 #gems specific to hosted services
 #gem 'turnsole', '~> 0.1' #heliotrope
 gem 'turnsole', git: 'https://github.com/mlibrary/turnsole', ref: 'master'

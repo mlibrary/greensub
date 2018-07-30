@@ -15,7 +15,7 @@ class Host
   end
 
   def fetch_data
-    data = YAML.load_file('data/hosts.yaml')
+    data = YAML.load_file('config/hosts.yaml')
     @base_uri = data["#{@name}"]["#{@type}"]["base_uri"]
     @token = data["#{@name}"]["#{@type}"]["token"]
   rescue
@@ -46,7 +46,12 @@ class Host
 
   def component_in_product?(component, product)
     res = @connection.component_products(handle: component.hosted_id)
-    res.detect { |e| e['identifier'] == product.external_id }
+    res.detect { |e| e['identifier'] == product.external_id } ? true : false
+  end
+
+  def subscriber_can_access_product?(subscriber, product)
+    res = @connection.lessee_products(lessee_identifier: subscriber.external_id)
+    res.detect { |e| e['identifier'] == product.external_id } ? true : false
   end
 
   def create_product(product)
@@ -59,7 +64,7 @@ class Host
   end
 
   def knows_subscriber?(subscriber)
-    @connection.find_lessee(identifier: subscriber.external_id)
+    @connection.find_lessee(identifier: subscriber.external_id) ? true : false
   end
 
   def knows_component?(component)
@@ -68,6 +73,12 @@ class Host
 
   def add_subscriber(subscriber)
     @connection.create_lessee(identifier: subscriber.external_id)
+  rescue => err
+    puts err
+  end
+
+  def delete_subscriber(subscriber)
+    @connection.delete_lessee(identifier: subscriber.external_id)
   rescue => err
     puts err
   end
@@ -88,7 +99,7 @@ class Host
 
   def link(product, component)
     puts "Adding #{component.hosted_id} to #{product.external_id} on #{@name} (#{@type})"
-    p @connection.link_component(product_identifier: product.external_id, handle: component.hosted_id)
+    @connection.link_component(product_identifier: product.external_id, handle: component.hosted_id)
   rescue => err
     puts err
   end
