@@ -12,7 +12,7 @@ class LeaseFeed
   end
 end
 
-class HEBLeasefeed < LeaseFeed
+class HEBLeaseFeed < LeaseFeed
   #move to parent class and use config?
   def fetch
     config = YAML.load_file('config/leasefeeds.yaml')
@@ -49,10 +49,13 @@ class HEBLeasefeed < LeaseFeed
       subscriber.phone = fr.xpath('phone').text
 
       lease = Lease.new(@product, subscriber)
-      expiration_date = Date.parse(fr.xpath('expirationdate').text)
-
-      lease.authorize if Date.today < expiration_date
-      lease.expire(expiration_date)
+      fr.xpath('expirationdate').text
+      exp = fr.xpath('expirationdate').text.split('-')
+      if Date.valid_date?(exp[0].to_i,exp[1].to_i,exp[2].to_i)
+        expiration_date = Date.parse(fr.xpath('expirationdate').text)
+        lease.authorize if Date.today < expiration_date
+        lease.expire(expiration_date)
+      end
     end
   end
 end
