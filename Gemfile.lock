@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/mlibrary/turnsole
-  revision: 29739229938a938df15f2556b258fd50f870455d
-  ref: master
+  revision: 2b477341429c3d92a601e5f10b80630e089de322
+  branch: master
   specs:
     turnsole (0.1.0)
       httparty (~> 0.16)

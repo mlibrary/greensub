@@ -71,7 +71,31 @@ class Host
     @connection.find_component(handle: component.hosted_id)
   end
 
+  def knows_institution?(institution)
+    @connection.find_institution(identifier: institution.external_id) ? true : false
+  end
+
+  def add_institution(institution)
+    if ( institution.id && institution.name != nil )
+      @connection.create_institution(identifier: institution.external_id, name: institution.name, entity_id: institution.entity_id)
+    else
+      abort "Institution name required; use --name"
+    end
+
+  rescue => err
+    puts err
+  end
+
+  def delete_institution(institution)
+    @connection.delete_institution(identifier: institution.external_id)
+  rescue => err
+    puts err
+  end
+
   def add_subscriber(subscriber)
+    if subscriber.is_a?(Institution) && knows_institution?(subscriber) == false
+      add_institution(subscriber)
+    end
     @connection.create_lessee(identifier: subscriber.external_id)
   rescue => err
     puts err
