@@ -13,6 +13,8 @@ begin
     opt.bool   '-e', '--expire', 'Remove authorization (else )'
     opt.bool   '-n', '--nomail', "Suppress email to subscribers"
     opt.bool   '-t', '--testing'
+    opt.string '--name', 'Name of the institution'
+    opt.string '--entityId', "entityId of the institution's Shibboleth entityId"
     opt.bool   '-h', '--help' do
       puts opts
     end
@@ -51,7 +53,7 @@ subscrs.each do |s|
   if s.include? '@'
     subscr = Individual.new( s )
   else
-    subscr = Institution.new( s )
+    subscr = Institution.new( s, opts[:name], opts[:entityId] )
   end
   lease = Lease.new(product, subscr)
   case action

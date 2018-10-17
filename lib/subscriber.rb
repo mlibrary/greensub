@@ -10,7 +10,13 @@ class Subscriber
 end
 
 class Institution < Subscriber
-  attr_accessor :name
+  attr_accessor :name, :entity_id
+
+  def initialize(id, name=nil, entity_id=nil)
+    @name = name
+    @entity_id = entity_id
+    super(id)
+  end
 end
 
 class Individual < Subscriber
