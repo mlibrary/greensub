@@ -40,14 +40,9 @@ class Lease
          #each distinct authorization
       @starts = start
       @expires = nil
-      if @starts <= Date.today
+      if (@starts <= Date.today && ! @product.subscriber_can_access?(@subscriber))
         @product.host.authorize(self)
-        if @product.subscriber_can_access?(@subscriber)
-          #log success
-          @product.send_instructions(@subscriber) if @is_new_subscriber
-        else
-          #log failure
-        end
+        @product.send_instructions(@subscriber) if @is_new_subscriber
       end
     else
       puts "Product #{@product.id} not on host #{@product.host.id} (#{@product.host.type})"
@@ -56,9 +51,7 @@ class Lease
   end
 
   def expire(expiration_date=Date.today)
-    if ! @product.host.knows_subscriber?(@subscriber)
-      puts "Subscriber #{@subscriber.id} is not on host #{@product.host.name}, so nothing to expire"
-    else
+    if @product.host.knows_subscriber?(@subscriber)
       if @product.hosted?
         unless @starts == nil
           if @starts > Date.today #a lease can't begin after it ends
@@ -67,7 +60,7 @@ class Lease
         end
 
         @expires = expiration_date
-        if Date.today >= @expires
+        if( Date.today >= @expires && @product.subscriber_can_access?(@subscriber))
             @product.host.unauthorize(self)
         end
       else
