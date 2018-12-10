@@ -64,7 +64,9 @@ class Host
   end
 
   def knows_subscriber?(subscriber)
-    @connection.find_lessee(identifier: subscriber.external_id) ? true : false
+    knows = @connection.find_institution(identifier: subscriber.external_id) ? true : false
+    knows ||= @connection.find_lessee(identifier: subscriber.external_id) ? true : false
+    knows
   end
 
   def knows_component?(component)
@@ -81,7 +83,6 @@ class Host
     else
       abort "Institution name required; use --name"
     end
-
   rescue => err
     puts err
   end
@@ -93,16 +94,21 @@ class Host
   end
 
   def add_subscriber(subscriber)
-    if subscriber.is_a?(Institution) && knows_institution?(subscriber) == false
-      add_institution(subscriber)
+    if subscriber.is_a?(Institution)
+      add_institution(subscriber) unless knows_institution?(subscriber)
+    else
+      @connection.create_lessee(identifier: subscriber.external_id)
     end
-    @connection.create_lessee(identifier: subscriber.external_id)
   rescue => err
     puts err
   end
 
   def delete_subscriber(subscriber)
-    @connection.delete_lessee(identifier: subscriber.external_id)
+    if subscriber.is_a?(Institution)
+      @connection.delete_institution(identifier: subscriber.external_id)
+    else
+      @connection.delete_lessee(identifier: subscriber.external_id)
+    end
   rescue => err
     puts err
   end

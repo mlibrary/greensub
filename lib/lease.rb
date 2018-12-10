@@ -45,7 +45,7 @@ class Lease
         @product.send_instructions(@subscriber) if @is_new_subscriber
       end
     else
-      puts "Product #{@product.id} not on host #{@product.host.id} (#{@product.host.type})"
+      puts "Product #{@product.id} not on host #{@product.host.name} (#{@product.host.type})"
       exit
     end
   end
