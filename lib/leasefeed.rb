@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'date'
 require 'typhoeus'
 require 'nokogiri'
 require_relative 'lease'

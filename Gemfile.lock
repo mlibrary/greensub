@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/mlibrary/turnsole
-  revision: fcd12a4c2ef7341d3c288514b7a8d11aa557a525
-  branch: 2371_Checkpoint_Upgrade
+  revision: bef4b8e7a521d7e6560497135ab2935d1b5352e1
+  branch: master
   specs:
     turnsole (0.1.0)
       faraday
