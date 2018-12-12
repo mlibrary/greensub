@@ -16,4 +16,4 @@ gem 'typhoeus', '~> 1.3'
 
 #gems specific to hosted services
 #gem 'turnsole', '~> 0.1' #heliotrope
-gem 'turnsole', git: 'https://github.com/mlibrary/turnsole', branch: 'master'
+gem 'turnsole', git: 'https://github.com/mlibrary/turnsole', branch: '2371_Checkpoint_Upgrade'
