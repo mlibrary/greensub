@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'date'
 require 'typhoeus'
 require 'nokogiri'
 require_relative 'lease'
@@ -57,5 +58,13 @@ class HEBLeaseFeed < LeaseFeed
         lease.expire(expiration_date)
       end
     end
+  end
+end
+
+class TestLeaseFeed < HEBLeaseFeed
+  def fetch
+    config = YAML.load_file('config/leasefeeds.yaml')
+    xml = config['test']['xml']
+    @datastream = Nokogiri::XML(xml)
   end
 end

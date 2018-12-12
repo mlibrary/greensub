@@ -24,11 +24,8 @@ class Host
 
   def make_connection
     if(@name == 'heliotrope')
-      require 'turnsole'
-      Turnsole::HeliotropeService.default_options[:base_uri] = @base_uri if @base_uri
-      Turnsole::HeliotropeService.default_options[:headers][:authorization] = "Bearer #{@token}" if @token
-      Turnsole::HeliotropeService.default_options
-      @connection = Turnsole::HeliotropeService.new
+      require 'turnsole/heliotrope/service'
+      @connection = Turnsole::Heliotrope::Service.new(base: @base_uri, token: @token)
     else
       @connection = nil
     end
@@ -39,36 +36,45 @@ class Host
     @connection.find_product(identifier: product_id).to_i > 0 ? true : false
   end
 
+  def component_in_product?(component, product)
+    @connection.product_component?(product_identifier: product.external_id, component_identifier: component.hosted_id)
+  end
+
+  def subscriber_can_access_product?(subscriber, product)
+    if subscriber.is_a?(Institution)
+      @connection.product_institution_subscribed?(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
+    elsif subscriber.is_a?(Individual)
+      @connection.product_individual_subscribed?(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
+    else
+      false
+    end
+  end
+
+  def create_product(product)
+    @connection.create_product(identifier: product.external_id, name: product.name, purchase: product.host)
+  end
+
   def products
     puts "Listing all products on host #{@name} #{@type}"
     @connection.products
   end
 
-  def component_in_product?(component, product)
-    res = @connection.component_products(handle: component.hosted_id)
-    res.detect { |e| e['identifier'] == product.external_id } ? true : false
+  def knows_product?(product)
+    @connection.find_product(identifier: product.external_id)
   end
 
-  def subscriber_can_access_product?(subscriber, product)
-    res = @connection.lessee_products(lessee_identifier: subscriber.external_id)
-    res.detect { |e| e['identifier'] == product.external_id } ? true : false
-  end
-
-  def create_product(product)
-    @connection.find_or_create_product(identifier: product.external_id)
-  end
-
-  def lessees
-    puts "Listing all lessees with accounts at host #{@name} #{@type}"
-    @connection.lessees
-  end
-
-  def knows_subscriber?(subscriber)
-    @connection.find_lessee(identifier: subscriber.external_id) ? true : false
+  def components
+    puts "Listing all components on host #{@name} #{@type}"
+    @connection.components
   end
 
   def knows_component?(component)
-    @connection.find_component(handle: component.hosted_id)
+    @connection.find_component(identifier: component.hosted_id)
+  end
+
+  def institutions
+    puts "Listing all institutions with accounts at host #{@name} #{@type}"
+    @connection.institutions
   end
 
   def knows_institution?(institution)
@@ -81,7 +87,6 @@ class Host
     else
       abort "Institution name required; use --name"
     end
-
   rescue => err
     puts err
   end
@@ -92,45 +97,98 @@ class Host
     puts err
   end
 
-  def add_subscriber(subscriber)
-    if subscriber.is_a?(Institution) && knows_institution?(subscriber) == false
-      add_institution(subscriber)
+  def individuals
+    puts "Listing all individuals with accounts at host #{@name} #{@type}"
+    @connection.individuals
+  end
+
+  def knows_individual?(individual)
+    @connection.find_individual(identifier: individual.external_id) ? true : false
+  end
+
+  def add_individual(individual)
+    if ( individual.id && individual.email != nil )
+      @connection.create_individual(identifier: individual.external_id, name: "#{individual.lastname}, #{individual.firstname}", email: individual.email)
+    else
+      abort "Individual email required; use --email"
     end
-    @connection.create_lessee(identifier: subscriber.external_id)
+  rescue => err
+    puts err
+  end
+
+  def delete_individual(individual)
+    @connection.delete_individual(identifier: individual.external_id)
+  rescue => err
+    puts err
+  end
+
+  def subscribers
+    puts "Listing all subscribers with accounts at host #{@name} #{@type}"
+    institutions + individuals
+  end
+
+  def knows_subscriber?(subscriber)
+    if subscriber.is_a?(Institution)
+      knows_institution?(subscriber)
+    elsif subscriber.is_a?(Individual)
+      knows_individual?(subscriber)
+    else
+      false
+    end
+  end
+
+  def add_subscriber(subscriber)
+    if subscriber.is_a?(Institution)
+      add_institution(subscriber) unless knows_institution?(subscriber)
+    elsif subscriber.is_a?(Individual)
+      add_individual(subscriber) unless knows_individual?(subscriber)
+    end
   rescue => err
     puts err
   end
 
   def delete_subscriber(subscriber)
-    @connection.delete_lessee(identifier: subscriber.external_id)
+    if subscriber.is_a?(Institution)
+      delete_institution(subscriber)
+    elsif subscriber.is_a?(Individual)
+      delete_individual(subscriber)
+    end
   rescue => err
     puts err
   end
 
   def authorize(lease)
     puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    @connection.link(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id )
+    if lease.subscriber.is_a?(Institution)
+      @connection.subscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
+    elsif lease.subscriber.is_a?(Individual)
+      @connection.subscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+    end
   rescue => err
       puts err
   end
 
   def unauthorize(lease)
     puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    @connection.unlink(product_identifier: lease.product.external_id, lessee_identifier: lease.subscriber.external_id )
+    if lease.subscriber.is_a?(Institution)
+      @connection.unsubscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
+    elsif lease.subscriber.is_a?(Individual)
+      @connection.unsubscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+    end
   rescue => err
-      puts err
+    puts err
   end
 
   def link(product, component)
     puts "Adding #{component.hosted_id} to #{product.external_id} on #{@name} (#{@type})"
-    @connection.link_component(product_identifier: product.external_id, handle: component.hosted_id)
+    @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.hosted_id)
   rescue => err
     puts err
   end
 
   def unlink(product, component)
     puts "Removing #{component.hosted_id} from #{product.external_id} on #{@name} (#{@type})"
-    @connection.unlink_component(product_identifier: product.external_id, handle: component.hosted_id)
+    @connection.remove_product_component(product_identifier: product.external_id, component_identifier: component.hosted_id)
   rescue => err
     puts err
   end

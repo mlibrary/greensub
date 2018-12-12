@@ -62,8 +62,9 @@ class Product
         send_email( subscriber.email,
                     :from => @config['instructions']['from'],
                     :from_alias => @config['instructions']['from_alias'],
+                    :bcc => @config['instructions']['bcc'],
                     :subject => @config['instructions']['subject'],
-                    :body => @config['instructions']['body'].gsub!('#{subscriber.email}', subscriber.email ) )
+                    :body => @config['instructions']['body'].gsub('#{subscriber.email}', subscriber.email ) )
       end
     end
   end
@@ -85,9 +86,9 @@ END_OF_MESSAGE
 
     begin
       Net::SMTP.start(opts[:server]) do |smtp|
-         smtp.send_message msg, opts[:from], to
-         #log email sent
+         smtp.send_message msg, opts[:from], to, opts[:bcc]
       end
+      puts "Sent email to #{to}"
     rescue => err
       puts err
     end

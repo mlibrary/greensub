@@ -20,7 +20,15 @@ end
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
+
 product = Product.new( opts[:product] )
-feed = HEBLeaseFeed.new(product)
+
+if ENV['GREENSUB_TEST']=='1'
+  feed = TestLeaseFeed.new(product)
+  puts "TESTING"
+else
+  feed = HEBLeaseFeed.new(product)
+end
+
 feed.fetch
 feed.parse
