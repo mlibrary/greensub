@@ -47,7 +47,7 @@ end
 rows.each do |r|
   fields = r.split(/[,\s]+/) #handle both tabs and commas
   id = fields[0].tr_s('"', '').tr_s("''", '').strip
-  sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip if sales_id
+  sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
   component = Component.new(id, sales_id, Product)
   begin
     if opts[:remove]
