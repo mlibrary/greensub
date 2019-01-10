@@ -37,7 +37,7 @@ class Host
   end
 
   def component_in_product?(component, product)
-    @connection.product_component?(product_identifier: product.external_id, component_identifier: component.hosted_id)
+    @connection.product_component?(product_identifier: product.external_id, component_identifier: component.sales_id)
   end
 
   def subscriber_can_access_product?(subscriber, product)
@@ -69,7 +69,7 @@ class Host
   end
 
   def knows_component?(component)
-    @connection.find_component(identifier: component.hosted_id)
+    @connection.find_component(identifier: component.sales_id)
   end
 
   def institutions
@@ -180,15 +180,19 @@ class Host
   end
 
   def link(product, component)
-    puts "Adding #{component.hosted_id} to #{product.external_id} on #{@name} (#{@type})"
-    @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.hosted_id)
+    puts "Adding #{component.sales_id} to #{product.external_id} on #{@name} (#{@type})"
+    if (! knows_component?(component))
+      puts "Component not known, creating..."
+      connection.create_component(identifier: component.sales_id, name: component.name, noid: component.hosted_id, handle: component.handle)
+    end
+    @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
   rescue => err
     puts err
   end
 
   def unlink(product, component)
-    puts "Removing #{component.hosted_id} from #{product.external_id} on #{@name} (#{@type})"
-    @connection.remove_product_component(product_identifier: product.external_id, component_identifier: component.hosted_id)
+    puts "Removing #{component.sales_id} from #{product.external_id} on #{@name} (#{@type})"
+    @connection.remove_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
   rescue => err
     puts err
   end
