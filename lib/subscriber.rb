@@ -9,7 +9,7 @@ class Subscriber
 
     def initialize(id)
       @id = id
-      @external_id = @id #unless we have a record that says otherwise....
+      @external_id = @id # unless we have a record that says otherwise....
     end
 end
 
@@ -18,7 +18,7 @@ class Institution < Subscriber
 
   attr_accessor :name, :entity_id
 
-  def initialize(id, name=nil, entity_id=nil)
+  def initialize(id, name = nil, entity_id = nil)
     super(id)
     @name = name
     @entity_id = entity_id

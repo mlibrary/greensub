@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
@@ -24,7 +25,7 @@ end
 
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 
-product = Product.new( opts[:product] )
+product = Product.new(opts[:product])
 
 unless product.hosted?
   puts "Product #{opts[:product]} does not have a host, quitting...."
@@ -37,7 +38,7 @@ if opts[:file] && (opts[:id] || opts[:sales_id])
   puts opts
 elsif opts[:file]
   puts "got a file"
-  File.foreach( opts[:file] ) { |l| rows.push l.chomp }
+  File.foreach(opts[:file]) { |l| rows.push l.chomp }
 elsif opts[:id]
   rows.push "#{opts[:id]},#{opts[:sales_id]}"
 else
@@ -45,7 +46,7 @@ else
 end
 
 rows.each do |r|
-  fields = r.split(/[,\s]+/) #handle both tabs and commas
+  fields = r.split(/[,\s]+/) # handle both tabs and commas
   id = fields[0].tr_s('"', '').tr_s("''", '').strip
   sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
   component = Component.new(id, sales_id, Product)

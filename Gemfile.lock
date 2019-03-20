@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/mlibrary/turnsole
-  revision: bef4b8e7a521d7e6560497135ab2935d1b5352e1
-  branch: master
+  revision: 4d890fe36315c3e05f55b4cb16b0f26ca058ae0e
+  ref: 4d890fe36315c3e05f55b4cb16b0f26ca058ae0e
   specs:
     turnsole (0.1.0)
       faraday
@@ -20,7 +20,7 @@ GEM
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.25)
-    httparty (0.16.3)
+    httparty (0.16.4)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     jaro_winkler (1.5.1)
@@ -60,6 +60,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.30.0)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.9.0)
     sequel (5.10.0)
     slop (4.6.2)
@@ -77,9 +79,10 @@ DEPENDENCIES
   nokogiri (~> 1.8)
   rspec (~> 3.0)
   rubocop (~> 0.58)
+  rubocop-rspec (~> 1.28)
   slop (~> 4.6)
   turnsole!
   typhoeus (~> 1.3)
 
 BUNDLED WITH
-   1.17.1
+   1.17.2

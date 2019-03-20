@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'bundler/setup'
 require 'slop'
 require_relative '../lib/product'
@@ -29,7 +30,7 @@ action = opts[:expire] ? :expire : :authz
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
-product = Product.new( opts[:product] )
+product = Product.new(opts[:product])
 
 unless product.hosted?
   puts "Product #{opts[:product]} does not have a host, quitting...."
@@ -43,23 +44,23 @@ if opts[:subscriber] && opts[:file]
 elsif opts[:subscriber]
   subscrs.push opts[:subscriber]
 elsif opts[:file]
-  File.foreach( opts[:file] ) { |l| subscrs.push l.chomp }
+  File.foreach(opts[:file]) { |l| subscrs.push l.chomp }
 else
   puts "No subscribers specified"
   exit!(0)
 end
 
 subscrs.each do |s|
-  if s.include? '@'
-    subscr = Individual.new( s )
-  else
-    subscr = Institution.new( s, opts[:name], opts[:entityId] )
-  end
+  subscr = if s.include? '@'
+             Individual.new(s)
+           else
+             Institution.new(s, opts[:name], opts[:entityId])
+           end
   lease = Lease.new(product, subscr)
   case action
   when :expire
-      lease.expire
+    lease.expire
   when :authz
-      lease.authorize
+    lease.authorize
   end
 end

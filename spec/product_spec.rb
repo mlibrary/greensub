@@ -5,8 +5,14 @@ require_relative '../lib/component'
 
 RSpec.describe Product do
   ENV['GREENSUB_TEST'] = '1'
+
+  before do
+    # Don't print status messages during specs
+    allow($stdout).to receive(:puts)
+  end
+
   describe "Example Product" do
-    test = Product.new('product1')
+    test = described_class.new('product1')
     it "has an external id" do
       expect(test.external_id).to eq("test_product1")
     end
@@ -16,7 +22,7 @@ RSpec.describe Product do
     it "has a host" do
       expect(test.host.class).to eq(Host)
     end
-    #MAY NEED TO CHANGE THE WAY COMPONENTS ARE CONSTRUCTED, CALLED
+    # MAY NEED TO CHANGE THE WAY COMPONENTS ARE CONSTRUCTED, CALLED
     # it "can add components from a comma separated list (no spaces)" do
     #   rows = ['abcd1234,heb00001', 'efgh5678,heb99991']
     #   test.add_components(rows)
@@ -41,11 +47,11 @@ RSpec.describe Product do
     #   expect(test.components[1].hosted_id).to eq('efgh5678')
     #   expect(test.components[1].sales_id).to eq('heb99991')
     # end
-
   end
+
   describe "Known bad product" do
     it "fails gracefully if there's no data on the requested product" do
-       #How to test this without abort interrupting further tests?
+      # How to test this without abort interrupting further tests?
     end
   end
 end

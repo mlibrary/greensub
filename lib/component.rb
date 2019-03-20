@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class Component
   attr_accessor :hosted_id, :sales_id, :name, :handle, :open_access, :product
 
-  def initialize( ext_id, s_id, prodObj, name=nil)
-    @hosted_id = ext_id #NOID
-    @sales_id = s_id ? s_id : nil
-    @name = name ? name : nil
+  def initialize(ext_id, s_id, prod_obj, name = nil)
+    @hosted_id = ext_id # NOID
+    @sales_id = s_id || nil
+    @name = name || nil
     @handle = get_handle(@hosted_id)
-    @product = prodObj
+    @product = prod_obj
   end
 
   def hosted?
@@ -14,7 +16,6 @@ class Component
   end
 
   def get_handle(hosted_id)
-      return "2027/fulcrum.#{hosted_id}"
+    "2027/fulcrum.#{hosted_id}"
   end
-
 end

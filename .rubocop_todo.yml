@@ -1,0 +1,4 @@
+# Put any overrides here
+
+Style/Documentation:
+  Enabled: false
