@@ -1,36 +1,36 @@
-Rails:
-  Enabled: true
-
-Rails/Delegate:
-  Enabled: false
-
-# inherit_gem:
-#   rubocop-rails:
-#     - config/rails.yml
+require: rubocop-rspec
+inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.4
-  Exclude:
+  TargetRubyVersion: 2.5
+  Include:
     - 'bin/**/*'
-    - 'vendor/**/*'
+    - '**/*.rb'
+    - '**/Rakefile'
+  Exclude:
+    - 'bin/setup'
+    - 'tmp/**/*'
 
-Layout/MultilineMethodDefinitionBraceLayout:
-  EnforcedStyle: same_line
-
-Metrics/LineLength:
-  Max: 110
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
 
 Metrics/BlockLength:
   Exclude:
-    - '*.gemspec'
-  ExcludedMethods: ['describe', 'context']
-
-Naming/UncommunicativeMethodParamName:
-  AllowedNames: ['db']
-
-Style/StringLiterals:
+    - 'spec/**/*'
+Metrics/LineLength:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  EnforcedStyle: compact
+RSpec/ContextWording:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+Style/StringLiterals:
+  Enabled: false

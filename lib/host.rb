@@ -3,27 +3,26 @@
 require 'yaml'
 require_relative 'subscriber'
 
-
-class Host
+class Host # rubocop:disable Metrics/ClassLength
   attr_accessor :name, :type, :base_uri, :token, :connection
 
   def initialize(name)
     @name = name
-    @type = ENV['GREENSUB_TEST']=='1' ? :test : :prod
+    @type = ENV['GREENSUB_TEST'] == '1' ? :test : :prod
     fetch_data
     make_connection
   end
 
   def fetch_data
     data = YAML.load_file('config/hosts.yaml')
-    @base_uri = data["#{@name}"]["#{@type}"]["base_uri"]
-    @token = data["#{@name}"]["#{@type}"]["token"]
-  rescue
-      abort "Nothing known about host #{@name} (#{@type})"
+    @base_uri = data[@name.to_s][@type.to_s]["base_uri"]
+    @token = data[@name.to_s][@type.to_s]["token"]
+  rescue StandardError
+    abort "Nothing known about host #{@name} (#{@type})"
   end
 
   def make_connection
-    if(@name == 'heliotrope')
+    if @name == 'heliotrope'
       require 'turnsole/heliotrope/service'
       @connection = Turnsole::Heliotrope::Service.new(base: @base_uri, token: @token)
     else
@@ -32,8 +31,8 @@ class Host
   end
 
   def hosted?(product_id)
-    abort "No connection for #{product_id}" if @connection == nil
-    @connection.find_product(identifier: product_id).to_i > 0 ? true : false
+    abort "No connection for #{product_id}" if @connection.nil?
+    @connection.find_product(identifier: product_id).to_i.positive?
   end
 
   def component_in_product?(component, product)
@@ -69,7 +68,7 @@ class Host
   end
 
   def knows_component?(component)
-    @connection.find_component(identifier: component.sales_id)
+    @connection.find_component(identifier: component.sales_id) ? true : false
   end
 
   def institutions
@@ -82,18 +81,18 @@ class Host
   end
 
   def add_institution(institution)
-    if ( institution.id && institution.name != nil )
+    if institution.id && !institution.name.nil?
       @connection.create_institution(identifier: institution.external_id, name: institution.name, entity_id: institution.entity_id)
     else
       abort "Institution name required; use --name"
     end
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
   def delete_institution(institution)
     @connection.delete_institution(identifier: institution.external_id)
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
@@ -107,18 +106,18 @@ class Host
   end
 
   def add_individual(individual)
-    if ( individual.id && individual.email != nil )
+    if individual.id && !individual.email.nil?
       @connection.create_individual(identifier: individual.external_id, name: "#{individual.lastname}, #{individual.firstname}", email: individual.email)
     else
       abort "Individual email required; use --email"
     end
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
   def delete_individual(individual)
     @connection.delete_individual(identifier: individual.external_id)
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
@@ -143,7 +142,7 @@ class Host
     elsif subscriber.is_a?(Individual)
       add_individual(subscriber) unless knows_individual?(subscriber)
     end
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
@@ -153,47 +152,47 @@ class Host
     elsif subscriber.is_a?(Individual)
       delete_individual(subscriber)
     end
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
-  def authorize(lease)
+  def authorize(lease) # rubocop:disable Metrics/AbcSize
     puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
     if lease.subscriber.is_a?(Institution)
       @connection.subscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
     elsif lease.subscriber.is_a?(Individual)
       @connection.subscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
     end
-  rescue => err
-      puts err
+  rescue StandardError => err
+    puts err
   end
 
-  def unauthorize(lease)
+  def unauthorize(lease) # rubocop:disable Metrics/AbcSize
     puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
     if lease.subscriber.is_a?(Institution)
       @connection.unsubscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
     elsif lease.subscriber.is_a?(Individual)
       @connection.unsubscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
     end
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
-  def link(product, component)
+  def link(product, component) # rubocop:disable Metrics/AbcSize
     puts "Adding #{component.sales_id} to #{product.external_id} on #{@name} (#{@type})"
-    if (! knows_component?(component))
+    unless knows_component?(component)
       puts "Component not known, creating..."
       connection.create_component(identifier: component.sales_id, name: component.name, noid: component.hosted_id, handle: component.handle)
     end
     @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 
   def unlink(product, component)
     puts "Removing #{component.sales_id} from #{product.external_id} on #{@name} (#{@type})"
     @connection.remove_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
-  rescue => err
+  rescue StandardError => err
     puts err
   end
 end

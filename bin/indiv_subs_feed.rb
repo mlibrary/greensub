@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'slop'
 require_relative '../lib/product'
-require_relative '../lib/leasefeed'
+require_relative '../lib/lease_feed'
 
 begin
   opts = Slop.parse strict: true do |opt|
@@ -20,10 +22,9 @@ end
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
+product = Product.new(opts[:product])
 
-product = Product.new( opts[:product] )
-
-if ENV['GREENSUB_TEST']=='1'
+if ENV['GREENSUB_TEST'] == '1'
   feed = TestLeaseFeed.new(product)
   puts "TESTING"
 else
