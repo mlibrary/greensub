@@ -182,7 +182,7 @@ class Host # rubocop:disable Metrics/ClassLength
     puts "Adding #{component.sales_id} to #{product.external_id} on #{@name} (#{@type})"
     unless knows_component?(component)
       puts "Component not known, creating..."
-      connection.create_component(identifier: component.sales_id, name: component.name, noid: component.hosted_id, handle: component.handle)
+      connection.create_component(identifier: component.sales_id, name: component.name, noid: component.hosted_id)
     end
     @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
   rescue StandardError => err
