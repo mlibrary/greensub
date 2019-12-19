@@ -18,4 +18,4 @@ gem 'rubocop-rspec', "~> 1.28"
 gem 'typhoeus', '~> 1.3'
 
 # gems specific to hosted services
-gem 'turnsole', github: 'mlibrary/turnsole', ref: '4d890fe36315c3e05f55b4cb16b0f26ca058ae0e'
+gem 'turnsole', github: 'mlibrary/turnsole', ref: '79c402004aadc2c0ff270562ebc61dcfa2ae6cea'
