@@ -52,6 +52,14 @@ class Product
     @host.component_in_product?(component, self)
   end
 
+  def list_components
+    @host.get_components(self)
+  end
+
+  def list_institutions
+    @host.get_institutions(self)
+  end
+
   def subscriber_can_access?(subscriber)
     @host.subscriber_can_access_product?(subscriber, self)
   end

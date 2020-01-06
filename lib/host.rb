@@ -67,6 +67,10 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.components
   end
 
+  def get_components(product)
+    @connection.product_components(identifier: product.external_id)
+  end
+
   def knows_component?(component)
     @connection.find_component(identifier: component.sales_id) ? true : false
   end
@@ -94,6 +98,10 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.delete_institution(identifier: institution.external_id)
   rescue StandardError => err
     puts err
+  end
+
+  def get_institutions(product)
+    @connection.product_institutions(identifier: product.external_id)
   end
 
   def individuals
