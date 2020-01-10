@@ -13,6 +13,7 @@ begin
     opt.string '-f', '--file', 'file with a list of subscriber ids'
     opt.bool   '-e', '--expire', 'Remove authorization (else )'
     opt.bool   '-n', '--nomail', "Suppress email to subscribers"
+    opt.bool   '-i', '--instructions', 'Send instructions even for existing accounts (rare)'
     opt.bool   '-t', '--testing'
     opt.string '--name', 'Name of the institution'
     opt.string '--entityId', "entityId of the institution's Shibboleth entityId"
@@ -61,6 +62,6 @@ subscrs.each do |s|
   when :expire
     lease.expire
   when :authz
-    lease.authorize
+    lease.authorize( opts[:instructions] )
   end
 end
