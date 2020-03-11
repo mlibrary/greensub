@@ -1,5 +1,8 @@
 *.gem
 *.rbc
+*~
+/log/
+/bin/test.rb
 /.config
 /config/
 /coverage/

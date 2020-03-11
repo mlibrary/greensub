@@ -15,6 +15,7 @@ begin
     opt.bool   '-t', '--testing'
     opt.string '-c', '--component', 'Component Identifier'
     opt.string '-n', '--noid', 'NOID of the Component Monograph'
+    opt.string '--sales_id', 'sales ID of the Component Monograph'
     opt.string '--cname', 'Name of the Component'
     opt.bool   '-h', '--help' do
       puts opts
@@ -43,12 +44,32 @@ end
 
 action = opts[:action]
 case action
-when 'exists'
+when 'product_exists'
   product.hosted?
 when 'list_components'
   puts product.list_components
 when 'list_institutions'
   puts product.list_institutions
+when 'component_info'
+  if opts[:file]
+    puts "got a file"
+    File.foreach(opts[:file]) { |l| rows.push l.chomp }
+  elsif opts[:noid]
+    rows.push "#{opts[:noid]},#{opts[:sales_id]}"
+  else
+    abort "No component ID to check"
+  end
+  rows.each do |r|
+    fields = r.split(/[,\s]+/) # handle both tabs and commas
+    id = fields[0].tr_s('"', '').tr_s("''", '').strip
+    sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
+    component = Component.new(id, sales_id, Product)
+    begin
+      puts "#{id} (#{sales_id}): " , product.host.knows_component?(component)
+    rescue StandardError => e
+      STDERR.puts e.message
+    end
+  end
 when 'add'
   if condition
 
