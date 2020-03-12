@@ -72,7 +72,7 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def knows_component?(component)
-    @connection.find_component(identifier: component.sales_id) ? true : false
+    @connection.find_component(identifier: component.hosted_id) ? true : false
   end
 
   def institutions
