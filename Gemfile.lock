@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/mlibrary/turnsole
-  revision: 79c402004aadc2c0ff270562ebc61dcfa2ae6cea
-  ref: 79c402004aadc2c0ff270562ebc61dcfa2ae6cea
+  revision: 7c30ba524e83f1d145fda4293d6e50de88d30dba
+  ref: 7c30ba524e83f1d145fda4293d6e50de88d30dba
   specs:
     turnsole (0.1.0)
       faraday
