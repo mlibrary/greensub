@@ -7,12 +7,13 @@ require_relative '../lib/component'
 
 begin
   opts = Slop.parse strict: true do |opt|
-    opt.string '-p', '--product', 'product id', required: true
+    opt.string '-p', '--product', 'product id'
     opt.string '-i', '--id', 'external id of component (i.e. its id on the host service)'
     opt.string '-s', '--sales_id', 'sales id of component (i.e. the id when selling access, e.g. ISBN)'
     opt.string '-f', '--file', 'csv or tab delimeted file of components: $id, $sales_id'
     opt.bool   '-r', '--remove', 'Remove components from product'
     opt.bool   '-t', '--testing'
+    opt.bool   '-d', '--delete', 'Delete component from host (unrestricts item)'
     opt.bool   '-h', '--help' do
       puts opts
     end
@@ -49,10 +50,12 @@ rows.each do |r|
   fields = r.split(/[,\s]+/) # handle both tabs and commas
   id = fields[0].tr_s('"', '').tr_s("''", '').strip
   sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
-  component = Component.new(id, sales_id, Product)
+  component = Component.new(id, sales_id, product)
   begin
     if opts[:remove]
       product.remove(component)
+    elsif opts[:delete]
+      component.remove_from_host
     else
       product.add(component)
     end
