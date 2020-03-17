@@ -26,7 +26,7 @@ class Lease
     end
   end
 
-  def authorize(start = Date.today) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+  def authorize(force_instructions, start = Date.today) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
     unless @product.host.knows_subscriber?(@subscriber)
       begin
         @product.host.add_subscriber(@subscriber)
@@ -44,7 +44,7 @@ class Lease
       @expires = nil
       if @starts <= Date.today && !@product.subscriber_can_access?(@subscriber)
         @product.host.authorize(self)
-        @product.send_instructions(@subscriber) if @is_new_subscriber
+        @product.send_instructions(@subscriber) if( force_instructions || @is_new_subscriber)
       end
     else
       puts "Product #{@product.id} not on host #{@product.host.name} (#{@product.host.type})"

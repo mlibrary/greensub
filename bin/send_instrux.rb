@@ -11,12 +11,7 @@ begin
     opt.string '-p', '--product', 'product id', required: true
     opt.string '-s', '--subscriber', 'subscriber id (institution)'
     opt.string '-f', '--file', 'file with a list of subscriber ids'
-    opt.bool   '-e', '--expire', 'Remove authorization (else )'
-    opt.bool   '-n', '--nomail', "Suppress email to subscribers"
-    opt.bool   '-i', '--instructions', 'Send instructions even for existing accounts (rare)'
     opt.bool   '-t', '--testing'
-    opt.string '--name', 'Name of the institution'
-    opt.string '--entityId', "entityId of the institution's Shibboleth entityId"
     opt.bool   '-h', '--help' do
       puts opts
     end
@@ -27,7 +22,6 @@ rescue Slop::Error => e
   exit
 end
 
-action = opts[:expire] ? :expire : :authz
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
@@ -54,14 +48,6 @@ end
 subscrs.each do |s|
   subscr = if s.include? '@'
              Individual.new(s)
-           else
-             Institution.new(s, opts[:name], opts[:entityId])
            end
-  lease = Lease.new(product, subscr)
-  case action
-  when :expire
-    lease.expire
-  when :authz
-    lease.authorize( opts[:instructions] )
-  end
+  product.send_instructions(subscr)
 end
