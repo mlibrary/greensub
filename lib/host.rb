@@ -72,7 +72,14 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def knows_component?(component)
-    @connection.find_component(identifier: component.hosted_id) ? true : false
+    @connection.find_component_by_noid(noid: component.hosted_id) ? true : false
+  end
+
+  def delete_component(component)
+    puts "Deleting #{component.sales_id} from #{@name} (#{@type})"
+    @connection.delete_component(identifier: component.sales_id)
+  rescue StandardError => err
+    puts err
   end
 
   def institutions

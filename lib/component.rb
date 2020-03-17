@@ -13,4 +13,8 @@ class Component
   def hosted?
     @product.host.knows_component?(self)
   end
+
+  def remove_from_host
+    @product.host.delete_component(self)
+  end
 end

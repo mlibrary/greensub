@@ -31,7 +31,8 @@ end
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 
 
-product = Product.new(opts[:product])
+product = Product.new(opts[:product]) if opts[:product]
+component = Component.new(opts[:component]) if opts[:component]
 unless product.hosted?
   puts "Product #{opts[:product]} does not have a host, quitting...."
   exit!(0)
@@ -44,8 +45,12 @@ end
 
 action = opts[:action]
 case action
-when 'product_exists'
-  product.hosted?
+when 'exists'
+  if product
+    product.hosted?
+  elsif component
+    component.hosted?
+  end
 when 'list_components'
   puts product.list_components
 when 'list_institutions'
