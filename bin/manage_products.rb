@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'slop'
+require 'json'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
 require_relative '../lib/lease'
@@ -44,6 +45,7 @@ if opts[:file]
 end
 
 action = opts[:action]
+output = ''
 case action
 when 'exists'
   if product
@@ -55,6 +57,11 @@ when 'list_components'
   puts product.list_components
 when 'list_institutions'
   puts product.list_institutions
+when 'list_individuals'
+  output = product.list_individuals
+  output.each do |i|
+    puts i["identifier"]
+  end
 when 'component_info'
   if opts[:file]
     puts "got a file"
