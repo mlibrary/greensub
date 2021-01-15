@@ -1,0 +1,11 @@
+#/bin/bash
+
+if [ ! $1 ]
+then
+  echo "qpinst: Query a Product's INSTitutions"
+  echo 'usage: qpinst [product_id]'
+  exit
+fi
+
+cd ..
+bundle exec ruby bin/manage_products.rb -a list_institutions -p $1 
