@@ -1,0 +1,11 @@
+#/bin/bash
+
+if [ ! $1 ]
+then
+  echo "qpind: Query a Product's INDividual subscribers"
+  echo 'usage: qpind [product_id]'
+  exit
+fi
+
+cd ..
+bundle exec ruby bin/manage_products.rb -a list_individuals -p $1

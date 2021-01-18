@@ -136,6 +136,10 @@ class Host # rubocop:disable Metrics/ClassLength
     puts err
   end
 
+  def get_individuals(product)
+    @connection.product_individuals(identifier: product.external_id)
+  end
+
   def subscribers
     puts "Listing all subscribers with accounts at host #{@name} #{@type}"
     institutions + individuals

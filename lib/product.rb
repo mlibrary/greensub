@@ -60,6 +60,10 @@ class Product
     @host.get_institutions(self)
   end
 
+  def list_individuals
+    @host.get_individuals(self)
+  end
+
   def subscriber_can_access?(subscriber)
     @host.subscriber_can_access_product?(subscriber, self)
   end
