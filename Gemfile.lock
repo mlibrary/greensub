@@ -22,10 +22,7 @@ GEM
     jaro_winkler (1.5.1)
     keycard (0.2.3)
       sequel
-    mini_portile2 (2.4.0)
     multipart-post (2.0.0)
-    nokogiri (1.10.8)
-      mini_portile2 (~> 2.4.0)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -68,7 +65,6 @@ DEPENDENCIES
   faraday (~> 0.15)
   faraday_middleware (~> 0.12)
   keycard (~> 0.2)
-  nokogiri (~> 1.10)
   rspec (~> 3.0)
   rubocop (~> 0.58)
   rubocop-rspec (~> 1.28)
