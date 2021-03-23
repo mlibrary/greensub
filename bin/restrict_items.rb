@@ -18,8 +18,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => e
-  puts e
+rescue Slop::Error => err
+  puts err
   puts 'Try -h or --help'
   exit
 end
@@ -49,7 +49,8 @@ end
 rows.each do |r|
   fields = r.split(/[,\s]+/) # handle both tabs and commas
   id = fields[0].tr_s('"', '').tr_s("''", '').strip
-  sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
+  sales_id = ''
+  sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip if fields[1]
   component = Component.new(id, sales_id, product)
   begin
     if opts[:remove]
@@ -59,7 +60,7 @@ rows.each do |r|
     else
       product.add(component)
     end
-  rescue StandardError => e
-    STDERR.puts e.message
+  rescue StandardError => err
+    puts err
   end
 end

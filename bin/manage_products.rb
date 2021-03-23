@@ -22,8 +22,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => e
-  puts e
+rescue Slop::Error => err
+  puts err
   puts 'Try -h or --help'
   exit
 end
@@ -78,8 +78,8 @@ when 'component_info'
     component = Component.new(id, sales_id, Product)
     begin
       puts "#{id} (#{sales_id}): " , product.host.knows_component?(component)
-    rescue StandardError => e
-      STDERR.puts e.message
+    rescue StandardError => err
+      puts err
     end
   end
 when 'add'

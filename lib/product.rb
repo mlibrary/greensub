@@ -22,8 +22,9 @@ class Product
     @external_id = @config["external_id"]
     @name = @config["name"]
     @host = Host.new(@config["host"])
-  rescue StandardError
-    puts "Nothing known about product #{@id}"
+  rescue => err
+    puts "Can't get product #{@id}:"
+    puts err
     exit
   end
 

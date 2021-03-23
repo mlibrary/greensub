@@ -31,8 +31,9 @@ class Lease
       begin
         @product.host.add_subscriber(@subscriber)
         @is_new_subscriber = true
-      rescue StandardError
-        puts "Can't add subscriber #{@subscriber.id} at host #{@product.host.id}"
+      rescue StandardError => err
+        puts "Can't add subscriber #{@subscriber.id} at host #{@product.host.id}:"
+        puts err
         # log failure
       end
     end

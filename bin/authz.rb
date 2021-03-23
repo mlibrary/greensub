@@ -21,8 +21,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => e
-  puts e
+rescue Slop::Error => err
+  puts err
   puts 'Try -h or --help'
   exit
 end

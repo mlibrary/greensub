@@ -17,8 +17,9 @@ class Host # rubocop:disable Metrics/ClassLength
     data = YAML.load_file('config/hosts.yaml')
     @base_uri = data[@name.to_s][@type.to_s]["base_uri"]
     @token = data[@name.to_s][@type.to_s]["token"]
-  rescue StandardError
-    abort "Nothing known about host #{@name} (#{@type})"
+  rescue StandardError => err
+    puts err
+    abort "Failed to find host #{@name} (#{@type})"
   end
 
   def make_connection
