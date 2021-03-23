@@ -26,7 +26,7 @@ class Lease
     end
   end
 
-  def authorize(force_instructions, start = Date.today) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+  def authorize(force_instructions = false, start = Date.today) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
     unless @product.host.knows_subscriber?(@subscriber)
       begin
         @product.host.add_subscriber(@subscriber)

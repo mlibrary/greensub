@@ -14,7 +14,7 @@ RSpec.describe Product do
   describe "Example Product" do
     test = described_class.new('product1')
     it "has an external id" do
-      expect(test.external_id).to eq("test_product1")
+      expect(test.external_id).to eq("product1")
     end
     it "has a name" do
       expect(test.name).to eq("Test Product 1")
