@@ -60,8 +60,8 @@ when 'list_institutions'
 when 'list_individuals'
   output = product.list_individuals
   output.each do |i|
-    puts i["identifier"]
-  end
+  puts i["identifier"]
+end
 when 'component_info'
   if opts[:file]
     puts "got a file"
