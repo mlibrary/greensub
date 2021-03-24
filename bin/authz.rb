@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
-require_relative '../lib/lease'
+require_relative '../lib/grant'
 
 begin
   opts = Slop.parse strict: true do |opt|
@@ -57,11 +57,11 @@ subscrs.each do |s|
            else
              Institution.new(s, opts[:name], opts[:entityId])
            end
-  lease = Lease.new(product, subscr)
+  grant = Grant.new(product, subscr)
   case action
   when :expire
-    lease.expire
+    grant.expire!
   when :authz
-    lease.authorize( opts[:instructions] )
+    grant.create!( opts[:instructions] )
   end
 end

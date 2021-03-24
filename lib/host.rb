@@ -176,23 +176,23 @@ class Host # rubocop:disable Metrics/ClassLength
     puts err
   end
 
-  def authorize(lease) # rubocop:disable Metrics/AbcSize
-    puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    if lease.subscriber.is_a?(Institution)
-      @connection.subscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
-    elsif lease.subscriber.is_a?(Individual)
-      @connection.subscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+  def create_grant!(grant) # rubocop:disable Metrics/AbcSize
+    puts "Authorizing #{grant.subscriber.external_id} to #{grant.product.external_id} on #{@name} (#{@type})"
+    if grant.subscriber.is_a?(Institution)
+      @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
+    elsif grant.subscriber.is_a?(Individual)
+      @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
     end
   rescue StandardError => err
     puts err
   end
 
-  def unauthorize(lease) # rubocop:disable Metrics/AbcSize
-    puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    if lease.subscriber.is_a?(Institution)
-      @connection.unsubscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
-    elsif lease.subscriber.is_a?(Individual)
-      @connection.unsubscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+  def expire_grant!(grant) # rubocop:disable Metrics/AbcSize
+    puts "De-authorizing #{grant.subscriber.external_id} to #{grant.product.external_id} on #{@name} (#{@type})"
+    if grant.subscriber.is_a?(Institution)
+      @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: :none)
+    elsif grant.subscriber.is_a?(Individual)
+      @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: :none)
     end
   rescue StandardError => err
     puts err
