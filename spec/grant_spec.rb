@@ -10,47 +10,42 @@ RSpec.describe Grant do
   ENV['GREENSUB_TEST'] = '1'
   ENV['GREENSUB_NOMAIL'] = '1'
 
+  heb = Product.new('heb')
+  entity_id = 'https://foo.edu/idp'
+
   random = rand(100_000..199_999)
   inst_id = "test_inst_#{random}"
   inst_name = "Test Institution #{inst_id}"
-  entity_id = 'https://foo.edu/idp'
   inst = Institution.new(inst_id, inst_name, entity_id)
-  inst_grant = described_class.new(Product.new('heb'), inst)
+  inst_grant = described_class.new(heb, inst)
+
+  random = rand(100_000..199_999)
+  inst_id = "test_inst_#{random}"
+  inst_name = "Test Institution #{inst_id}"
+  inst2 = Institution.new(inst_id, inst_name, entity_id)
+  inst2_grant = described_class.new(heb, inst2, :read)
 
   before do
     # Don't print status messages during specs
-    allow($stdout).to receive(:puts)
+    #allow($stdout).to receive(:puts)
   end
 
   after(:all) do # rubocop:disable RSpec/BeforeAfterAll
-    inst_grant.product.host.delete_institution(inst_grant.subscriber)
     inst_grant.product.host.delete_subscriber(inst_grant.subscriber)
+    inst2_grant.product.host.delete_subscriber(inst2_grant.subscriber)
   end
 
-  describe "Institutional Grant" do
-    random = rand(100_000..199_999)
-    inst_id = "test_inst_#{random}"
-    inst_name = "Test Institution #{inst_id}"
-    entity_id = 'https://foo.edu/idp'
-    inst = Institution.new(inst_id, inst_name, entity_id)
-    inst_grant = described_class.new(Product.new('heb'), inst)
-
+  describe "for Institution" do
     it "is active and defaults to a full license" do
-      inst_grant.create!
-      expect(inst_grant.license_at_host).to eq(:full)
+      expect(inst_grant.create!).to be true
+      expect(heb.host.get_product_subscriber_license(heb,inst)).to eq(:full)
     end
     it "makes sure the Institution exists on host" do
       expect(inst_grant.product.host.knows_institution?(inst_grant.subscriber)).to be(true)
     end
     it "is active and has a :read license" do
-      random = rand(100_000..199_999)
-      inst_id = "test_inst_#{random}"
-      inst_name = "Test Institution #{inst_id}"
-      entity_id = 'https://foo.edu/idp'
-      inst2 = Institution.new(inst_id, inst_name, entity_id)
-      inst_grant2 = described_class.new(Product.new('heb'), inst2, :read)
-      inst_grant2.create!
-      expect(inst_grant2.license_at_host).to eq(:read)
+      expect(inst2_grant.create!).to be true
+      expect(heb.host.get_product_subscriber_license(heb,inst2)).to eq(:read)
     end
   end
 

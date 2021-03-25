@@ -177,11 +177,20 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def create_grant!(grant) # rubocop:disable Metrics/AbcSize
-    puts "Authorizing #{grant.subscriber.external_id} to #{grant.product.external_id} on #{@name} (#{@type})"
+    puts "Granting #{grant.license} access to #{grant.product.external_id} for #{grant.subscriber.external_id} on #{@name} (#{@type})"
     if grant.subscriber.is_a?(Institution)
-      @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
+      success = @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
+      puts "Testing success..."
+      if success
+        abort "Successfully created grant: #{success}"
+      else
+        abort "Could not create grant: #{success}"
+      end
     elsif grant.subscriber.is_a?(Individual)
       @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
+    else
+      abort "Unknown subscriber type"
+      false
     end
   rescue StandardError => err
     puts err
@@ -196,6 +205,15 @@ class Host # rubocop:disable Metrics/ClassLength
     end
   rescue StandardError => err
     puts err
+  end
+
+  def get_product_subscriber_license(product, subscriber)
+    if subscriber.is_a?(Institution)
+      @connection.get_product_institution_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
+    elsif subscriber.is_a?(Individual)
+      @connection.get_product_individual_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
+    end
+
   end
 
   def link(product, component) # rubocop:disable Metrics/AbcSize
