@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
+require 'lisbn'
 require_relative 'subscriber'
 
 class Host # rubocop:disable Metrics/ClassLength
@@ -33,6 +34,27 @@ class Host # rubocop:disable Metrics/ClassLength
   def hosted?(product_id)
     abort "No connection for #{product_id}" if @connection.nil?
     @connection.find_product(identifier: product_id).to_i.positive?
+  end
+
+  def find_component_external_id_by_identifier(identifier)
+    return false unless identifier
+
+    #is it an ISBN?
+    isbn = Lisbn.new(identifier)
+    results = []
+    case identifier
+    when isbn.valid?
+      results = @connection.find_noid_by_isbn(isbn: identifier)
+    when /doi\.org/
+      results = @connection.find_noid_by_doi(doi: identifier)
+    when /10.3998/
+      results = @connection.find_noid_by_doi(doi: identifier)
+    else
+      results = @connection.find_noid_by_identifier(identifier: identifier)
+    end
+
+  rescue StandardError => err
+    puts err
   end
 
   def component_in_product?(component, product)
