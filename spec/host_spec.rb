@@ -30,23 +30,30 @@ RSpec.describe Host do
       end
     end
     it "can find NOID by DOI" do
-      expect(helio.find_component_external_id_by_identifier('10.3998/mpub.192640')).to eq('kw52j9144')
+      expect(helio.find_component_external_ids_by_identifier('10.3998/mpub.192640').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('10.3998/mpub.192640').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
     it "can find NOID by DOI URL" do
-      expect(helio.find_component_external_id_by_identifier('https://doi.org/10.3998/mpub.192640')).to eq('kw52j9144')
+      expect(helio.find_component_external_ids_by_identifier('https://doi.org/10.3998/mpub.192640').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('https://doi.org/10.3998/mpub.192640').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
     it "can find a NOID by ISBN (with dashes)" do
-      expect(helio.find_component_external_id_by_identifier('978-0-472-05122-9')).to eq('kw52j9144')
+      expect(helio.find_component_external_ids_by_identifier('978-0-472-05122-9').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('978-0-472-05122-9').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
     it "can find a NOID by ISBN (without dashes)" do
-      expect(helio.find_component_external_id_by_identifier('9780472051229')).to eq('kw52j9144')
+      expect(helio.find_component_external_ids_by_identifier('9780472051229').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('9780472051229').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
     it "can find a NOID by other identifer" do
-      expect(helio.find_component_external_id_by_identifier('ahab90909')).to eq('kw52j9144')
+      expect(helio.find_component_external_ids_by_identifier('ahab90909').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('ahab90909').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
-    it "knows what to do when multiple NOIDS match the query" do
-
-    end
+    it "returns multiple NOIDS if they match the query" do
+      expect(helio.find_component_external_ids_by_identifier('9780520275140').length).to eq(2)
+      expect(helio.find_component_external_ids_by_identifier('9780520275140').any?{|h| h['id'] == '8049g518t' }).to eq(true)
+      expect(helio.find_component_external_ids_by_identifier('9780520275140').any?{|h| h['id'] == '8g84mm284' }).to eq(true)
+     end
   end
 
 

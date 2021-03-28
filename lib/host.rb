@@ -37,28 +37,25 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.find_product(identifier: product_id).to_i.positive?
   end
 
-  def find_component_external_id_by_identifier(identifier)
+  def find_component_external_ids_by_identifier(identifier)
 
-    return false unless identifier
+    abort "No identifier provided" unless identifier
 
     #is it an ISBN?
     isbn = Lisbn.new(identifier)
-    results = ''
 
     if isbn.valid?
-      results = @connection.find_noid_by_isbn(isbn: identifier)
+      return @connection.find_noid_by_isbn(isbn: identifier)
     else
       case identifier
       when /doi\.org/
-        results = @connection.find_noid_by_doi(doi: identifier)
+        return @connection.find_noid_by_doi(doi: identifier)
       when /10.3998/
-        results = @connection.find_noid_by_doi(doi: identifier)
+        return @connection.find_noid_by_doi(doi: identifier)
       else
-        results = @connection.find_noid_by_identifier(identifier: identifier)
+        return @connection.find_noid_by_identifier(identifier: identifier)
       end
     end
-    return results[0]['id']
-
   rescue StandardError => err
     puts err
   end
