@@ -100,7 +100,7 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def delete_component(component)
-    puts "Deleting #{component.sales_id} from #{@name} (#{@type})"
+    puts "Deleting #{component.hosted_id} from #{@name} (#{@type})"
     @connection.delete_component(identifier: component.sales_id)
   rescue StandardError => err
     puts err
