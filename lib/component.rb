@@ -18,8 +18,8 @@ class Component
     @product.host.delete_component(self)
   end
 
-  def find_external_id_by_query(identifier)
-    product.host.get_component_external_id_by_identifier(identifier)
+  def find_external_id(identifier)
+    product.host.find_component_external_ids_by_identifier(identifier)
   end
 
 end
