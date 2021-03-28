@@ -12,37 +12,37 @@ RSpec.describe Host do
   end
 
   describe "Example Test Host" do
-    test = described_class.new('example')
+    example = described_class.new('example')
     it "has a base_uri" do
-      expect(test.base_uri).to eq("https://test.example.com")
+      expect(example.base_uri).to eq("https://test.example.com")
     end
     it "has a base_uri that is an https URL" do
-      uri = URI(test.base_uri)
+      uri = URI(example.base_uri)
       expect(uri.scheme).to eq("https")
     end
     it "has a token" do
-      expect(test.token).to eq("test.foo.bar.baz")
+      expect(example.token).to eq("test.foo.bar.baz")
     end
+    helio = described_class.new('heliotrope')
     describe "Heliotrope" do
-      helio = described_class.new('heliotrope')
       it "responds to connection" do
         expect(helio.connection).to be_truthy
       end
     end
     it "can find NOID by DOI" do
-      expect(test.get_external_id_by_query('10.3998/mpub.192640')).to eq('kw52j9144')
+      expect(helio.find_component_external_id_by_identifier('10.3998/mpub.192640')).to eq('kw52j9144')
     end
     it "can find NOID by DOI URL" do
-        expect(test.get_external_id_by_query('https://doi.org/10.3998/mpub.192640')).to eq('kw52j9144')
+      expect(helio.find_component_external_id_by_identifier('https://doi.org/10.3998/mpub.192640')).to eq('kw52j9144')
     end
     it "can find a NOID by ISBN (with dashes)" do
-      expect(test.get_external_id_by_query('978-0-472-05122-9')).to eq('kw52j9144')
+      expect(helio.find_component_external_id_by_identifier('978-0-472-05122-9')).to eq('kw52j9144')
     end
     it "can find a NOID by ISBN (without dashes)" do
-      expect(test.get_external_id_by_query('9780472051229')).to eq('kw52j9144')
+      expect(helio.find_component_external_id_by_identifier('9780472051229')).to eq('kw52j9144')
     end
     it "can find a NOID by other identifer" do
-      expect(test.get_external_id_by_query('ahab90909')).to eq('kw52j9144')
+      expect(helio.find_component_external_id_by_identifier('ahab90909')).to eq('kw52j9144')
     end
     it "knows what to do when multiple NOIDS match the query" do
 
