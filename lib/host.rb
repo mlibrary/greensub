@@ -180,7 +180,7 @@ class Host # rubocop:disable Metrics/ClassLength
     puts "Granting #{grant.license} access to #{grant.product.external_id} for #{grant.subscriber.external_id} on #{@name} (#{@type})"
     if grant.subscriber.is_a?(Institution)
       success = @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
-      puts "Testing success..."
+      puts "Testing success for: product_identifier: #{grant.product.external_id}, institution_identifier: #{grant.subscriber.external_id}, license: #{grant.license}"
       if success
         abort "Successfully created grant: #{success}"
       else

@@ -11,8 +11,9 @@ begin
     opt.string '-p', '--product', 'product id', required: true
     opt.string '-s', '--subscriber', 'subscriber id (institution)'
     opt.string '-f', '--file', 'file with a list of subscriber ids'
-    opt.bool   '-e', '--expire', 'Remove authorization (else )'
-    opt.bool   '-n', '--nomail', "Suppress email to subscribers"
+    opt.string '-l', '--license', 'Type of license granted [full, read, none]. App will set a default based on product.'
+    opt.bool   '-e', '--expire', 'Remove authorization'
+    opt.bool   '-n', '--nomail', 'Suppress email to subscribers'
     opt.bool   '-i', '--instructions', 'Send instructions even for existing accounts (rare)'
     opt.bool   '-t', '--testing'
     opt.string '--name', 'Name of the institution'
@@ -27,7 +28,17 @@ rescue Slop::Error => err
   exit
 end
 
-action = opts[:expire] ? :expire : :authz
+license = ''
+if opts[:license]
+  license = opts[:license].to_sym
+  LICENSES = [:full, :read, :none]
+  unless LICENSES.include?(license)
+    puts "Option -l must use a valid license: #{LICENSES}"
+    exit!(0)
+  end
+end
+
+action = (opts[:expire] || license == :none)  ? :expire : :authz
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
@@ -57,7 +68,7 @@ subscrs.each do |s|
            else
              Institution.new(s, opts[:name], opts[:entityId])
            end
-  grant = Grant.new(product, subscr)
+  grant = Grant.new(product, subscr, license)
   case action
   when :expire
     grant.expire!

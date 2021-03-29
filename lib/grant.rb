@@ -11,14 +11,14 @@ class Grant
     @subscriber = subscr
     @product = product
     @license = license
-    @license = determine_default_license() unless license
+    determine_default_license
   end
 
   def determine_default_license
     # Default to :full license
     # But we can have some logic here that sets a different default for certain types of products
-    # BAR frontlist
-    return :full
+    # e.g. BAR frontlist
+    @license = :full unless @license
   end
 
   def get_license_at_host
@@ -55,7 +55,7 @@ class Grant
     return unless @product.host.knows_subscriber?(@subscriber)
 
     if @product.hosted?
-      @product.host.unauthorize(self) if @product.subscriber_can_access?(@subscriber)
+      @product.host.expire_grant!(self) if @product.subscriber_can_access?(@subscriber)
     else
       puts "Product #{@product.id} not on host #{@product.host.name} (#{@product.host.type})"
       exit
