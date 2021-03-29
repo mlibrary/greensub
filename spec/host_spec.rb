@@ -49,6 +49,11 @@ RSpec.describe Host do
       expect(helio.find_component_external_ids_by_identifier('ahab90909').length).to eq(1)
       expect(helio.find_component_external_ids_by_identifier('ahab90909').any?{|h| h['id'] == 'kw52j9144' }).to eq(true)
     end
+    it "can find a NOID by other identifer" do
+      abort "#{helio.find_component_external_ids_by_identifier('bar_number\:S241').inspect}"
+      expect(helio.find_component_external_ids_by_identifier('bar_number\:S241').length).to eq(1)
+      expect(helio.find_component_external_ids_by_identifier('bar_number\:S241').any?{|h| h['id'] == 'hd76s0609' }).to eq(true)
+    end
     it "returns multiple NOIDS if they match the query" do
       expect(helio.find_component_external_ids_by_identifier('9780520275140').length).to eq(2)
       expect(helio.find_component_external_ids_by_identifier('9780520275140').any?{|h| h['id'] == '8049g518t' }).to eq(true)
