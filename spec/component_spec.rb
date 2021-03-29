@@ -15,14 +15,14 @@ RSpec.describe Component do
   prod1.create
   prod2 = Product.new('product2')
   prod2.create
-  comp1 = described_class.new('abcd1234', 'qwerty', prod1)
+  comp1 = described_class.new('kw52j9144', 'kw52j9144', prod1) #Moby Dick
   # comp2 = Component.new('efgh5678', 'asdfg', prod2)
 
   it "knows the ID that an external host will know it by" do
-    expect(comp1.hosted_id).to eq('abcd1234')
+    expect(comp1.hosted_id).to eq('kw52j9144')
   end
   it "knows the ID by which it is sold" do
-    expect(comp1.sales_id).to eq('qwerty')
+    expect(comp1.sales_id).to eq('kw52j9144')
   end
   it "can get added to a first product" do
     prod1.add(comp1)

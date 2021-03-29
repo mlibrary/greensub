@@ -22,8 +22,9 @@ class Product
     @external_id = @config["external_id"]
     @name = @config["name"]
     @host = Host.new(@config["host"])
-  rescue StandardError
-    puts "Nothing known about product #{@id}"
+  rescue => err
+    puts "Can't get product #{@id}:"
+    puts err
     exit
   end
 
@@ -62,10 +63,6 @@ class Product
 
   def list_individuals
     @host.get_individuals(self)
-  end
-
-  def subscriber_can_access?(subscriber)
-    @host.subscriber_can_access_product?(subscriber, self)
   end
 
   def send_instructions(subscriber) # rubocop:disable Metrics/AbcSize

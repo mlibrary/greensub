@@ -17,8 +17,9 @@ class Host # rubocop:disable Metrics/ClassLength
     data = YAML.load_file('config/hosts.yaml')
     @base_uri = data[@name.to_s][@type.to_s]["base_uri"]
     @token = data[@name.to_s][@type.to_s]["token"]
-  rescue StandardError
-    abort "Nothing known about host #{@name} (#{@type})"
+  rescue StandardError => err
+    puts err
+    abort "Failed to find host #{@name} (#{@type})"
   end
 
   def make_connection
@@ -37,16 +38,6 @@ class Host # rubocop:disable Metrics/ClassLength
 
   def component_in_product?(component, product)
     @connection.product_component?(product_identifier: product.external_id, component_identifier: component.sales_id)
-  end
-
-  def subscriber_can_access_product?(subscriber, product)
-    if subscriber.is_a?(Institution)
-      @connection.product_institution_subscribed?(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
-    elsif subscriber.is_a?(Individual)
-      @connection.product_individual_subscribed?(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
-    else
-      false
-    end
   end
 
   def create_product(product)
@@ -175,26 +166,42 @@ class Host # rubocop:disable Metrics/ClassLength
     puts err
   end
 
-  def authorize(lease) # rubocop:disable Metrics/AbcSize
-    puts "Authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    if lease.subscriber.is_a?(Institution)
-      @connection.subscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
-    elsif lease.subscriber.is_a?(Individual)
-      @connection.subscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+  def create_grant!(grant) # rubocop:disable Metrics/AbcSize
+    puts "Granting #{grant.license} access to #{grant.product.external_id} for #{grant.subscriber.external_id} on #{@name} (#{@type})"
+    if grant.subscriber.is_a?(Institution)
+      success = @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
+    elsif grant.subscriber.is_a?(Individual)
+      success = @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
+    else
+      abort "Unknown subscriber type"
+      false
+    end
+    if ! success
+      abort "Could not create grant: product_identifier: #{grant.product.external_id}, institution_identifier: #{grant.subscriber.external_id}, license: #{grant.license}"
+    end
+    return success
+  rescue StandardError => err
+    puts err
+  end
+
+  def expire_grant!(grant) # rubocop:disable Metrics/AbcSize
+    puts "De-authorizing #{grant.subscriber.external_id} to #{grant.product.external_id} on #{@name} (#{@type})"
+    if grant.subscriber.is_a?(Institution)
+      @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: :none)
+    elsif grant.subscriber.is_a?(Individual)
+      @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: :none)
     end
   rescue StandardError => err
     puts err
   end
 
-  def unauthorize(lease) # rubocop:disable Metrics/AbcSize
-    puts "De-authorizing #{lease.subscriber.external_id} to #{lease.product.external_id} on #{@name} (#{@type})"
-    if lease.subscriber.is_a?(Institution)
-      @connection.unsubscribe_product_institution(product_identifier: lease.product.external_id, institution_identifier: lease.subscriber.external_id)
-    elsif lease.subscriber.is_a?(Individual)
-      @connection.unsubscribe_product_individual(product_identifier: lease.product.external_id, individual_identifier: lease.subscriber.external_id)
+  def get_product_subscriber_license(product, subscriber)
+    if subscriber.is_a?(Institution)
+      @connection.get_product_institution_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
+    elsif subscriber.is_a?(Individual)
+      @connection.get_product_individual_license(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
     end
-  rescue StandardError => err
-    puts err
+
   end
 
   def link(product, component) # rubocop:disable Metrics/AbcSize
