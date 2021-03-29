@@ -4,10 +4,12 @@ require 'date'
 require 'turnsole'
 require_relative 'product'
 
+ACCESS_LICENSES = [:full, :read]
+
 class Grant
   attr_accessor :id, :subscriber, :product, :license, :is_new_subscriber
 
-  def initialize(product, subscr, license = nil)
+  def initialize(product, subscr, license=nil)
     @subscriber = subscr
     @product = product
     @license = license
@@ -19,11 +21,6 @@ class Grant
     # But we can have some logic here that sets a different default for certain types of products
     # e.g. BAR frontlist
     @license = :full unless @license
-  end
-
-  def get_license_at_host
-    #What does the host say is the license this subscriber holds for this product?
-
   end
 
   def create!(force_instructions = false) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
@@ -38,13 +35,11 @@ class Grant
       end
     end
     if @product.hosted?
-      if !@product.subscriber_can_access?(@subscriber)
-        success = @product.host.create_grant!(self)
-        if success
-            @product.send_instructions(@subscriber) if( force_instructions || @is_new_subscriber)
-        end
-          return success
+      success = @product.host.create_grant!(self)
+      if success
+          @product.send_instructions(@subscriber) if( force_instructions || @is_new_subscriber)
       end
+        return success
     else
       puts "Product #{@product.id} not on host #{@product.host.name} (#{@product.host.type})"
       return false
@@ -55,7 +50,7 @@ class Grant
     return unless @product.host.knows_subscriber?(@subscriber)
 
     if @product.hosted?
-      @product.host.expire_grant!(self) if @product.subscriber_can_access?(@subscriber)
+      @product.host.expire_grant!(self) if ACCESS_LICENSES.include?(@product.host.get_product_subscriber_license(@product, @subscriber))
     else
       puts "Product #{@product.id} not on host #{@product.host.name} (#{@product.host.type})"
       exit

@@ -28,7 +28,7 @@ rescue Slop::Error => err
   exit
 end
 
-license = ''
+license = nil
 if opts[:license]
   license = opts[:license].to_sym
   LICENSES = [:full, :read, :none]

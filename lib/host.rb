@@ -40,16 +40,6 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.product_component?(product_identifier: product.external_id, component_identifier: component.sales_id)
   end
 
-  def subscriber_can_access_product?(subscriber, product)
-    if subscriber.is_a?(Institution)
-      @connection.product_institution_subscribed?(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
-    elsif subscriber.is_a?(Individual)
-      @connection.product_individual_subscribed?(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
-    else
-      false
-    end
-  end
-
   def create_product(product)
     @connection.create_product(identifier: product.external_id, name: product.name, purchase: product.host)
   end
@@ -180,18 +170,16 @@ class Host # rubocop:disable Metrics/ClassLength
     puts "Granting #{grant.license} access to #{grant.product.external_id} for #{grant.subscriber.external_id} on #{@name} (#{@type})"
     if grant.subscriber.is_a?(Institution)
       success = @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
-      puts "Testing success for: product_identifier: #{grant.product.external_id}, institution_identifier: #{grant.subscriber.external_id}, license: #{grant.license}"
-      if success
-        abort "Successfully created grant: #{success}"
-      else
-        abort "Could not create grant: #{success}"
-      end
     elsif grant.subscriber.is_a?(Individual)
-      @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
+      success = @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
     else
       abort "Unknown subscriber type"
       false
     end
+    if ! success
+      abort "Could not create grant: product_identifier: #{grant.product.external_id}, institution_identifier: #{grant.subscriber.external_id}, license: #{grant.license}"
+    end
+    return success
   rescue StandardError => err
     puts err
   end
@@ -211,7 +199,7 @@ class Host # rubocop:disable Metrics/ClassLength
     if subscriber.is_a?(Institution)
       @connection.get_product_institution_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
     elsif subscriber.is_a?(Individual)
-      @connection.get_product_individual_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
+      @connection.get_product_individual_license(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
     end
 
   end

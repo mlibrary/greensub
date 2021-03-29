@@ -27,7 +27,9 @@ RSpec.describe Grant do
 
   before do
     # Don't print status messages during specs
-    #allow($stdout).to receive(:puts)
+    allow($stdout).to receive(:puts)
+    inst_grant.product.host.delete_subscriber(inst_grant.subscriber)
+    inst2_grant.product.host.delete_subscriber(inst2_grant.subscriber)
   end
 
   after(:all) do # rubocop:disable RSpec/BeforeAfterAll
@@ -49,19 +51,21 @@ RSpec.describe Grant do
     end
   end
 
-  describe "A new individual subscription" do
-    prod = Product.new('heb')
-    data = YAML.load_file('config/tests.yaml')
-    ENV['GREENSUB_NOMAIL'] = '0'
-    indiv_id = data['subscribers']['individual']['email']
-    indiv = Individual.new(indiv_id)
-    indiv_grant = described_class.new(prod, indiv)
-    it "recognizes when a subscriber is new" do
-      indiv_grant.expire!
-      prod.host.delete_subscriber(indiv)
-      expect(prod.host.knows_subscriber?(indiv)).to be(false)
-      indiv_grant.create!
-      expect(indiv_grant.is_new_subscriber).to be(true)
-    end
+  prod = Product.new('heb')
+  data = YAML.load_file('config/tests.yaml')
+  ENV['GREENSUB_NOMAIL'] = '0'
+  indiv_id = data['subscribers']['individual']['email']
+  indiv = Individual.new(indiv_id)
+  indiv_grant = described_class.new(prod, indiv)
+
+  it "creates a new individual subscription" do
+    indiv_grant.create!
+    expect(prod.host.knows_subscriber?(indiv)).to be(true)
+    expect(prod.host.get_product_subscriber_license(prod, indiv)).to eq(:full)
+  end
+  it "expires an individual subscription" do
+    indiv_grant.expire!
+    expect(prod.host.knows_subscriber?(indiv)).to be(true)
+    expect(prod.host.get_product_subscriber_license(prod, indiv)).to eq(:none)
   end
 end

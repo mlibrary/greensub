@@ -65,10 +65,6 @@ class Product
     @host.get_individuals(self)
   end
 
-  def subscriber_can_access?(subscriber)
-    @host.subscriber_can_access_product?(subscriber, self)
-  end
-
   def send_instructions(subscriber) # rubocop:disable Metrics/AbcSize
     return if ENV['GREENSUB_NOMAIL'] == '1'
 
