@@ -13,6 +13,8 @@ class Component
     if find_hosted_id_flag
       find_hosted_id
     end
+
+    handle_bar_number_sales_id
   end
 
   def hosted?
@@ -33,4 +35,14 @@ class Component
       abort "Multiple matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
     end
   end
+end
+
+def handle_bar_number_sales_id
+  #Unlike other Monograph identifiers, BAR numbers have a prefix, but ve've
+  # already created Components with Sales IDs of BAR numbers without those prefixes.
+  # Until we remove the sales IDs altogether, handle this special case by trimming
+  # off the prefix after we've had the chance to use it to do the NOID lookup.
+  s = @sales_id.dup
+  s.slice! 'bar_number:'
+  @sales_id = s
 end
