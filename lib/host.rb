@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
+require 'lisbn'
 require_relative 'subscriber'
 
 class Host # rubocop:disable Metrics/ClassLength
@@ -36,6 +37,29 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.find_product(identifier: product_id).to_i.positive?
   end
 
+  def find_component_external_ids_by_identifier(identifier)
+
+    abort "No identifier provided" unless identifier
+
+    #is it an ISBN?
+    isbn = Lisbn.new(identifier)
+
+    if isbn.valid?
+      return @connection.find_noid_by_isbn(isbn: identifier)
+    else
+      case identifier
+      when /doi\.org/
+        return @connection.find_noid_by_doi(doi: identifier)
+      when /10.3998/
+        return @connection.find_noid_by_doi(doi: identifier)
+      else
+        return @connection.find_noid_by_identifier(identifier: identifier)
+      end
+    end
+  rescue StandardError => err
+    puts err
+  end
+
   def component_in_product?(component, product)
     @connection.product_component?(product_identifier: product.external_id, component_identifier: component.sales_id)
   end
@@ -67,7 +91,7 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def delete_component(component)
-    puts "Deleting #{component.sales_id} from #{@name} (#{@type})"
+    puts "Deleting #{component.hosted_id} from #{@name} (#{@type})"
     @connection.delete_component(identifier: component.sales_id)
   rescue StandardError => err
     puts err
