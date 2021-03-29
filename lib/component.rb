@@ -27,8 +27,10 @@ class Component
     results = product.host.find_component_external_ids_by_identifier(@sales_id)
     if results.length == 1
       @hosted_id = results[0]['id']
+    elsif results.length == 0
+        abort "No matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
     else
-      abort "Multiple matches for #{identifier} at #{host.name}: #{results.inspect}"
+      abort "Multiple matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
     end
   end
 end
