@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
+require 'turnsole'
 require_relative 'product'
 
 class Grant
