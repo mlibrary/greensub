@@ -13,6 +13,7 @@ begin
     opt.string '-f', '--file', 'csv or tab delimeted file of components: $id, $sales_id'
     opt.bool   '-r', '--remove', 'Remove components from product'
     opt.bool   '-t', '--testing'
+    opt.bool   '-l', '--lookup', 'lookup hosted id by the sales id'
     opt.bool   '-d', '--delete', 'Delete component from host (unrestricts item)'
     opt.bool   '-h', '--help' do
       puts opts
@@ -37,21 +38,29 @@ rows = []
 if opts[:file] && (opts[:id] || opts[:sales_id])
   puts "Either define one component with -e [-s], or multiple with -f"
   puts opts
+elsif opts[:lookup] && opts[:sales_id] && opts[:id]
+  puts "Don't use --lookup if you already have the --id"
 elsif opts[:file]
   puts "got a file"
   File.foreach(opts[:file]) { |l| rows.push l.chomp }
 elsif opts[:id]
   rows.push "#{opts[:id]},#{opts[:sales_id]}"
+elsif opts[:lookup] && opts[:sales_id]
+    rows.push "#{opts[:sales_id]}"
 else
-  puts "No id defined, so can't restrict component"
+  puts "Incompatible options, so can't restrict component"
 end
 
 rows.each do |r|
-  fields = r.split(/[,\s]+/) # handle both tabs and commas
-  id = fields[0].tr_s('"', '').tr_s("''", '').strip
-  sales_id = ''
-  sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip if fields[1]
-  component = Component.new(id, sales_id, product)
+  if opts[:lookup]
+    sales_id = r.strip
+    component = Component.new(nil, sales_id, opts[:lookup], product)
+  else
+    fields = r.split(/[,\s]+/) # handle both tabs and commas
+    id = fields[0].tr_s('"', '').tr_s("''", '').strip
+    sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
+    component = Component.new(id, sales_id, opts[:lookup],    product)
+  end
   begin
     if opts[:remove]
       product.remove(component)

@@ -15,8 +15,8 @@ RSpec.describe Component do
   prod1.create
   prod2 = Product.new('product2')
   prod2.create
-  comp1 = described_class.new('kw52j9144', 'kw52j9144', prod1) #Moby Dick
-  # comp2 = Component.new('efgh5678', 'asdfg', prod2)
+  id_lookup_flag = false
+  comp1 = described_class.new('kw52j9144', 'kw52j9144', id_lookup_flag, prod1) #Moby Dick
 
   it "knows the ID that an external host will know it by" do
     expect(comp1.hosted_id).to eq('kw52j9144')
@@ -39,5 +39,14 @@ RSpec.describe Component do
     expect(prod1).not_to have_component(comp1)
     prod2.remove(comp1)
     expect(prod2).not_to have_component(comp1)
+  end
+
+  id_lookup_flag = true
+  comp3 = described_class.new(nil, 'bar_number:S241', id_lookup_flag, prod2)
+  it "can find find its NOID if we only have a BAR Number" do
+    expect(comp3.hosted_id).to eq('hd76s0609')
+  end
+  it "handles the special case where the BAR number is formatted differently in the sales_is and the Monograph metadata" do
+    expect(comp3.sales_id).to eq('S241')
   end
 end

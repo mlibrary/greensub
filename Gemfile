@@ -17,4 +17,7 @@ gem 'rubocop-rspec', "~> 1.28"
 gem 'typhoeus', '~> 1.3'
 
 # gems specific to hosted services
-gem 'turnsole', github: 'mlibrary/turnsole', ref: 'a375e422bd06c56b019c901799760e01966e8779'
+gem 'turnsole', github: 'mlibrary/turnsole', ref: 'e3b5afea442f9d950067e69f3b40f76042774258'
+
+#ISBN manipulation and validation
+gem 'lisbn'
