@@ -3,7 +3,7 @@ require 'slop'
 require 'json'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
-require_relative '../lib/lease'
+require_relative '../lib/grant'
 
 begin
   opts = Slop.parse strict: true do |opt|
