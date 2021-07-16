@@ -43,6 +43,6 @@ def handle_bar_number_sales_id
   # Until we remove the sales IDs altogether, handle this special case by trimming
   # off the prefix after we've had the chance to use it to do the NOID lookup.
   s = @sales_id.dup
-  s.slice! 'bar_number:'
+  s.slice! 'bar_number:' if s =~ /^bar_number:/
   @sales_id = s
 end
