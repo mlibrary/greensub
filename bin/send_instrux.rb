@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
-require_relative '../lib/grant'
+require_relative '../lib/license'
 
 begin
   opts = Slop.parse strict: true do |opt|
@@ -16,8 +16,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => err
-  puts err
+rescue Slop::Error => e
+  puts e
   puts 'Try -h or --help'
   exit
 end
@@ -46,8 +46,6 @@ else
 end
 
 subscrs.each do |s|
-  subscr = if s.include? '@'
-             Individual.new(s)
-           end
+  subscr = (Individual.new(s) if s.include? '@')
   product.send_instructions(subscr)
 end

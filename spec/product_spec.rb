@@ -16,9 +16,11 @@ RSpec.describe Product do
     it "has an external id" do
       expect(test.external_id).to eq("product1")
     end
+
     it "has a name" do
       expect(test.name).to eq("Test Product 1")
     end
+
     it "has a host" do
       expect(test.host.class).to eq(Host)
     end

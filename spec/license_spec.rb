@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative '../lib/grant'
+require_relative '../lib/license'
 require_relative '../lib/subscriber'
 require_relative '../lib/product'
 require_relative '../lib/host'
 
-RSpec.describe Grant do
+RSpec.describe License do
   ENV['GREENSUB_TEST'] = '1'
   ENV['GREENSUB_NOMAIL'] = '1'
 
@@ -17,37 +17,39 @@ RSpec.describe Grant do
   inst_id = "test_inst_#{random}"
   inst_name = "Test Institution #{inst_id}"
   inst = Institution.new(inst_id, inst_name, entity_id)
-  inst_grant = described_class.new(heb, inst)
+  inst_license = described_class.new(heb, inst)
 
   random = rand(100_000..199_999)
   inst_id = "test_inst_#{random}"
   inst_name = "Test Institution #{inst_id}"
   inst2 = Institution.new(inst_id, inst_name, entity_id)
-  inst2_grant = described_class.new(heb, inst2, :read)
+  inst2_license = described_class.new(heb, inst2, type: :read)
 
   before do
     # Don't print status messages during specs
     allow($stdout).to receive(:puts)
-    inst_grant.product.host.delete_subscriber(inst_grant.subscriber)
-    inst2_grant.product.host.delete_subscriber(inst2_grant.subscriber)
+    inst_license.product.host.delete_subscriber(inst_license.subscriber)
+    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
   end
 
   after(:all) do # rubocop:disable RSpec/BeforeAfterAll
-    inst_grant.product.host.delete_subscriber(inst_grant.subscriber)
-    inst2_grant.product.host.delete_subscriber(inst2_grant.subscriber)
+    inst_license.product.host.delete_subscriber(inst_license.subscriber)
+    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
   end
 
   describe "for Institution" do
     it "is active and defaults to a full license" do
-      expect(inst_grant.create!).to be true
-      expect(heb.host.get_product_subscriber_license(heb,inst)).to eq(:full)
+      expect(inst_license.create!).to be true
+      expect(heb.host.get_product_subscriber_license_type(heb, inst)).to eq(:full)
     end
+
     it "makes sure the Institution exists on host" do
-      expect(inst_grant.product.host.knows_institution?(inst_grant.subscriber)).to be(true)
+      expect(inst_license.product.host.knows_institution?(inst_license.subscriber)).to be(true)
     end
+
     it "is active and has a :read license" do
-      expect(inst2_grant.create!).to be true
-      expect(heb.host.get_product_subscriber_license(heb,inst2)).to eq(:read)
+      expect(inst2_license.create!).to be true
+      expect(heb.host.get_product_subscriber_license_type(heb, inst2)).to eq(:read)
     end
   end
 
@@ -56,16 +58,17 @@ RSpec.describe Grant do
   ENV['GREENSUB_NOMAIL'] = '0'
   indiv_id = data['subscribers']['individual']['email']
   indiv = Individual.new(indiv_id)
-  indiv_grant = described_class.new(prod, indiv)
+  indiv_license = described_class.new(prod, indiv)
 
   it "creates a new individual subscription" do
-    indiv_grant.create!
+    indiv_license.create!
     expect(prod.host.knows_subscriber?(indiv)).to be(true)
-    expect(prod.host.get_product_subscriber_license(prod, indiv)).to eq(:full)
+    expect(prod.host.get_product_subscriber_license_type(prod, indiv)).to eq(:full)
   end
+
   it "expires an individual subscription" do
-    indiv_grant.expire!
+    indiv_license.delete!
     expect(prod.host.knows_subscriber?(indiv)).to be(true)
-    expect(prod.host.get_product_subscriber_license(prod, indiv)).to eq(:none)
+    expect(prod.host.get_product_subscriber_license_type(prod, indiv)).to eq(nil)
   end
 end

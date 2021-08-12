@@ -11,13 +11,13 @@ gem 'faraday_middleware', '~> 0.12'
 gem 'slop', '~> 4.6'
 
 gem 'rspec', '~> 3.0'
-gem 'rubocop', '~> 0.58'
-gem 'rubocop-rspec', "~> 1.28"
+gem 'rubocop', '~> 1.20'
+gem 'rubocop-rspec', "~> 2.4"
 
 gem 'typhoeus', '~> 1.3'
 
 # gems specific to hosted services
-gem 'turnsole', github: 'mlibrary/turnsole', ref: 'e3b5afea442f9d950067e69f3b40f76042774258'
+gem 'turnsole', github: 'mlibrary/turnsole', ref: '2269a5acb6f46de3fdb4d3b72caf1afe6593778a'
 
 #ISBN manipulation and validation
 gem 'lisbn'

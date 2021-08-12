@@ -3,7 +3,8 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.7
+  NewCops: enable
   Include:
     - 'bin/**/*'
     - '**/*.rb'
@@ -13,13 +14,13 @@ AllCops:
     - 'tmp/**/*'
 
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
+Layout/LineLength:
+  Enabled: false
 
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
-Metrics/LineLength:
-  Enabled: false
 
 RSpec/ContextWording:
   Enabled: false
