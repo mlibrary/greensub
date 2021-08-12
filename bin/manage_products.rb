@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
 require 'slop'
 require 'json'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
-require_relative '../lib/grant'
+require_relative '../lib/license'
 
 begin
   opts = Slop.parse strict: true do |opt|
@@ -22,15 +24,13 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => err
-  puts err
+rescue Slop::Error => e
+  puts e
   puts 'Try -h or --help'
   exit
 end
 
-
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
-
 
 product = Product.new(opts[:product]) if opts[:product]
 component = Component.new(opts[:component]) if opts[:component]
@@ -40,12 +40,10 @@ unless product.hosted?
 end
 
 rows = []
-if opts[:file]
-  File.foreach(opts[:file]) { |l| rows.push l.chomp }
-end
+File.foreach(opts[:file]) { |l| rows.push l.chomp } if opts[:file]
 
 action = opts[:action]
-output = ''
+output = '' # rubocop:disable Lint/UselessAssignment
 case action
 when 'exists'
   if product
@@ -60,8 +58,8 @@ when 'list_institutions'
 when 'list_individuals'
   output = product.list_individuals
   output.each do |i|
-  puts i["identifier"]
-end
+    puts i["identifier"]
+  end
 when 'component_info'
   if opts[:file]
     puts "got a file"
@@ -77,15 +75,13 @@ when 'component_info'
     sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
     component = Component.new(id, sales_id, Product)
     begin
-      puts "#{id} (#{sales_id}): " , product.host.knows_component?(component)
-    rescue StandardError => err
-      puts err
+      puts "#{id} (#{sales_id}): ", product.host.knows_component?(component)
+    rescue StandardError => e
+      puts e
     end
   end
 when 'add'
-  if condition
-
-  else
+  if condition # rubocop:disable Lint/EmptyConditionalBody
 
   end
 end

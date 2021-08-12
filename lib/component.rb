@@ -10,9 +10,7 @@ class Component
     @name = name || nil
     @product = prod_obj
 
-    if find_hosted_id_flag
-      find_hosted_id
-    end
+    find_hosted_id if find_hosted_id_flag
 
     handle_bar_number_sales_id
   end
@@ -27,10 +25,11 @@ class Component
 
   def find_hosted_id
     results = product.host.find_component_external_ids_by_identifier(@sales_id)
-    if results.length == 1
+    case results.length
+    when 1
       @hosted_id = results[0]['id']
-    elsif results.length == 0
-        abort "No matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
+    when 0
+      abort "No matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
     else
       abort "Multiple matches for #{@sales_id} at #{product.host.name}: #{results.inspect}"
     end
@@ -38,7 +37,7 @@ class Component
 end
 
 def handle_bar_number_sales_id
-  #Unlike other Monograph identifiers, BAR numbers have a prefix, but ve've
+  # Unlike other Monograph identifiers, BAR numbers have a prefix, but ve've
   # already created Components with Sales IDs of BAR numbers without those prefixes.
   # Until we remove the sales IDs altogether, handle this special case by trimming
   # off the prefix after we've had the chance to use it to do the NOID lookup.

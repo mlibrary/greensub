@@ -19,8 +19,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => err
-  puts err
+rescue Slop::Error => e
+  puts e
   puts 'Try -h or --help'
   exit
 end
@@ -46,7 +46,7 @@ elsif opts[:file]
 elsif opts[:id]
   rows.push "#{opts[:id]},#{opts[:sales_id]}"
 elsif opts[:lookup] && opts[:sales_id]
-    rows.push "#{opts[:sales_id]}"
+  rows.push (opts[:sales_id]).to_s
 else
   puts "Incompatible options, so can't restrict component"
 end
@@ -59,7 +59,7 @@ rows.each do |r|
     fields = r.split(/[,\s]+/) # handle both tabs and commas
     id = fields[0].tr_s('"', '').tr_s("''", '').strip
     sales_id = fields[1].tr_s('"', '').tr_s("''", '').strip
-    component = Component.new(id, sales_id, opts[:lookup],    product)
+    component = Component.new(id, sales_id, opts[:lookup], product)
   end
   begin
     if opts[:remove]
@@ -69,7 +69,7 @@ rows.each do |r|
     else
       product.add(component)
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 end

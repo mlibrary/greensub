@@ -18,8 +18,8 @@ class Host # rubocop:disable Metrics/ClassLength
     data = YAML.load_file('config/hosts.yaml')
     @base_uri = data[@name.to_s][@type.to_s]["base_uri"]
     @token = data[@name.to_s][@type.to_s]["token"]
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
     abort "Failed to find host #{@name} (#{@type})"
   end
 
@@ -37,27 +37,24 @@ class Host # rubocop:disable Metrics/ClassLength
     @connection.find_product(identifier: product_id).to_i.positive?
   end
 
-  def find_component_external_ids_by_identifier(identifier)
-
+  def find_component_external_ids_by_identifier(identifier) # rubocop:disable Metrics/MethodLength
     abort "No identifier provided" unless identifier
 
-    #is it an ISBN?
+    # is it an ISBN?
     isbn = Lisbn.new(identifier)
 
     if isbn.valid?
-      return @connection.find_noid_by_isbn(isbn: identifier)
+      @connection.find_noid_by_isbn(isbn: identifier)
     else
       case identifier
-      when /doi\.org/
-        return @connection.find_noid_by_doi(doi: identifier)
-      when /10.3998/
-        return @connection.find_noid_by_doi(doi: identifier)
+      when /doi\.org/, /10.3998/
+        @connection.find_noid_by_doi(doi: identifier)
       else
-        return @connection.find_noid_by_identifier(identifier: identifier)
+        @connection.find_noid_by_identifier(identifier: identifier)
       end
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def component_in_product?(component, product)
@@ -93,8 +90,8 @@ class Host # rubocop:disable Metrics/ClassLength
   def delete_component(component)
     puts "Deleting #{component.hosted_id} from #{@name} (#{@type})"
     @connection.delete_component(identifier: component.sales_id)
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def institutions
@@ -109,17 +106,19 @@ class Host # rubocop:disable Metrics/ClassLength
   def add_institution(institution)
     if institution.id && !institution.name.nil?
       @connection.create_institution(identifier: institution.external_id, name: institution.name, entity_id: institution.entity_id)
+      @connection.create_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :member)
     else
       abort "Institution name required; use --name"
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def delete_institution(institution)
+    @connection.delete_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :member)
     @connection.delete_institution(identifier: institution.external_id)
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def get_institutions(product)
@@ -141,18 +140,22 @@ class Host # rubocop:disable Metrics/ClassLength
     else
       abort "Individual email required; use --email"
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def delete_individual(individual)
     @connection.delete_individual(identifier: individual.external_id)
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def get_individuals(product)
     @connection.product_individuals(identifier: product.external_id)
+  end
+
+  def get_licenses(product)
+    @connection.product_licenses(identifier: product.external_id)
   end
 
   def subscribers
@@ -161,9 +164,10 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def knows_subscriber?(subscriber)
-    if subscriber.is_a?(Institution)
+    case subscriber
+    when Institution
       knows_institution?(subscriber)
-    elsif subscriber.is_a?(Individual)
+    when Individual
       knows_individual?(subscriber)
     else
       false
@@ -171,78 +175,80 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def add_subscriber(subscriber)
-    if subscriber.is_a?(Institution)
+    case subscriber
+    when Institution
       add_institution(subscriber) unless knows_institution?(subscriber)
-    elsif subscriber.is_a?(Individual)
+    when Individual
       add_individual(subscriber) unless knows_individual?(subscriber)
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def delete_subscriber(subscriber)
-    if subscriber.is_a?(Institution)
+    case subscriber
+    when Institution
       delete_institution(subscriber)
-    elsif subscriber.is_a?(Individual)
+    when Individual
       delete_individual(subscriber)
     end
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
-  def create_grant!(grant) # rubocop:disable Metrics/AbcSize
-    puts "Granting #{grant.license} access to #{grant.product.external_id} for #{grant.subscriber.external_id} on #{@name} (#{@type})"
-    if grant.subscriber.is_a?(Institution)
-      success = @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: grant.license)
-    elsif grant.subscriber.is_a?(Individual)
-      success = @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: grant.license)
-    else
-      abort "Unknown subscriber type"
-      false
-    end
-    if ! success
-      abort "Could not create grant: product_identifier: #{grant.product.external_id}, institution_identifier: #{grant.subscriber.external_id}, license: #{grant.license}"
-    end
-    return success
-  rescue StandardError => err
-    puts err
-  end
-
-  def expire_grant!(grant) # rubocop:disable Metrics/AbcSize
-    puts "De-authorizing #{grant.subscriber.external_id} to #{grant.product.external_id} on #{@name} (#{@type})"
-    if grant.subscriber.is_a?(Institution)
-      @connection.set_product_institution_license(product_identifier: grant.product.external_id, institution_identifier: grant.subscriber.external_id, license: :none)
-    elsif grant.subscriber.is_a?(Individual)
-      @connection.set_product_individual_license(product_identifier: grant.product.external_id, individual_identifier: grant.subscriber.external_id, license: :none)
-    end
-  rescue StandardError => err
-    puts err
-  end
-
-  def get_product_subscriber_license(product, subscriber)
-    if subscriber.is_a?(Institution)
-      @connection.get_product_institution_license(product_identifier: product.external_id, institution_identifier: subscriber.external_id)
-    elsif subscriber.is_a?(Individual)
-      @connection.get_product_individual_license(product_identifier: product.external_id, individual_identifier: subscriber.external_id)
-    end
-
-  end
-
-  def link(product, component) # rubocop:disable Metrics/AbcSize
+  def link(product, component)
     puts "Adding #{component.sales_id} to #{product.external_id} on #{@name} (#{@type})"
     unless knows_component?(component)
       puts "Component not known, creating..."
       connection.create_component(identifier: component.sales_id, name: component.name, noid: component.hosted_id)
     end
     @connection.add_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
   end
 
   def unlink(product, component)
     puts "Removing #{component.sales_id} from #{product.external_id} on #{@name} (#{@type})"
     @connection.remove_product_component(product_identifier: product.external_id, component_identifier: component.sales_id)
-  rescue StandardError => err
-    puts err
+  rescue StandardError => e
+    puts e
+  end
+
+  def get_product_subscriber_license_type(product, subscriber)
+    case subscriber
+    when Institution
+      @connection.find_product_institution_license(identifier: product.external_id, institution_identifier: subscriber.external_id)
+    when Individual
+      @connection.find_product_individual_license(identifier: product.external_id, individual_identifier: subscriber.external_id)
+    end
+  rescue StandardError => e
+    puts e
+  end
+
+  def create_license!(license) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    puts "License #{license.type} access to #{license.product.external_id} for #{license.subscriber.external_id} on #{@name} (#{@type})"
+    success = case license.subscriber
+              when Institution
+                @connection.create_product_institution_license(identifier: license.product.external_id, institution_identifier: license.subscriber.external_id, license_type: license.type)
+              when Individual
+                @connection.create_product_individual_license(identifier: license.product.external_id, individual_identifier: license.subscriber.external_id, license_type: license.type)
+              end
+    return true if success
+
+    abort "Could not create license: product_identifier: #{license.product.external_id}, institution_identifier: #{license.subscriber.external_id}, license_type: #{license.type}"
+  rescue StandardError => e
+    puts e
+  end
+
+  def delete_license!(license) # rubocop:disable Metrics/AbcSize
+    puts "De-authorizing #{license.subscriber.external_id} to #{license.product.external_id} on #{@name} (#{@type})"
+    case license.subscriber
+    when Institution
+      @connection.delete_product_institution_license(identifier: license.product.external_id, institution_identifier: license.subscriber.external_id)
+    when Individual
+      @connection.delete_product_individual_license(identifier: license.product.external_id, individual_identifier: license.subscriber.external_id)
+    end
+  rescue StandardError => e
+    puts e
   end
 end
