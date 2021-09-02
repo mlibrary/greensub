@@ -14,13 +14,13 @@ RSpec.describe License do
   entity_id = 'https://foo.edu/idp'
 
   random = rand(100_000..199_999)
-  inst_id = "test_inst_#{random}"
+  inst_id = "999#{random}"
   inst_name = "Test Institution #{inst_id}"
   inst = Institution.new(inst_id, inst_name, entity_id)
   inst_license = described_class.new(heb, inst)
 
   random = rand(100_000..199_999)
-  inst_id = "test_inst_#{random}"
+  inst_id = "999#{random}"
   inst_name = "Test Institution #{inst_id}"
   inst2 = Institution.new(inst_id, inst_name, entity_id)
   inst2_license = described_class.new(heb, inst2, type: :read)
