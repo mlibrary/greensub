@@ -40,7 +40,7 @@ RSpec.describe License do
   describe "for Institution" do
     it "is active and defaults to a full license" do
       expect(inst_license.create!).to be true
-      expect(heb.host.get_product_subscriber_license(heb, inst)).to eq(:full)
+      expect(heb.host.get_product_subscriber_license_type(heb, inst)).to eq(:full)
     end
 
     it "makes sure the Institution exists on host" do
@@ -49,7 +49,7 @@ RSpec.describe License do
 
     it "is active and has a :read license" do
       expect(inst2_license.create!).to be true
-      expect(heb.host.get_product_subscriber_license(heb, inst2)).to eq(:read)
+      expect(heb.host.get_product_subscriber_license_type(heb, inst2)).to eq(:read)
     end
   end
 
