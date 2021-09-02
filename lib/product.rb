@@ -22,15 +22,15 @@ class Product
     @external_id = @config["external_id"]
     @name = @config["name"]
     @host = Host.new(@config["host"])
-  rescue => err
+  rescue StandardError => e
     puts "Can't get product #{@id}:"
-    puts err
+    puts e
     exit
   end
 
   # Check to see if the host responds to this product
   def hosted?
-    @host.hosted?(@external_id) ? true : false
+    @host.hosted?(@external_id) ? true : false # rubocop:disable Style/IfWithBooleanLiteralBranches
   end
 
   def create
@@ -63,6 +63,10 @@ class Product
 
   def list_individuals
     @host.get_individuals(self)
+  end
+
+  def list_licenses
+    @host.get_licenses(self)
   end
 
   def send_instructions(subscriber) # rubocop:disable Metrics/AbcSize
@@ -98,8 +102,8 @@ class Product
         smtp.send_message msg, opts[:from], to, opts[:bcc]
       end
       puts "Sent email to #{to}"
-    rescue StandardError => err
-      puts err
+    rescue StandardError => e
+      puts e
     end
   end
 end

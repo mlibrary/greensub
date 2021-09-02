@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'slop'
 require_relative '../lib/product'
 require_relative '../lib/subscriber'
-require_relative '../lib/grant'
+require_relative '../lib/license'
 
 begin
   opts = Slop.parse strict: true do |opt|
@@ -22,8 +22,8 @@ begin
       puts opts
     end
   end
-rescue Slop::Error => err
-  puts err
+rescue Slop::Error => e
+  puts e
   puts 'Try -h or --help'
   exit
 end
@@ -31,14 +31,14 @@ end
 license = nil
 if opts[:license]
   license = opts[:license].to_sym
-  LICENSES = [:full, :read, :none]
+  LICENSES = %i[full read none].freeze
   unless LICENSES.include?(license)
     puts "Option -l must use a valid license: #{LICENSES}"
     exit!(0)
   end
 end
 
-action = (opts[:expire] || license == :none)  ? :expire : :authz
+action = opts[:expire] || license == :none ? :expire : :authz
 ENV['GREENSUB_TEST'] = opts[:testing] ? '1' : '0'
 ENV['GREENSUB_NOMAIL'] = opts[:nomail] ? '1' : '0'
 
@@ -68,11 +68,11 @@ subscrs.each do |s|
            else
              Institution.new(s, opts[:name], opts[:entityId])
            end
-  grant = Grant.new(product, subscr, license)
+  license_obj = License.new(product, subscr, type: license)
   case action
   when :expire
-    grant.expire!
+    license_obj.delete!
   when :authz
-    grant.create!( opts[:instructions] )
+    license_obj.create!(opts[:instructions])
   end
 end
