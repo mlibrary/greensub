@@ -5,6 +5,7 @@ require_relative '../lib/component'
 
 RSpec.describe Product do
   ENV['GREENSUB_TEST'] = '1'
+  ENV['GREENSUB_NOMAIL'] = '1'
 
   before do
     # Don't print status messages during specs
@@ -54,6 +55,42 @@ RSpec.describe Product do
   describe "Known bad product" do
     it "fails gracefully if there's no data on the requested product" do
       # How to test this without abort interrupting further tests?
+    end
+  end
+
+  describe "BAR 2021" do
+    bar = Product.new('bar_2021')
+
+    random = rand(100_000..199_999)
+    inst_id = "999#{random}"
+    inst_name = "Test Institution #{inst_id}"
+    inst = Institution.new(inst_id, inst_name)
+
+
+    random = rand(100_000..199_999)
+    inst_id = "999#{random}"
+    inst_name = "Test Institution #{inst_id}"
+    inst2 = Institution.new(inst_id, inst_name)
+
+    before do
+      # Don't print status messages during specs
+      allow($stdout).to receive(:puts)
+  #    inst_license.product.host.delete_subscriber(inst_license.subscriber)
+  #    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
+    end
+
+    after(:all) do # rubocop:disable RSpec/BeforeAfterAl
+  #    Delete all Licenses we created
+  #    inst_license.product.host.delete_subscriber(inst_license.subscriber)
+  #    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
+    end
+
+    it "creates only the specified License when an Institution is authorized" do
+      expect(bar.create_license(inst, :full, :member)).to be true
+      expect(bar.host.get_product_subscriber_license_type(bar, inst, :member)).to eq(:full)
+      expect(bar.create_license(inst, :read, :alum)).to be true
+      expect(bar.host.get_product_subscriber_license_type(bar, inst, :alum)).to eq(:read)
+      expect(bar.host.get_product_subscriber_license_type(bar, inst, :wak_in)).to be_nil
     end
   end
 end
