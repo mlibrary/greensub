@@ -1,0 +1,11 @@
+{"id"=>122, "identifier"=>"658", "name"=>"University of Southampton", "entity_id"=>"https://webauth.soton.ac.uk/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/122.json"}
+{"id"=>2, "identifier"=>"1", "name"=>"University of Michigan, Ann Arbor", "entity_id"=>"https://shibboleth.umich.edu/idp/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/2.json"}
+{"id"=>4, "identifier"=>"2", "name"=>"University of Michigan, Dearborn", "entity_id"=>"https://shibboleth.umich.edu/idp/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/4.json"}
+{"id"=>6, "identifier"=>"3", "name"=>"University of Michigan, Flint", "entity_id"=>"https://shibboleth.umich.edu/idp/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/6.json"}
+{"id"=>146, "identifier"=>"12", "name"=>"University of Pennsylvania", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/146.json"}
+{"id"=>372, "identifier"=>"340", "name"=>"Stanford University", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/372.json"}
+{"id"=>346, "identifier"=>"315", "name"=>"New York University", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/346.json"}
+{"id"=>4422, "identifier"=>"2393", "name"=>"67 Bricks", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/4422.json"}
+{"id"=>100, "identifier"=>"1677", "name"=>"University of Exeter", "entity_id"=>"https://elibrary.exeter.ac.uk/idp/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/100.json"}
+{"id"=>138, "identifier"=>"15", "name"=>"University of York", "entity_id"=>"https://shib.york.ac.uk/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/138.json"}
+{"id"=>90, "identifier"=>"675", "name"=>"University College London", "entity_id"=>"https://shib-idp.ucl.ac.uk/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/90.json"}

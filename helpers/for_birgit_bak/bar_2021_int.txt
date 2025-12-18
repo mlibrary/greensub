@@ -1,0 +1,2 @@
+{"id"=>4394, "identifier"=>"2379", "name"=>"Israel Antiquities Authority", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/4394.json"}
+{"id"=>306, "identifier"=>"261", "name"=>"Brown University", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/306.json"}

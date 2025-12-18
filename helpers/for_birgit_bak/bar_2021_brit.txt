@@ -1,0 +1,1 @@
+{"id"=>306, "identifier"=>"261", "name"=>"Brown University", "entity_id"=>nil, "url"=>"https://www.fulcrum.org/greensub/institutions/306.json"}

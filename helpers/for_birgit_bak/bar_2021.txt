@@ -1,0 +1,1 @@
+{"id"=>90, "identifier"=>"675", "name"=>"University College London", "entity_id"=>"https://shib-idp.ucl.ac.uk/shibboleth", "url"=>"https://www.fulcrum.org/greensub/institutions/90.json"}

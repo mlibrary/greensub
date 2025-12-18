@@ -1,0 +1,2 @@
+{"id"=>2714, "identifier"=>"1478", "name"=>"University of Bradford, Bradford, West Yorkshire, UK", "entity_id"=>"https://brad.ac.uk/oala/metadata", "url"=>"https://www.fulcrum.org/greensub/institutions/2714.json"}
+{"id"=>4424, "identifier"=>"2397", "name"=>"Bournemouth University, Dorset, UK", "entity_id"=>"https://idp.bournemouth.ac.uk/oala/metadata", "url"=>"https://www.fulcrum.org/greensub/institutions/4424.json"}

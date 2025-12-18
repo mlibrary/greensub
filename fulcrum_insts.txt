@@ -1,0 +1,2098 @@
+166	University of Nevada, Reno
+146	University of New Brunswick
+379	University of New South Wales
+380	University of North Carolina at Chapel Hill
+23	University of Notre Dame
+21	University of Nottingham, UK
+48	University of Oregon
+384	University of Otago
+10	University of Oxford, Oxford, UK
+12	University of Pennsylvania
+245	University of Pittsburgh
+387	University of Puget Sound
+388	University of Queensland
+389	University of Rochester
+163	University of South Florida
+157	University of Southern California
+35	University of Sydney
+222	University of Tennessee, Knoxville
+6	University of Toronto
+395	University of Trier
+396	University of Tuebingen
+192	University of Utah
+150	University of Victoria, Victoria, BC, CA
+398	University of Virginia, Charlottesville, VA
+399	University of Waikato
+26	University of Washington
+148	University of Waterloo
+50	University of Western Ontario
+246	University of Wisconsin, Green Bay
+401	University of Wisconsin, Madison
+402	University of Wittenberg
+202	University of Wyoming
+15	University of York
+172	Uppsala University, Uppsala, Sweden
+371	University of Heidelberg
+45	University of Helsinki, Finland
+689	University of Groningen
+372	University of Hong Kong
+65	University of Illinois at Urbana-Champaign
+690	DePaul University
+691	James Cook University
+692	Ecole des Hautes Etudes en Sciences Sociales, Paris, France
+693	Norwalk Community College
+694	Gateway Community College
+695	Zayed University
+696	University of Pikeville, Pikeville, KY
+698	University of Birmingham
+699	Adirondack Community College
+700	James Madison University
+701	University of Alabama, Tuscaloosa
+702	University of Newcastle Upon Tyne, Newcastle Upon Tyne, England
+703	Pacific Data Conversion Corporation
+704	Apex Data Services, Inc.
+705	TechBooks
+34	University of Iowa, Iowa City
+706	ProQuest
+4	University of Michigan, University Library, Faculty Exploratory
+707	Beloit College
+216	University of Kansas
+53	University of Kentucky
+375	University of Kiel
+182	University of Maine, Orono
+162	University of Manitoba
+32	University of Maryland, Baltimore
+1	University of Michigan, Ann Arbor
+2	University of Michigan, Dearborn
+490	University of Michigan, Library Information Technology and MPublishing
+3	University of Michigan, Flint
+429	University of Missouri, Kansas City, Nichols Library
+198	University of Nebraska, Lincoln
+160	University of Nevada, Las Vegas
+349	The University of Adelaide
+464	The University of Chicago
+459	The University of Illinois, Springfield
+352	The University of Newcastle, Australia
+54	University of Texas, Austin
+432	Towson University, Towson, MD
+354	Trinity College, Hartford, Connecticut
+355	U.S. Military Academy, West Point, NY
+358	Union College, Schenectady, NY
+359	University of North Carolina at Charlotte
+52	Universidad de Sevilla
+16	Universitats und Landesbibliothek Muenster
+30	Universiteitsbibliotheok Leiden (Leiden University), Leiden, Netherlands
+38	University of Amsterdam
+235	University of Arizona
+361	University of Auckland
+362	University of British Columbia
+158	University of Calgary
+365	University of California Digital Library
+447	University of California, Berkeley
+220	University of California, Davis
+367	University of California, Irvine
+13	University of California, Los Angeles
+366	University of California, Santa Barbara
+368	University of Canterbury
+133	University of Colorado, Boulder
+159	University of Connecticut, Storrs, CT
+41	University of Delaware
+168	University of Florida, Gainesville, FL
+180	University of Georgia
+327	Purdue University, West Lafayette, IN
+240	Queens College, CUNY
+328	Queensland University of Technology
+329	Reed College
+136	Rhode Island College
+171	Rhodes College
+62	Rice University
+331	Universiteitsbibliotheek Gent (was Rijksuniversiteit Gent), Gent, Belgium
+151	San Francisco State University
+333	San Jose State University
+336	University of London
+195	Skidmore College
+335	Smith College, Northampton, MA
+247	Southern Methodist University, Dallas, TX
+422	Southern Utah University
+149	Springfield College
+337	St. John's University, Jamaica, NY
+338	St. Lawrence University
+339	St. Olaf College Libraries
+340	Stanford University
+135	State University of New York, Buffalo
+341	State University of New York, Albany
+138	State University of New York, Binghamton
+342	State University of New York, Stony Brook
+234	State University of West Georgia
+28	Heinrich-Heine University of Dusseldorf
+143	Swarthmore College
+345	Syracuse University
+346	Tel-Aviv University
+173	Temple University
+1224	Spring Hill College, Mobile, AL
+1225	Houston Community College
+1226	University of Aarhus, Denmark
+1227	University of North Alabama, Florence, AL
+1228	Institute of American Indian Arts, Santa Fe, NM
+1229	Durham Technical Community College, Durham, NC
+1230	Auckland University of Technology, Auckland, NZ
+1231	Universidad De La Rioja, Spain
+1232	McMaster University, Hamilton, Ontario, CA
+1240	Texas Southern University, Houston, TX
+1234	Indiana University - Purdue University, Columbus
+1235	Indiana University, Southeast (New Albany, IN)
+1236	Indiana University, South Bend
+1237	Indiana University, Northwest (Gary, IN)
+1238	Indiana University, East (Richmond, IN)
+1239	Ottawa University, Ottawa, KS
+1241	University of California, Merced
+1242	Cardiff University, Wales, UK
+1243	University of Bergen, Norway
+1244	Arnold and Porter, Northern Virginia
+1245	Arnold and Porter, Denver, CO
+1246	Arnold and Porter, Los Angeles, CA
+1247	Arnold and Porter, London, UK
+1248	Arnold and Porter, Brussels, Belgium
+1249	National Library Board, Singapore
+1250	Augusta State University, Augusta, GA
+1251	The Hackley School, Tarrytown, NY
+1252	Fort Belknap College, Harlem, MT
+1253	Dharma Drum Buddhist College, Taipei County, Taiwan
+1254	Auburn University, Montgomery, AL
+1255	Normandale Community College, Bloomington, MN
+1256	Heritage University, Toppenish, WA
+1257	University of Stirling, Scotland
+1258	Chiba University, Japan
+1259	Fairleigh Dickinson University
+1260	Occidental College, Los Angeles, CA
+1261	Fo Guang College, Taiwan
+1262	Mitchell College, New London, CT
+1263	American Antiquarian Society, Worcester, MA
+1264	Guilford College, Greensboro, NC
+1265	Yellowstone National Park, Wyoming
+1266	Rockhurst University, Kansas City, MO
+1267	Commack High School, Commack, NY
+1268	Canisius College, Buffalo, NY
+1269	University Tampere, Finland
+1270	Soka University, Tokyo, Japan
+1271	Daniel Webster College, Nashua, NH
+1272	Southern New Hampshire University, Manchester, NH
+1273	Jacksonville State University, Jacksonville, AL
+1274	University of Tasmania, Hobart, Tasmania, Australia
+1275	Dominican College, Orangeburg, NY
+1276	Dutchess Community College, Poughkeepsie, NY
+1277	Marist College, Poughkeepsie, NY
+1278	Mount St. Mary College, Newburgh, NY
+1279	Nyack College, Nyack, NY
+1280	Orange County Community College, Middletown, NY
+1281	Salvation Army Library
+1282	St. Thomas Aquinas College, Sparkill, NY
+1283	State University of New York, New Paltz
+1284	State University of New York, Ulster
+1285	Unification Theological Seminary, Barrytown, NY
+1286	Columbia-Greene Community College, Hudson, NY
+1287	Sullivan County Community College, Loch Sheldrake, NY
+1290	The Hotchkiss School, Lakeville, CT
+1288	Culinary Institute of America, Hyde Park, NY
+1289	Kyoto Sangyo University, Japan
+1291	Ashland University, Ashland, OH
+1292	Rockland Community College, Suffern, NY
+1293	Brescia University, Owensboro, KY
+1294	Centre College, Danville, KY
+1295	The Loomis Chaffee School, Windsor, CT
+1296	University of Brunei Darussalam, Gadong, Brunei Darussalam
+1297	Edge Hill University, Ormskirk, Lancashire, UK
+1298	University of Winchester, Hampshire, UK
+1299	West Virginia University, Morgantown
+1300	New England College, Henniker, NH
+1301	Hiram College, Hiram, OH
+1302	Muskingum College, New Concord, OH
+1303	Escola Graduada de Sao Paulo, Sao Paulo, Brazil
+1304	Bibliotheque Interuniversitaire de la Sorbonne, Paris, France
+1305	Richland Community College, Decatur, IL
+1306	Longwood University, Farmville, VA
+1307	Korea University, Seoul, Korea
+1308	Kutztown University, Kutztown, PA
+1309	Michigan Technological University, Houghton, MI
+1310	Evansville Vanderburgh Public Library, Evansville, IN
+1311	Swansea University
+1312	University College Dublin, Ireland
+1313	Olivet Nazarene University, Bourbonnais, IL
+1314	Columbia International University, Columbia, SC
+1315	Idaho State University, Pocatello, ID
+1316	University of Portsmouth, Hampshire, UK
+1317	Air University, Maxwell Air Force Base, AL
+1318	University of Science and Arts of Oklahoma, Chickasha
+1319	University of Alabama, Huntsville
+1320	Faulkner University, Montgomery, AL
+1321	University of Augsberg, Germany
+1322	University of Sassari, Italy
+1323	Davidson College, Davidson, NC
+1324	Tabor Academy, Marion, MA
+1325	Queen's University, Belfast, Northern Ireland, UK
+1326	Hastings College, Hastings, NE
+1327	Kharkiv National University, Kharkov, Ukraine
+1328	Central Michigan University, Mount Pleasant, MI
+1329	South Dakota State University, Brookings, SD
+1330	Ohio University, Eastern, Belmont/Saint Clairsville, OH
+1331	Yeovil College, Somerset, UK
+1332	Red Crow College, Cardston, Alberta, CA
+1333	Muskegon Community College
+1334	Albion College, Albion, MI
+1335	Schoolcraft College, Livonia, MI
+1336	Erikson Institute, Chicago, IL
+1337	Macomb Community College, Warren, MI
+1338	Grand Valley State University, Allendale, MI
+1339	Madonna University, Livonia, MI
+1340	American University of Rome
+1341	University of Bologna, Bologna, Italy
+1342	Wofford College, Spartanburg, SC
+1343	Lansing Community College, Lansing, MI
+1344	Buffalo State College, Buffalo, NY
+1345	University of Cauca, Colombia
+1346	Erie Community College, NY
+1347	Saline High School, Saline, MI
+1348	Moorpark College, Moorpark, CA
+1349	Albright College, Reading, PA
+1350	Colorado State University, Pueblo, CO
+1351	Chesapeake College, Wye Mills, MD
+1352	University of Texas Health Science Center at San Antonio, TX
+1353	Macon State College, Macon, GA
+1354	University of West Bohemia, Plzen, Czech Republic
+1355	South Puget Sound Community College, Olympia, WA
+1356	La Sapienza, Universita degli Studi di Roma, Rome, Italy
+1357	Trocaire College, Buffalo, NY
+1358	Rocky Mountain College, Billings, MT
+1359	McDonogh School, Owings Mills, MD
+1360	Tacoma Community College, Tacoma, WA
+1361	Center for Advanced Study, Sofia, Bulgaria
+1362	Millikin University, Decatur, IL
+1363	St. Petersburg State University, St. Petersburg, Russia
+1364	Reinhardt College, Waleska, GA
+1365	Clark College, Vancouver, WA
+1366	Brigham Young University, Idaho
+1367	Latter-Day Saints Business College, Salt Lake City, UT
+1368	University of Massachusetts, Dartmouth, North Dartmouth, MA
+1369	University of Leicester, England
+1370	Nanyang Technological University, Singapore
+1371	Bergen Community College, Paramus, NJ
+1372	University of Colorado, Denver
+1373	Metropolitan State College of Denver, Denver, CO
+1374	Community College of Denver, Denver, CO
+1375	Auraria Higher Education Center, Denver, CO
+1376	University of Maine, Machias
+1377	Nebraska Wesleyan University, Lincoln, NE
+1378	Charlotte Latin School, Charlotte, NC
+1379	Reading Area Community College, Reading, PA
+1380	Columbia Basin College, Pasco, WA
+1381	London School of Economics and Political Science
+1382	Assumption College, Worcester, MA
+1383	Multnomah University, Portland, OR
+1384	Blackburn College, Carlinville, IL
+1385	Saint Michaels College, Colchester, VT
+1386	Kean University, Union, NJ
+1387	Sidwell Friends School, Washington, DC
+1388	Ave Maria University, Naples, FL
+1389	University of Northern Colorado, Greeley, CO
+1390	Northern Michigan University, Marquette, MI
+1391	Tokyo Womans Christian University, Tokyo, Japan
+1392	Setsunan University, Japan
+1393	University of Trondheim, Trondheim, Norway
+1394	University of Bern, Bern, Switzerland
+1395	Weber State University, Ogden, UT
+1396	University of South Dakota, Vermillion, SD
+1397	East Tennessee State University, Johnson City, TN
+1398	Fayetteville State University, Fayetteville, NC
+1399	Montana State University, Bozeman, MT
+1400	Universite catholique de Louvain, Louvain-la-Neuve, Belgium
+1401	Fort Lewis College, Durango, CO
+1402	College of the Holy Cross, Worcester, MA
+1403	Martin Luther College, New Ulm, MN
+1404	Gardner-Webb University, Boiling Springs, NC
+1405	Central Piedmont Community College, Charlotte, NC
+1406	Community College of Philadelphia, Philadelphia, PA
+1407	Office of National Assessment, ACT, Australia
+1408	Open University, Milton Keynes, UK
+1409	Florida Gulf Coast University, Fort Myers, FL
+1410	Coconino Community College, Flagstaff, AZ
+1411	Ben-Gurion University of the Negev, Israel
+1412	Universita degli Studi di Trento, Italy
+1413	American University of Kuwait
+1414	Association of the Bar of the City of New York
+1415	Ritsumeikan Asia Pacific University, Japan
+1416	John Burroughs School, St. Louis, MO
+1417	Musee du Quai Branly, Paris, France
+1420	Ex Libris, Metalib Sales and Support
+1418	Showa Womens University, Japan
+1419	Immaculata University, Immaculata, PA
+1421	University of Southern Mississippi
+1422	Eastern New Mexico University, Portales, NM
+1423	Chonnam National University, Seoul, Korea
+1424	Deerfield Academy, Deerfield, MA
+1425	Mount Ida College, Newton, MA
+1426	Rabun Gap-Nacoochee School, Rabun Gap, GA
+1427	Trinity Preparatory School, Winter Park, FL
+1428	Atlanta International School,	Atlanta, GA
+1429	Durham Academy, Durham, NC
+1430	Frederica Academy, St Simons Island, GA
+1431	St. Mary's School, Raleigh, NC
+1432	Pace Academy, Atlanta, GA
+1433	Northland Pioneer College, Holbrook, AZ
+1434	Highland Community College, Freeport, IL
+1435	University of Hyderabad, India
+1436	Carroll College, Helena, MT
+1437	Oakwood School, North Hollywood, CA
+1438	Mayville State University, Mayville, ND
+1439	Cornell College, Mount Vernon, IA
+1440	St Josephs College, NY
+1441	Davis College, Birmingham, NY
+1442	Elon University, Elon, NC
+1443	Western New Mexico University, Silver City, NM
+1444	Law Library of Louisiana, New Orleans, LA
+1445	Canada Department of Justice, Ottawa, Ontario, CA
+1446	University of South Carolina, Beaufort
+1447	Middlesex County College, Edison, NJ
+1448	University of Northern Iowa, Cedar Falls, IA
+1449	The Citadel - The Military College of South Carolina, Charleston, SC
+1450	Millbrook School, Millbrook, NY
+1451	Austin College, Sherman, TX
+1452	St. Andrews Episcopal School, Potomac, MA
+1453	Lawrence Academy, Groton, MA
+1454	American Public University System, Charles Town, WV
+1455	Corban College, Salem, OR
+1456	Hennepin County Law Library, Minneapolis, MN
+1457	Athens Academy, Athens, GA
+1458	Christian Brothers University, Memphis, TN
+1459	Concordia University, Portland, OR
+1460	National Business Systems
+1461	Concordia University, St Paul, MN
+1462	Modern Language Association, New York, NY
+1463	CUNY Graduate School of Journalism
+1464	Park University, Parkville, MO
+1465	University of Colorado, Colorado Springs
+1466	Mansfield University, Mansfield, PA
+1467	Salve Regina University, Newport, RI
+1468	Rostov State University, Rostov-on-Don, Russia
+1469	University of North Carolina at Wilmington
+1470	St Cloud State University, St Cloud, MN
+1471	Montgomery County Community College, PA
+1472	Dongguk University, Seoul, South Korea
+1473	Graduate Institute of Applied Linguistics, Dallas, TX
+1474	Randolph College, Lynchburg, VA
+1475	University of Southern Queensland, Australia
+1476	University of Massachusetts, Lowell
+1477	Montgomery College, Montgomery County, MD
+1478	University of Bradford, Bradford, West Yorkshire, UK
+1479	Northwest Vista College, San Antonio, TX
+1480	San Antonio College, San Antonio, TX
+1481	Jinan University, Guangzhou, China
+1482	Francis Parker School, San Diego, CA
+1483	Capital Normal University, Beijing, China
+1484	Guangdong University of Foreign Studies, Guangdong, China
+1485	Pontificia Universidad Catolica de Valparaiso, Valparaiso, Chile
+1486	Southwestern Law School, Los Angeles, CA
+1487	Charlotte School of Law, Charlotte, NC
+1488	Lee College, Baytown, TX
+1489	Touro University, California
+1490	Colorado Academy, Denver, CO
+1491	Troy University, Alabama
+1492	Athens State University, Athens, AL
+1493	Ball State University, Muncie, IN
+1494	Peking University, China
+1495	Huazhong Normal University, Wuhan, China
+1496	Camosun College, Victoria, BC, Canada
+1497	Folger Shakespeare Library, Washington, DC
+1498	Skyline College, San Bruno, CA
+1499	University of Eastern Finland, Joensuu, Finland
+1500	University of Central Florida, Orlanda, FL
+1501	Webster University, St. Louis, MO
+1502	Wartburg College, Waverly, IO
+1503	Gillette College, Gillette, WY
+1504	Vanguard University of Southern California, Costa Mesa, CA
+1505	Rocky Mountain College, Calgary, Alberta, CA
+1506	Universidad Complutense de Madrid, Spain
+1507	Marine Corps University, Washington, DC
+1508	College Center for Library Automation, Tallahassee, FL
+1509	Center of Advanced Studies on Contemporary China, Torino, Italy
+1510	California Institute of Technology, Pasadena, CA
+1511	Max Planck Institute, Leipzig, Germany
+1512	National Central University of Taiwan
+1513	University of Sussex, Brighton, England
+1514	Paris Diderot University, Paris, France
+1515	Frank Phillips College, Texas
+1516	Australian Institute of Aboriginal and Torres Strait Islander Studies, Canberra, Australia
+1517	El Colegio de Mexico, Mexico City
+1518	Pablo de Olavide University, Seville, Spain
+1520	Macquarie University, Sydney, Australia
+1521	University of North Carolina at Pembroke
+1522	University of Stavanger, Stavanger, Norway
+1523	California Lutheran University, Thousand Oak, CA
+1524	Museum Victoria, Victoria, Australia
+1525	Aston University, Birmingham, UK
+1526	Toyama University, Toyama, Japan
+1527	University of Florence, Florence, Italy
+1528	Andrew W. Mellon Foundation, New York, NY
+1529	American School of Classical Studies, Athens, Greece
+1530	National Library of Medicine, Bethesda, MD
+1531	Zhejiang University, China
+1532	Nankai University, China
+1533	Jilin University, China
+1534	Northeastern University, China
+1535	Valley City State University, Valley City, North Dakota
+1536	Senate House Libraries, University of London, London
+1537	University of Salerno, Salerno, Italy
+1538	University of the Americas, Puebla, Mexico
+1539	University of Pompeu Fabra, Barcelona, Spain
+1541	Louisiana State University Law Center
+1542	Hankuk University of Foreign Studies, Seoul, Korea
+1543	Paul Smiths College, Paul Smiths, NY
+1544	University of Salzburg, Salzburg, Austria
+1545	Sacred Heart University, Fairfield, CT
+1546	East Texas Baptist University, Marshall, TX
+1547	Poly Prep Country Day School, Brooklyn, NY
+1548	Serials Solutions (Federated Search Development and Testing)
+1549	North Island College, BC, CA
+1550	West Chester University of Pennsylvania, West Chester, PA
+1551	Thomas Jefferson High School for Science and Technology, Alexandria, VA
+1552	US Army Combined Arms Research Library, Fort Leavenworth, KS
+1553	Lycoming College, Williamsport, PA
+1554	Naugatuck Valley Community College, Waterbury, CT
+1555	Dublin City University, Ireland
+1556	National University of Ireland, Maynooth
+1557	University of Limerick, Ireland
+1558	University of Wales, Trinity Saint David
+1559	Higher Education Authority, Ireland
+1560	Science Foundation Ireland, Dublin
+1561	Christian Theological Seminary, Indianapolis, IN
+1562	State University of New York, Tompkins, Cortland Community College
+1563	Queen Mary University of London
+1564	Albany College of Pharmacy, Albany, NY
+1565	Orange-Ulster Boces School Library System, Monroe, NY
+1566	Poughkeepsie Day School, NY
+1567	Spackenkill High School, Poughkeepsie, NY
+1568	Suffern High School, Suffern, NY
+1569	Warwick Valley High School, Warwick, NY
+1570	College of Saint Rose, Albany, NY
+1571	Concordia College, Moorhead, MN
+1572	Bowling Green State University, Bowling Green, OH
+1573	Ohio University, Merida, Mexico
+1574	Ohio University, Chillicothe
+1575	Ohio University, Southern, Ironton, OH
+1576	OhioNet Offices, Columbus, OH
+1577	Jacobs University, Bremen, Germany
+1578	Monroe-Woodbury Senior High School, Central Valley, NY
+1579	University of Redlands, Redlands, CA
+1580	Saint Martins University, Lacey, WA
+1581	Columbia Gorge Community College, The Dalles, OR
+1582	Albertson College of Idaho, Caldwell, ID
+1583	Kauai Community College
+1584	Grant MacEwan College, Edmonton, Alberta, CA
+1585	University of West Florida, Pensacola, FL
+1586	University of Nebraska, Omaha
+1587	Dine College, Tsaile, AZ
+1588	Knox College, Galesburg, IL
+1589	Monticello High School, Monticello, NY
+1590	Oakwood Friends, Poughkeepsie, NY
+1591	Arlington High School, Lagrangeville, NY
+1592	FD Roosevelt High School, Hyde Park, NY
+1593	International Cultural Center, Krakow, Poland
+1594	Anderson University, Anderson, IN
+1595	Royal Holloway, University of London, Ehgam, Surrey, UK
+1596	Stephen F. Austin State University, Nacogdoches, TX
+1597	Rosemont College, Rosemont, PA
+1598	Collin College, Plano, TX
+1599	Wesley College, Dover, DE
+1600	National Cathedral School, Washington, DC
+1601	Statewide California Electronic Library Consortium, Los Angeles, CA
+1602	Liberty Fund, Indianapolis, IN
+1603	Houghton College, Houghton, NY
+1604	American Justice School of Law, Paducah, KY
+1605	California University of Pennsylvania, California, PA
+1606	University of Sao Paulo, Sao Paulo, Brazil
+1607	Cabrini College, Philadelphia, PA
+1608	University College Cork, Ireland
+1609	Briercrest College and Seminary, Caronport, Saskatchewan, CA
+1610	Australian Catholic University
+1611	University of California, Hastings, College of the Law
+1612	China Youth University for Political Sciences, Beijing, China
+1613	Keyano College, Alberta, CA
+1614	National Library of the Netherlands, Den Haag, Netherlands
+1615	Maryland State Law Library, Annapolis, MD
+1616	Northwest Community College, BC, CA
+1617	British Columbia Courthouse Library Society, Vancouver, BC, CA
+1618	China Institutes of Contemporary International Relations, Beijing, China
+1619	Henry Ford Community College, Dearborn, MI
+1620	Bay de Noc Community College, Escanaba, MI
+1621	Ryukoku University, Japan
+1622	California Baptist University (formerly College), Riverside, CA
+1623	Universitat de Barcelona, Spain
+1624	Stissing Mountain High School, Pine Plains, NY
+1625	State University of New York, Purchase
+1626	SIT Graduate Institute, Brattleboro, VT
+1627	Manhattan College, Riverdale, NY
+1628	University of Tennessee, Chattanooga
+1629	Higher Education Library Information Network (HELIN) Consortium, Kingston, RI
+1630	The Judge Advocate General's Legal Center and School, Charlottesville, VA
+1631	Windward Community College, Kaneohe, HI
+1632	Honolulu Community College, HI
+1633	Hillsdale College, Hillsdale, MI
+1634	University of Sherbrooke, Quebec, CA
+1635	Wright State University, Dayton, OH
+1636	Merrimack College, North Andover, MA
+1637	Science History Institute
+1638	Somerset Christian College, Zarephath, NJ
+1639	Georgia Library Learning Online Consortium
+1640	University of North Florida, Jacksonville, FL
+1642	Maine State Law and Legislative Reference Library
+1643	Lucerne Central and University Library, Switzerland
+1644	University of Paris, France
+1645	University of North Georgia, Dahlonega, GA
+1646	University of Warsaw, Poland
+1647	University of Quebec, CA
+1648	Sao Paulo State University, Sao Paulo, Brazil
+1649	Ohio Dominican University, Columbus, OH
+1650	Wilmington College, Wilmington, OH
+1651	Union Institute and University, Montpelier, VT
+1652	Nipissing University, North Bay, Ontario, CA
+1653	Tianjin Foreign Studies University, China
+1654	State University of New York, Empire State College
+1655	University of Tromsoe, Norway
+1656	Valley Forge Christian College, Phoenixville, PA
+1657	Policy Research Institute, Nishigara, Japan
+1663	Paterson Free Public Library, Paterson, NJ
+1659	Saint Louis Art Museum, St. Louis, MO
+1660	Shoreline Community College, Shoreline, WA
+1661	New York Law Institute
+1662	Pontificia Universidade Catolica do Rio de Janeiro, Rio de Janeiro, Brasil
+1664	Berkeley Preparatory School, Tampa, FL
+1665	Western State Univerity, Fullerton, CA
+1666	Campbell University, Buies Creek, NC
+1667	Avondale College, Cooranbong, NSW
+1668	Wallkill Senior High School, Wallkill, NY
+1669	Albertus Magnus High School, Bardonia, NY
+1670	University of the Highlands and Islands, Scotland
+1671	Friends Select School, Philadelphia, PA
+1672	Southeastern Library Network, Atlanta, GA
+1673	Bishop Grosseteste College, Lincoln, UK
+1674	University of New England, NSW, Australia
+1675	St Josephs University, Philadelphia, PA
+1676	University of Prince Edward Island, Charlottetown, PE, Canada
+1677	University of Exeter, Exeter, Devon, UK
+1678	Tsinghua University, Beijing, China
+1679	Community College of Aurora, Aurora, CO
+1680	Ambrose University College, Calgary, Alberta, CA
+1681	Oklahoma State University, Stillwater, OK
+1682	National Science Foundation, Arlington, VA
+1683	University of Notre Dame, Australia
+1684	Yonsei University, Seoul, Korea
+1685	Shippensburg University, Shippensburg, PA
+1686	National Library of Norway, Oslo
+1687	University of Worcester, Worcester, UK
+1688	Anthropological Survey Southern Regional Center, Karnataka, India
+1689	University of Michigan Museum of Art Intranet
+1690	State University of New York, New Palz
+1691	Abilene Christian University, Abilene, TX
+1692	Benedictine University, Lisle, IL
+1693	Touro College South, Miami Beach, FL
+1694	Touro College, Harlem Medical, New York, NY
+1696	Touro College, France
+1695	Touro College, Los Angeles, CA
+1697	Lander Institute, Jerusalem, Israel
+1698	Museum of Ethnography, Stockholm, Sweden
+1699	Barton Community College, Great Bend, KS
+1700	Westfield State College, Westfield, MA
+1701	Sixth Form College, Farnborough, UK
+1702	The Golden Web Foundation, Cambridge, UK
+1703	McHenry County College, Crystal Lake, IL
+1704	University of Tampa, Tampa, FL
+1705	University of Massachusetts, Boston
+1706	Yakima Valley Community College, Yakima, WA
+1707	Augustana University, Sioux Falls, SD
+1708	Wenatchee Valley College, Wenatchee, WA
+1709	Tuskegee University, Tuskegee, AL
+1710	Johnson University, Knoxville, TN
+1711	Lenoir-Rhyne University, Hickory, NC
+1712	German Historical Institute, Washington, DC
+1713	Hampshire College, Amherst, MA
+1714	University of Louisiana at Lafayette
+1715	Triton College, River Grove, IL
+1716	St. Mary's University of Minnesota
+1717	State University of New York, Plattsburgh
+1718	Moravian College, Bethlehem, PA
+1719	St Catherine University, Twin Cities
+1720	Pennsylvania College of Technology, Williamsport, PA
+1721	Bemidji State University, Bemidji, MN
+1722	California Institute of the Arts, Valencia, CA
+1723	Eastern Washington University, Cheney, WA
+1724	Cedar Crest College, Allentown, PA
+1725	Ohio Wesleyan University, Delaware, OH
+1726	Kentucky State University, Frankfort, KY
+1727	Mississippi University for Women, Columbus, MS
+1728	Berry College, Mount Berry, GA
+1729	University of North Carolina School of the Arts
+1730	Goldsmiths College, University of London, UK
+1731	University of Catania, Italy
+1732	University of Bristol, UK
+1733	Universitat Bielefeld, Germany
+1734	Lebanese American University, Beirut, Lebanon
+1735	Pittsburgh Theological Seminary
+1736	University of Kassel, Kassel, Germany
+1737	Bloomfield College, Bloomfield, NJ
+1738	Allegheny College, Meadville, PA
+1739	New Mexico State University, Las Cruces, NM
+1740	Institute of Social Studies, The Netherlands
+1741	University of the West of England, Bristol, England
+1742	London Metropolitan University
+1743	Oxford Brookes University, Oxford, UK
+1744	University of Toulouse II, France
+1745	St Francis Xavier University, Antigonish, Nova Scotia
+27	Texas A and M University, College Station, TX
+347	The Chinese University of Hong Kong
+348	The Metropolitan Museum of Art, New York
+29	The Pennsylvania State University
+217	Louisiana State University
+184	Loyola Marymount University
+219	Loyola University, Chicago
+415	Lund University, Lund, Sweden
+207	Macalester College
+305	Manhattanville College
+197	Minnesota State University, Mankato
+176	Maryville College
+437	Massachusetts Institute of Technology
+306	Massey University
+307	McGill University
+131	Michigan State University, East Lansing
+243	Middle Tennessee State University, Murfreesboro, TN
+309	Middlebury College
+453	Millersville University
+310	Monash University, Melbourne, Australia
+164	Montclair State University
+311	Mount Holyoke College
+462	National Endowment for the Humanities
+226	National Museum of Ethnology, Osaka, Japan
+312	National University of Singapore
+196	Nazareth College of Rochester
+314	Nelson-Atkins Museum of Art, Kansas City, MO
+315	New York University
+316	North Carolina State University
+153	Northern Arizona University
+318	Northern Illinois University
+59	Northwestern University, Evanston
+320	Oberlin College
+321	Ohio State University, Columbus
+322	Ohio University, Athens
+323	Oregon State University
+417	Oxford University Press
+325	Portland State University
+60	Princeton University
+201	Dalhousie University
+177	Dartmouth College
+277	Denison University
+278	Dickinson College, Carlisle, PA
+279	Drew University
+280	Duke University
+281	University of Durham, Durham, England
+248	East Carolina University
+37	Eastern Kentucky University
+165	Evergreen State College, Olympia, WA
+282	Flinders University of South Australia
+230	Florida Atlantic University
+457	Florida State University
+137	Franklin Pierce University, Rindge, NH
+200	Franklin and Marshall College, Lancaster, PA
+39	Freie Universitat Berlin
+42	Gakushuin University, Japan
+283	George Washington University
+284	Georgetown University
+43	Georgia State University
+33	Gettysburg College
+449	University of Glasgow, Glasgow, Scotland, UK
+287	Griffith University
+134	Grinnell College
+288	Hamilton College
+139	Hartwick College
+40	Harvard University
+290	Haverford College, Haverford, PA
+291	Hebrew University of Jerusalem
+205	Illinois State University
+178	Indiana State University
+152	Indiana University, Bloomington
+57	Institute for Advanced Study, Princeton, NJ
+294	Humboldt University of Berlin, Germany
+295	International House of Japan, Tokyo
+233	International Mission Board
+296	Johns Hopkins University
+297	Kenyon College
+298	National Library of Sweden, Stockholm, Sweden
+300	La Trobe University
+188	Lakehead University
+147	Lawrence University, Appleton, WI
+301	Lafayette College
+302	Lewis and Clark College
+303	Linfield College
+140	Loma Linda University
+183	Academia Sinica, Institute of Ethnology, Taiwan
+250	Agnes Scott College
+224	American University, Washington, DC
+51	Amherst College Library
+69	Ann Arbor Public Schools
+181	Arizona State University
+154	Asbury Theological Seminary
+253	Augustana College, Rock Island, IL
+254	Australian National University
+255	Bard College, Annandale-on-Hudson, NY
+256	Bates College
+194	Biola University
+142	Boise State University
+47	Boston College
+421	Boston University
+258	Bowdoin College
+260	Brigham Young University, Provo, UT
+169	Brigham Young University, Hawaii
+261	Brown University
+262	Bryn Mayr College, Bryn Mayr, PA
+263	California Institute of Integral Studies
+214	California Polytechnic State University, San Luis Obispo
+212	California State University, Northridge at Channel Islands
+210	California State University, Bakersfield
+186	California State University, Chico
+141	California State University, Fullerton
+215	California State University, Monterey Bay
+211	California State University, Northridge
+213	California State University (Cal Poly Pomona), Pomona, CA
+145	California State University, Sacramento
+179	Carleton College
+155	Central Connecticut State University
+265	City University of Hong Kong
+414	The Claremont Colleges
+266	Cleveland Museum of Art, Cleveland, Ohio
+267	Colby College, Waterville, ME
+144	Colgate University
+191	College of Charleston, Charleston, SC
+167	College of DuPage
+269	College of William and Mary
+231	Colorado College, Colorado Springs
+271	Columbia University Libraries
+272	Concordia University, Montreal, Quebec, CA
+273	Connecticut College
+436	Cornell University
+130	Valdosta State University
+404	Victoria University of Wellington
+189	Virginia Commonwealth University
+132	Wake Forest University
+218	Washington State University
+407	Washington University in St Louis, St Louis, MO
+406	Washington and Lee University
+408	Wesleyan University, Connecticut
+44	Western Michigan University
+410	Western Washington University
+411	Whitman College, Walla Walla, WA
+412	Williams College
+17	Yale University
+241	York College, CUNY
+14	York University, Toronto, Ontario, CA
+497	University of Minnesota, Morris
+498	Turku University including Turku University Hospital, Turku, Finland
+499	Eastern Illinois University
+500	California State University, Office of the Chancellor
+501	Emory University
+503	Universitatsbibliothek Freiburg
+505	Hunter College, CUNY
+506	University of Texas, Arlington
+508	Emmanuel College, UK
+509	University of Minnesota, Twin Cities
+510	Universidad de La Coruna
+511	San Diego State University
+512	Juniata College
+513	Memorial University of Newfoundland
+514	University of Alberta
+515	Rutgers University
+516	Virginia Polytechnic Institute and State University, Blacksburg, VA
+517	Wellesley College
+518	University of California, San Diego
+519	Providence College
+521	University of Houston Clear Lake, Houston, TX
+522	National Library of Australia
+523	DePauw University
+557	University of Minnesota, Duluth
+543	Hong Kong Polytechnic University
+526	Universitat Duisburg
+527	British Library, UK
+528	Trent University
+529	Tsurumi University
+530	William Paterson University
+531	University of California, Santa Cruz
+532	Simon Fraser University, Burnaby, British Columbia
+533	The Japan Foundation, Tokyo
+534	The University of Melbourne, Melbourne, Australia
+535	University of Maryland, College Park
+536	Sophia University, Tokyo, Japan
+537	Katholieke Universiteit Leuven, Belgium
+538	Baylor University
+539	University of Leeds
+551	International Research Center for Japanese Studies, Kyoto, Japan
+540	University of Massachusetts, Amherst
+541	Edinburgh University
+542	University of Kent, Canterbury, UK
+544	University of Zurich
+545	Auburn University, Auburn, AL
+546	Lehigh University
+547	Universitatsbibliothek Eichstatt
+548	Andrews University
+549	Kings College, London
+570	University of Michigan, Pseudo-campus for Pseudo-users
+553	University of Missouri, Columbia
+554	University of California, Riverside
+555	University of California, San Francisco
+556	University of Minnesota, Crookston
+558	Coe College, Cedar Rapids, IA
+559	University of Guam
+560	Fordham University
+561	Bibliotheque Nationale de France, Paris
+562	Trinity College, University of Dublin
+563	University of De La Laguna
+564	University of Haifa, Israel
+565	California State University, Los Angeles
+566	University of Cincinnati
+567	University of South Carolina, Columbia
+568	Seoul National University, Korea
+569	University of San Francisco
+571	Vanderbilt University
+572	American Museum of Natural History
+573	Assemblies of God Theological Seminary
+574	INSEAD Euro-Asia Center, Paris, France
+575	Radboud University Nijmegen, Netherlands
+576	University of Hawaii, Manoa
+577	Willamette University
+578	University of Wurzburg, Wurzburg, Germany
+579	Broward College, Fort Lauderdale, FL
+580	Pacific University
+581	Bucknell University
+583	University of Cambridge, Cambridge, England
+594	University of New Hampshire
+585	University of Erlangen-Nuernberg, Erlangen, Germany
+598	Athabasca University
+587	Great Basin College
+588	University of Bayreuth
+590	Colorado State University, Fort Collins, CO
+591	Universitaets Basel, Switzerland
+592	Pazmany Peter Catholic University
+403	Vassar College
+593	University of Vienna, Vienna, Austria
+595	Vrije University
+596	U.S. Naval Academy Library
+597	University of Laval, Quebec, CA
+599	University of Lethbridge
+600	University of Northern British Columbia
+601	University of Winnipeg
+602	University of Wisconsin, Eau Claire
+603	University of Wisconsin, La Crosse
+604	University of Wisconsin, Milwaukee
+605	University of Wisconsin, Oshkosh
+606	University of Wisconsin, Parkside
+607	University of Wisconsin, Platteville
+608	University of Wisconsin, River Falls
+2277	Makerere University, Kampala, Uganda
+2278	Utica College, Utica, NY
+2279	Baptist Missionary Association Theological Seminary, Jacksonville, TX
+2280	Covenant Theological Seminary, St. Louis, MO
+609	University of Wisconsin, Stevens Point
+610	University of Wisconsin, Stout
+611	University of Wisconsin, Superior
+612	University of Wisconsin, Whitewater
+613	University of Wisconsin Colleges
+614	Sewanee: The University of the South
+685	Utah State University
+686	University of Malaya, Kuala Lumpur, Malaysia
+687	Tulane University
+688	University of Michigan, Library Staff
+708	Getty Research Institute
+709	University of St. Andrews, Scotland
+710	State University of New York, Potsdam
+712	University of Arkansas, Fayetteville
+713	Villanova University
+715	Seikei University, Tokyo, Japan
+716	Japan Society, New York, New York
+717	Waseda University
+718	Crown College
+719	Humboldt State University
+5	University of Michigan, University Library, Library Instructional Center
+720	Mills College
+721	Alliant University
+722	University of LaVerne, LaVerne, CA
+723	Fielding Institute
+724	Westmont College
+725	University of North Texas
+726	Hobart and William Smith Colleges, Geneva, NY
+727	State University of New York, Geneseo
+729	California State University, Dominguez Hills
+730	California State University, East Bay
+775	Ursinus College
+733	California State University, Long Beach
+734	California State University, Maritime Academy
+735	California State University, Moss Landing
+736	California State University, Moss Landing, Salinas
+737	California State University, San Bernardino
+738	California State University, San Marcos
+739	California State University, Sonoma
+740	California State University, Stanislaus
+741	California State University, Stanislaus, Stockton
+742	Lyon College
+743	University of Reading, UK
+745	University of Texas, Brownsville
+746	University of Texas, San Antonio
+747	University of Texas, Tyler
+748	University of Texas of the Permian Basin
+749	The University of Texas Rio Grande Valley
+744	University of Louisville
+616	Hong Kong Baptist University
+728	University of Alabama, Birmingham
+618	California State University, Fresno
+620	Carnegie Mellon University
+621	Marshall University
+622	Kyoto University, Japan
+623	Universidad Autonoma de Barcelona
+624	Universite de Poitiers, France
+626	Western Carolina University
+625	University of Hamburg, Hamburg, Germany
+627	Asian Institute of Management, Makati City, Philippines
+628	Monmouth University
+629	Universitat zu Koln (University of Cologne), Cologne, Germany
+630	New York Public Library, New York City
+631	Maison des Sciences de l'Homme, Paris, France
+633	Tunghai University, Taichung, Taiwan
+634	Lingnan University, Hong Kong
+635	Southern Illinois University, Carbondale
+714	Universidad Nacional Autonoma de Mexico
+637	Brock University, Ontario, Canada
+638	Murdoch University, Perth, Western Australia
+639	University of Trieste, Trieste, Italy
+640	University of Akron
+641	College of Wooster
+642	Rollins College
+643	Wheaton College, Wheaton, IL
+644	University of Vermont
+645	University of North Texas, Denton/System Center
+647	University of Montana, Missoula
+648	Western State College
+649	Trinity University, San Antonio, Texas
+650	Tufts University
+651	University and Research Library of Erfurt/Gotha, Germany
+652	Hong Kong University of Science and Technology
+653	University of Miami
+654	Bard Academy at Simon's Rock
+655	Keio University, Japan
+656	Shepherd College
+657	Aoyama Gakuin University, Japan
+658	University of Southampton, England
+659	Teikyo University, Japan
+660	National Library of Berlin, Berlin, Germany
+661	Southwestern Missouri State University
+662	Victoria University of Technology
+663	Mount Royal University, Calgary, CA
+664	Copenhagen University, Denmark
+665	University of Tokyo
+666	D'Youville College
+667	Kittatinny Regional High School
+669	Naval War College, Newport, Rhode Island
+670	Naval Postgraduate School, Monterey, California
+671	Governors State University
+672	Southern Illinois University, Edwardsville
+673	University of Western Australia
+674	Erasmus University, Rotterdam, Netherlands
+675	University College London
+676	Danville Area Community College
+677	Bavarian State Library (Bayerische Staatsbibliothek), Munich
+678	Ludwig Maximilian University / Ludwig-Maximilians-Universitat, Munich, Germany
+679	University of Passau, Passau, Germany
+680	National Tsing Hua University, Hsinchu, Taiwan
+681	University of New Mexico
+682	Iowa State University
+683	University of Illinois, Chicago
+684	Miami University, Oxford, OH
+2282	Cleveland Institute of Art, Cleveland, OH
+2284	Moorestown Friends School, Moorestown, NJ
+2285	Emmanuel College, Boston, MA
+2286	Ringling College of Art, Sarasota, FL
+2287	St. John Vianney Theological Seminary, Denver, CO
+2288	Iliff School of Theology, Denver, CO
+750	State University of New York, Brockport
+752	Columbus State Community College
+753	University of Toledo
+259	Brandeis University
+754	Istituto Giapponese di Cultura, Rome, Italy
+755	University of San Diego
+756	Mount St. Mary's College, Los Angeles, CA
+757	Johann Wolfgang Goethe University, Frankfurt, Germany
+758	Campbellsville University
+759	University of the Cumberlands, Williamsburg, KY
+760	Lincoln Memorial University
+761	Bryan College
+762	Ferrum College
+763	King College, Bristol, TN
+764	Indiana University, Kokomo
+765	Purdue University, Fort Wayne
+766	American Council Of Learned Societies
+767	College of New Jersey
+776	St. John Fisher College
+768	Ohio State University, Wooster
+769	Ohio State University, Newark
+770	Ohio State University, Lima
+771	Ohio State University, Marion
+772	Loyola University, Notre Dame
+773	Pace University
+774	Universitat Konstanz
+777	University of Greifswald
+778	Institute of Southeast Asian Studies, Republic of Singapore
+779	Milton Academy
+780	Sarah Lawrence College
+781	Shorter College
+782	American University, Cairo
+783	Hofstra University, Hempstead, New York
+784	Martin Luther University, Halle, Germany
+785	Earlham College, Richmond, Indiana
+786	Western Kentucky University
+787	University of Ottawa, Ottawa, Ontario, Canada
+788	University of Bonn, Bonn, Germany
+789	Trinity Western University
+790	University of Geneva
+791	University of South Alabama, Mobile
+792	St. Xavier University
+793	University of Manchester
+794	Case Western Reserve University, Cleveland, OH
+795	Ripon College
+796	University of Texas, El Paso
+797	National University, San Diego, CA
+798	American Jewish University, Los Angeles, CA
+799	Pepperdine University
+800	Santa Clara University
+801	Luther College
+802	Universita di Urbino, Urbino, Italy
+803	University College of Boras, Boras, Sweden
+804	State University of New York, Jefferson Community College
+805	Yeshiva University
+806	Indiana University of Pennsylvania
+807	Library of Congress
+808	University of Santiago de Compostela
+809	Wellcome Library, London, England
+810	Catholic University of America, Washington, DC
+811	Prairie View A and M University
+812	Universitat Gottingen
+813	University of Liverpool
+814	Ohio State University, Mansfield
+815	University of Sheffield, Sheffield, England
+816	Fairfield University
+817	Calvin College and Seminary, Grand Rapids, Michigan
+818	Central European University
+819	North Carolina A and T State University
+823	Texas Christian University
+821	Le Moyne College
+822	University of Tulsa
+824	Arkansas Tech University, Russellville, AR
+825	Radford University
+826	Deutsches Institut fur Japanstudien, Tokyo, Japan
+827	University of the Ozarks
+828	York College of Pennsylvania
+829	University of Oklahoma, Norman, OK
+830	Toyo University
+831	Westminster College, Salt Lake City, UT
+832	Chestnut Hill College
+833	Sweet Briar College
+834	University of Houston Downtown, Houston, TX
+835	American Historical Association, Washington, DC
+838	Marymount Manhattan College
+836	University of Oslo, Oslo, Norway
+837	Wabash College
+839	Northwestern Michigan College
+840	Bloomsburg University
+841	Quincy University
+842	Ohio Northern University
+843	University of the West Indies
+844	Berea College
+845	Carson-Newman College
+846	Emory and Henry College
+847	Kentucky Christian University, Grayson, KY
+848	Lee University
+849	Milligan College
+850	Ohio Valley University, Vienna, WV
+851	Tennessee Wesleyan College
+852	Warren Wilson College
+853	Drexel University
+854	Harvard-Westlake School
+855	Alameda County Law Library, Oakland, CA
+856	Allegheney County Law Library, Pittsburgh, PA
+857	Quinnipiac University
+858	Brooklyn Law School, Brooklyn, NY
+859	California Western School of Law, San Diego, CA
+860	Capital University, Columbus, OH
+861	Creighton University
+862	[removed]
+863	Hamline University
+864	Jenkins Law Library, Philadelphia, PA
+865	Los Angeles County Law Library
+866	Marquette University
+867	Mercer University
+868	State Law Library of Montana, Helena, MT
+869	Oklahoma City University
+870	Orange County Public Law Library
+871	Queen's University, Kingston, Ontario, CA
+872	San Diego County Law Library, San Diego, CA
+2311	Wartburg Theological Seminary, Dubuque, IA
+2281	South Asia Institute of Advanced Christian Studies, Bangalore, India
+2283	Front Range Community College - all campuses, CO
+2289	University of the West, Rosemead, CA
+2312	Algoma University, Sault Ste. Marie, Ontario
+873	Southwestern University, Los Angeles, CA
+874	Suffolk University, Boston, MA
+948	Lehman College, CUNY
+876	University of Windsor, Ontario, CA
+877	John Marshall Law School, Chicago, IL
+878	Valparaiso University, Valparaiso, IN
+879	University of Richmond, Richmond, VA
+880	St. Louis University, St. Louis, MO
+881	Law Society of Upper Canada, Toronto, Ontario, CA
+882	Stetson University, Deland, FL
+883	Northern Kentucky University, Highland Heights, KY
+884	University of LaVerne, Ontario, CA
+885	Indiana University - Purdue University, Indianapolis
+886	Red Deer College
+888	New York Law School
+889	Wisconsin State Law Library
+890	Mississippi College
+891	Touro Law Center
+892	Appalachian School of Law, Grundy, VA
+893	Ramsey County Law Library, St. Paul, MN
+894	Seton Hall University, Newark, NJ
+895	Northeastern University, Boston, MA
+949	Supreme Court of the United States Library, Washington, DC
+897	Ave Maria School of Law, Ann Arbor, MI
+898	University of Detroit Mercy
+899	Texas Wesleyan University
+900	George Mason University, Arlington, VA
+901	Texas Tech University, Lubbock, TX
+902	Santa Clara County Law Library
+903	St. Louis County Law Library, Clayton, MO
+904	Riverside County Law Library, Riverside, CA
+905	Appellate Division Law Library, Rochester, NY
+906	Superior Court Law Library, Phoenix, AZ
+907	Chicago-Kent College of Law, Chiacgo, IL
+908	San Bernardino County Law Library
+909	University of St. Thomas, Minneapolis, MN
+910	Arnold and Porter, Washington, DC
+911	Gibson, Dunn, and Crutch, Los Angeles, CA
+912	Covington and Burlington, Washington, DC
+913	Hogan and Hartson, Washington, DC
+914	Wilkie, Farr and Gallagher, New York, NY
+915	Kramer, Levin et al, New York, NY
+916	Wiggin and Dana, New Haven, CT
+917	St Joseph Notre Dame High School
+918	Florida Coastal School of Law
+919	Baruch College, CUNY
+920	John Jay College, CUNY
+921	CUNY School of Law
+922	University of Guelph
+923	University Library Utrecht
+924	US Courts, Administrative Offices, Washington, DC
+925	Schwabe, Williamson and Wyatt, Portland OR
+926	Thomas Jefferson Law School Library, San Diego, CA
+927	Nova Southeastern University, Fort Lauderdale, FL
+928	California Court of Appeals, Los Angeles, CA
+929	Franklin Pierce Law Center Library
+930	Jones Day, Washington DC
+931	Caplin and Drysdale, Washington, DC
+932	Regent University, Virginia Beach, VA
+933	Meyer Boswell Books, Inc., San Francisco, CA
+934	University of North Dakota, Grand Forks, ND
+935	University of Hawaii, Maui
+936	Washburn University, Topeka, KS
+937	Cincinnati Law Library Association
+938	University of Arkansas, Little Rock, AR
+939	William Mitchell College of Law, St. Paul, MN
+940	Florida International University, Miami, FL
+941	University of Idaho, Moscow, ID
+942	Widener University, Wilmington, DE
+943	US Court of Appeals for the Armed Forces, Washington, DC
+944	Albany Law School, Albany, NY
+945	Rensselaer Polytechnic Institute
+946	William S. Hein and Co, Inc.
+947	Smithsonian Institution Libraries, Washington, DC
+950	Truman State University
+951	University of Houston Law Center, Houston, TX
+952	Wayne State University
+953	University of Maryland School of Law
+955	Contra Costa County Public Law Library, Martinez, CA
+956	University of Baltimore
+957	Marian University, Fond du Lac, WI
+958	Whittier College, Whittier, CA
+959	Library of Michigan
+960	Jackson County Law Library, Kansas City, MO
+961	Barry University, Orlando, FL
+962	University of Leipzig, Leipzig, Germany
+963	Hawaii Pacific University
+964	Faegre and Benson, Minneapolis, MN
+965	Saginaw Valley State University
+966	Ovid-Elsie Area Schools
+967	Oakland University
+968	Hope College, Holland, MI
+969	Cornerstone University
+970	Eastern Michigan University
+971	Furman University, Greenville, SC
+972	McGuireWoods LLP, Richmond, VA
+973	New England School of Law, Boston, MA
+974	University of North Carolina at Greensboro
+976	University of Hawaii, West Oahu
+977	Western New England University, Springfield, MA
+978	National Taiwan University, Taipei, Taiwan
+979	Colonial Williamsburg Foundation
+980	Capital Community College, Hartford, CT
+981	Brooklyn College, CUNY
+982	City College, CUNY
+983	Medgar Evers College, CUNY
+984	New York City College of Technology, CUNY
+985	College of Staten Island, CUNY
+986	The Graduate Center, CUNY
+987	Borough of Manhattan Community College, CUNY
+988	Bronx Community College, CUNY
+989	Hostos Community College, CUNY
+990	Kingsboro Community College, CUNY
+991	LaGuardia Community College, CUNY
+992	Queensboro Community College, CUNY
+993	Missouri Southern State University
+994	St. Mary's University, San Antonio, TX
+995	CUNY Central Office
+996	San Francisco Law Library
+997	Connecticut State Library, Hartford, CT
+998	Universiti Utara Malaysia, Kedah, Malaysia
+999	Sidley Austin Brown and Wood LLP, Washington, DC
+1000	American Academy in Rome, Rome, Italy
+1001	Pulaski Technical College
+1002	Curtin University of Technology
+1003	Central Washington University
+1004	McKendree College
+1005	Mercyhurst College
+1006	University of Central Missouri, Warrensburg, MO
+1007	European University Institute, Florence, Italy
+1008	Yukon College
+1009	Okanagan University College, British Columbia, Canada
+1010	Ryerson University, Toronto, Ontario, Canada
+1011	Supreme Court of Ohio Law Library, Columbus, OH
+1012	Saybrook College
+1013	Warner Pacific College, Portland, OR
+1014	Wilfried Laurier University
+1015	University College of the Fraser Valley
+1016	University of Colima
+1017	Gogebic Community College, Ironwood, MI
+1018	Ozarks Technical Community College, Springfield, MO
+1019	The Lovett School, Atlanta, GA
+1020	Ivy Tech Community College
+1021	Drury University, Springfield, MO
+1022	Cincinnati Christian University, Cincinnati, OH
+1023	Cincinnati State Technical and Community College, Cincinnati, OH
+1024	Edison Community College
+1025	John Carroll University
+1026	Kent State University, Kent
+1027	Kent State University, Trumbull
+1028	Kent State University, Ashtabula
+1029	Kent State University, East Liverpool
+1030	Kent State University, Geauga
+1031	Kent State University, Salem
+1032	Kent State University, Stark
+1033	Kent State University, Tuscavaras
+1034	Lakeland Community College
+1035	Lorain County Community College
+1036	Malone College
+1037	University of Mount Union, Alliance, OH
+1038	Mount Vernon Nazarene University
+1039	Morehead State University
+1040	Chancellor University, Cleveland, OH
+1041	OhioLINK Offices
+1042	Otterbein College, Westerville, OH
+1043	Owens Community College, Toledo, OH
+1044	Southern State Community College
+1045	National Library of Canada, Ottawa, Ontario, CA
+1046	State Library of Ohio
+1047	Tiffin University
+1048	University of Dayton
+1049	Ursuline College, Pepper Pike, OH
+1050	Walsh University
+1051	Xavier University, Cincinnati, OH
+1052	Institute of Ismaili Studies
+1053	Glen Oaks Community College
+1054	St. Mary's College of Maryland
+1055	Ohio University, Lancaster
+1056	US Courts, VPN
+1057	US Courts, 1st Circuit
+1058	US Courts, 2nd Circuit
+1059	US Courts, 3rd Circuit
+1060	US Courts, 4th Circuit
+1061	US Courts, 5th Circuit
+1062	US Courts, 6th Circuit
+1063	US Courts, 7th Circuit
+1064	US Courts, 8th Circuit
+1065	US Courts, 9th Circuit
+1066	US Courts, 10th Circuit
+1067	US Courts, 11th Circuit
+1068	Hebrew College
+1069	Bangor Theological Seminary, Portland, Maine
+1070	Bangor Theological Seminary, Bangor, Maine
+1071	American University of Beirut
+1072	National Central Library, Taipei, Taiwan
+1073	Acadia University
+1074	Mary Washington College
+1075	University of Arkansas, Fort Smith
+1076	College of Southern Nevada, Las Vegas, NV
+1077	St. Thomas University, Miami, FL
+1078	Messiah College, Grantham, PA
+1079	New York Institute of Technology
+1080	Norfolk Academy, Norfolk, VA
+1081	Washington College, Chestertown, MD
+1082	Lesley University, Cambridge, MA
+1083	Delaware State University
+1084	Fond du Lac Tribal and Community College, Cloquet, MN
+1085	Law Library Microfilm Consortium Offices, Kaneohe, HI
+1086	Simmons University, Boston, MA
+1087	Drake University, Des Moines, IA
+1088	Clemson University, Clemson, SC
+1089	Law Society of Saskatchewan
+1090	Supreme Court of Canada Library, Ottawa, ON
+1091	University of Saskatchewan, Saskatoon, SA
+1092	University of Mississippi
+1093	Florida A and M University, Tallahassee, FL
+1094	Istituto Italiano per l'Africa e l'Oriente, Rome, Italy
+1095	University of Texas, Dallas
+1096	Houston Academy of Medicine, Texas Medical Center
+1097	University of Texas, Houston, Health Science Center
+1098	University of Texas, Houston, Health Science Center, Dental Branch
+1099	University of Texas, Houston, Health Science Center, Psychiatry Library
+1100	University of Texas, Houston, Health Science Center, School of Public Health
+1101	Gonzaga University, Spokane, WA
+1102	European University, St. Petersburg, Russia
+1103	South Texas College of Law, Houston, TX
+1104	Bethel University, Saint Paul, MN
+1105	University of Lausanne, Lausanne, Switzerland
+1106	Aalborg University, Denmark
+1107	Danish Electronic Research Library
+1108	Technical University of Denmark
+1109	Roskilde University, Denmark
+1110	University Library of Southern Denmark, Odense, Denmark
+1111	Carleton University, Ottawa, ONT, CA
+1112	University of Denver, Denver, CO
+1113	Golden Gate University, San Francisco, CA
+1114	Seattle University, Seattle, WA
+1115	Rhode Island State Law Library
+1116	University of Montreal, Quebec, CA
+1117	Thomas M. Cooley Law School, Lansing, MI
+1118	Joliet Junior College, Joliet, IL
+1119	Cleveland State University, Cleveland, OH
+1120	University of Regina, Regina, Saskatchewan, Canada
+1121	Lynchburg College, Lynchburg, VA
+1122	Belmont Technical College, St. Clairsville, OH
+1123	Clark State Community College, Springfield, OH
+1124	Ohio University, Zanesville
+1125	Northern State University, Aberdeen, SD
+1126	California Judicial Center Library
+1128	American River College
+1129	Cosumnes River College, Sacremento, CA
+1130	Folsom Lake College
+1131	Sacramento City College
+1132	Cloud County Community College
+1133	Emporia State University
+1134	Fort Hays State University
+1135	Johnson County Community College
+1136	Johnson County Library
+1137	Kansas City Kansas Community College
+1138	Kansas State University
+1139	Pittsburg State University, Pittsburg, KS
+1140	Wichita State University
+1141	Keene State College, Keene, NH
+1142	Great Bay Community College, Portsmouth, NH
+1143	Universitatsbibliothek Marburg
+1144	Charleston School of Law
+1145	Montreat College, Montreat, NC
+1146	Freed-Hardeman University, Henderson, TN
+1147	Alice Lloyd College, Pippa Passes, KY
+1148	Hiwassee College, Madisonville, TN
+1149	Union College, Barbourville, KY
+1150	University of Missouri, St. Louis
+1151	Ca Foscari University of Venice, Venice, Italy
+1152	University of South Carolina, Lancaster
+1153	University of South Carolina, Salkehatchie
+1154	University of South Carolina, Sumter
+1155	University of South Carolina, Union
+1156	Tennessee State University
+1157	Pellissippi State Technical Community College, Knoxville, TN
+1158	Fulton-Montgomery Community College, Johnstown, NY
+1159	National University of Ireland, Galway
+1160	Ruhr Universitatbibliothek Bochum
+1161	University of the District of Columbia
+1162	New School University, New York, NY
+1163	National Library of Wales
+1164	St. Louis Community College, St. Louis, MO
+1165	Northern Lakes College
+1167	Touro College, New York, NY
+1169	Touro University, Israel
+1170	Touro College, Berlin
+1171	Moscow University Touro, Moscow, Russia
+1172	Trident University  International (TUI) (formerly Touro University International), Cypress, CA
+1173	Goucher College, Baltimore, MA
+1174	Northwest College, Kirkland, WA
+1175	Institute for Behavior, Evolution and Law
+1176	University of the Pacific, Stockton, CA
+1177	American Institute for Lankan Studies, Colombo, Sri Lanka
+1178	Western Nevada Community College
+1179	University of South Carolina, Aiken
+1180	University of South Carolina, Upstate
+1181	New Paltz High School, New Paltz, NY
+1182	Non-University of Michigan Mirlyn Users
+1183	Taylor University, Upland, IN
+1184	Grande Prairie Regional College, Grande Prairie, Alberta, CA
+1185	Texas State University, San Marcos
+1186	Ventura College, Ventura, CA
+1187	Leeds Beckett University, Leeds, UK
+1188	University of Hawaii, Hilo
+1189	Chattanooga State Community College, Chattanooga, TN
+1190	Motlow State Community College, Tullahoma, TN
+1191	Glendale Community College, Glendale, AZ
+1192	Touro University, Nevada
+1193	Liberty University, Lynchburg, VA
+1194	Laurentian University, Sudbury
+1195	Laurentian University, Sault Sainte Marie
+1196	Laurentian University, Hearst
+1197	Laurentian University, Kapuskasing
+1198	Laurentian University, Timmins
+1199	Plymouth State University, Plymouth, NH
+1200	San Juan College, Farmington, NM
+1201	Tamkang University, New Taipei City, Taiwan
+1202	University of Technology, Sydney, Australia
+1203	Lambuth University, Jackson, TN
+1204	Brevard College, Brevard, NC
+1205	University of Warwick, Coventry, UK
+1206	Green River Community College, Auburn, WA
+1207	Capilano College, BC, CA
+1208	Jamestown Community College, Jamestown, NY
+1209	US Department of State
+1210	Walters State Community College, Morristown, TN
+1211	Alderson-Broaddus College, Philippi. WV
+1212	Bethany College, Bethany, WV
+1213	Bluefield College, Bluefield, VA
+1214	Davis and Elkins College, Elkins, WV
+1215	Lees-McRae College, Banner Elk, NC
+1216	Lindsey Wilson College, Columbia, KY
+1217	Mars Hill College, Mars Hill, NC
+1218	Tusculum College, Greeneville, TN
+1219	University of Charleston, Charleston, WV
+1220	Virginia Intermont College, Bristol, VA
+1221	West Virginia Wesleyan College, Buckhannon, WV
+1222	Wheeling Jesuit University, Wheeling, WV
+1223	Singapore Management University
+1979	Charles Darwin University, Casuarina,	Australia
+1766	Pomfret School, Pomfret, CT
+1767	Langara College, Vancouver, BC, CA
+1768	University of Rhode Island, Kingston, RI
+1771	Liaoning University, Shenyang City, Liaoning Province, China
+1802	Woodrow Wilson International Center for Scholars, Washington, DC
+1821	University of Bolton, UK
+1822	Iona College, New Rochelle, NY
+1823	Texas Womens University, Denton, TX
+1824	Nicholls State University, Thibodaux, LA
+1825	Bradley University, Peoria, IL
+1826	College of Saint Benedict, St Joseph, MN and Saint Johns University, Collegeville, MN
+1845	University of Wollongong, Wollongong, Australia
+1847	H.W. Wilson Co., Bronx, NY
+1848	University of Cyprus, Nicosia, Cyprus
+1849	Central Compilation and Translation Bureau, Beijing, China
+1852	Leeds Trinity University College, Horsforth, UK
+1853	Georgian Court University, Lakewood, NJ
+1854	Northwest College, Powell, WY
+1905	La Salle University, Philadelphia, PA
+1906	Appalachian State University, Boone, NC
+1952	Southwestern University, Georgetown, TX
+1969	Rogers State University, Claremore, OK
+1977	State University of New York, Oneonta, NY
+1978	Mesa Community College, Mesa, AZ
+1980	Simpson University, Redding, CA
+1992	University of Gloucestershire, Gloucestershire, UK
+2000	Kofi Annan International Peacekeeping Training Centre, Cantonment-Accra, Ghana
+2012	Whitefield Academy, Mableton, GA
+2009	University of Houston, Houston, TX
+2011	Indian Springs School, Indian Springs, AL
+2013	Carrollton School of the Sacred Heart, Miami, FL
+2017	The Danish Center for Research on Women and Gender (KVINFO) (((K??n Viden Information Forskning), Denmark
+2020	Northeast Normal University, Changchun, Jilin, China
+2046	Max Planck Institute for the History of Science, Berlin, Germany
+2054	Centre for Womens Development Studies, New Delhi, India
+2068	Bethlehem College and Seminary, MMinneapolis, MN
+2069	Princeton Theological Seminary, Princeton, NJ
+2072	Carthage College, Kenosha, WI
+2073	The Masters Seminary, Sun Valley, CA
+2074	Xiamen University, Fujian, China
+2075	Lanzhou University, Gansu, China
+2076	East China Normal University, Shanghai, China
+2087	Marietta College, Marietta, OH
+2102	Yunnan Agricultural University, Kunming, Yunnan, China
+2103	Fuzhou University, Fuzhou, Fujian, China
+2119	Bluffton University, Bluffton, OH
+2122	Queen Margaret University, Musselburgh, Scotland
+2129	St. Stephen's School, Rome, Italy
+2138	American College of Greece, Athens, Greece
+2139	Baldwin Wallace University, Berea, OH
+2140	Defiance College, Defiance, OH
+2141	University of Rio Grande and Rio Grande Community College, Rio Grande, OH
+2147	Georgia Institute of Technology, Atlanta, GA
+2156	Museum of Fine Arts, Boston, MA
+2157	College of Our Lady of the Elms (Elms College), Chicopee, MA
+1755	Tainan National College of the Arts, Taiwan
+1756	National Changhua University of Education, Taiwan
+1757	National Taiwan Normal University
+1758	Muhlenberg College, Allentown, PA
+1759	Readex
+1763	University of Macau
+1838	Lancaster University, Bailrigg, Lancaster, UK
+1839	University of Minnesota, Hormel Institute
+1840	Universidad Francisco Marroquin, Guatemala
+1841	Rowan University, Glassboro, NJ
+1842	Episcopal Divinity School, Cambridge, MA
+1843	Hingham High School, Hingham, MA
+1866	University of Wales, Lampeter, UK
+1867	American University of Iraq
+1874	University of Surrey, Guildford, Surrey, UK
+1875	University of Strathclyde, Glasgow, Scotland, UK
+1876	University of Plymouth, Plymouth, England, UK
+1877	Northumbria University, Newcastle upon Tyne, UK
+1878	Keele University, Staffordshire, UK
+1880	University of Hull, Hull, UK
+1881	University of Huddersfield, Huddersfield, UK
+1886	University of Essex, Colchester, Essex, UK
+1887	University of East Anglia, Norwich, Norfolk, England
+1888	University of Derby, Derby, UK
+1889	University of Cumbria, Cumbria, England, UK
+1890	University of Chester, Chester, UK
+1891	University of Central Lancashire, Preston, England, UK
+1892	Bangor University, Bangor, Wales, UK
+1893	University of Aberdeen, Aberdeen, Scotland, UK
+1894	University College Falmouth, Falmouth, England, UK
+1895	University of Chichester, Chichester, UK
+1896	The Victoria and Albert Museum, London, UK
+1900	British Museum, London
+1901	Brunel University, Uxbridge, Middlesex, England
+1997	Mississippi State University, Mississippi State, MS
+2006	University of the Arts (UArts), Philadelphia, PA
+2108	Chicago State University, Chicago, IL
+2067	Touro College, Israel
+2008	Ararteko: Defensor Del Pueblo Vasco,, Vitoria-Gasteiz, Spain
+2086	Ashford University, Clinton, IA
+2107	American Council Of Learned Societies, Humanities E-Books Offices
+2117	University of the Valley of Guatemala
+2118	Piedmont College, Demorest, GA
+2134	International University of Japan, Minami-Uonuma, Japan
+2135	The Dalton School, New York, NY
+2136	Jewish Theological Seminary, New York, NY
+8	University of Michigan, University Library, Library Buildings
+1746	Graceland University, Independence, MO
+1764	Thompson Rivers University, Kamloops, BC, CA
+1772	Vancouver Island University, Nanaimo, BC, CA
+1827	St. Mary's College, Notre Dame, IN
+1828	Belmont University, Nashville, TN
+1829	Saint Pauls School, Concord, NH
+1834	Hampden-Sydney College, Hampden-Sydney, VA
+1836	Randolph-Macon College, Ashland, VA
+1837	University of North Carolina at Asheville
+1844	University of Evansville, Evansville, IN
+1860	Elsevier Bibliographic Databases, Amsterdam, Netherlands
+1864	North Dakota State University, Fargo, ND
+2131	Bridgewater State University, Bridgewater, MA
+1963	Cary Academy, Cary, NC
+1964	St. Catherine's School, Richmond, VA
+1965	Association for Asian Studies, Ann Arbor, MI
+1975	Oglethorpe University, Brookhaven, GA
+1988	Faculdade de Filosofia e Ci??ncias (FFC), Marilia, Brazil
+1989	National Taiwan University of Arts, Taiwan
+1990	Phillips Exeter Academy, Exeter, NH
+1995	Central Intelligence Agency, McLean, VA
+1996	Marianopolis College, Westmount, Quebec, Canada
+2005	Hood College, Frederick, MD
+2035	City University London
+2038	The College Preparatory School, Oakland, CA
+2050	Buckingham Browne and Nichols, Cambridge, MA
+2051	University of Heilongjiang, China
+2052	Mount Angel Abbey, St Benedict, OR
+2058	Eastern University, St Davids, PA
+2059	Catholic Theological Union, Chicago, IL
+2060	Butler University, Indianapolis, IN
+2070	Oakton Community College, Des Plaines and Skokie, IL
+2071	Lancaster Bible College, Lancaster, PA
+2099	University of the Basque Country, Spain
+2111	Thomas Jefferson Foundation, Charlottesville, VA
+2112	Kent Place School, Summit, NJ
+2120	McCallie School, Chattanooga, TN
+2137	University of Bridgeport, Bridgeport, CT
+2154	Saint Anselm College, Manchester, NH
+2182	Philadelphia Museum of Art, Philadelphia, PA
+2183	Gateway Seminary, Ontario, CA
+2184	Shawnee State University, Portsmouth, OH
+2053	Wuyi University, Wuyishan, China
+1762	University of Memphis, TN
+1761	Bucks County Community College, Newtown, PA
+1769	Sichuan International Studies University, China
+1770	Chinese Academy of Social Sciences, Beijing, China
+1778	West Virginia University, Parkersburg
+1808	Franklin University, Columbus, OH
+1804	University of Malaga, Spain
+1807	Heidelberg University, Tiffin, OH
+1809	University of Findlay, Findlay, OH
+1810	University of Mary Washington, Fredericksburg, VA
+1811	Johnson and Wales University, Providence, RI
+1812	Roger Williams University, Bristol, RI
+1813	Oregon Coast Community College, South Beach, OR
+1814	Point Loma Nazarene University, San Diego, CA
+1815	Lebanon Valley College, Annville, PA
+1816	University of Nebraska, Kearney, NE
+1817	Hong Kong Shue Yan University
+1818	Ateneo de Manila University, Philippines
+1830	Ohio State University, Edison Welding Institute
+1835	Saint Bonaventure University, Allegany, NY
+1846	Sodertorn University, Flemingsberg, Sweden
+1850	Technische Universitat Berlin, Germany
+1851	Faith Evangelical College and Seminary, Tacoma, WA
+1855	University of California, Lawrence Livermore National Laboratory
+1856	Grambling State University, Grambling, LA
+1857	University of Alaska Southeast, Juneau, AK
+1858	Northeastern Illinois University, Chicago, IL
+1859	University of Alaska Fairbanks, Fairbanks, AK
+1868	Aberystwyth University, Wales
+1869	Anglia Ruskin University, Cambridge and Chelmsford, UK
+1870	Bath Spa University College, Bath, England
+1871	North Carolina Central University, Durham, NC
+1872	Birkbeck College, University of London
+1873	Birmingham City University, UK
+1879	University of Guadalajara, Guadalajara, Jalisco, Mexico
+1897	National Library of Israel, Givat Ram, Jerusalem
+1898	Northeast Asian History Foundation, Seoul, Korea
+1899	Wheaton College, Norton, MA
+1939	Cuyahoga Community College, Ohio
+1940	Lake Forest College, Lake Forest, IL
+1941	University of Puerto Rico, San Juan, Puerto Rico
+1942	Sookmyung Womens University, Seoul, South Korea
+1943	McDaniel College, Westminster, MD
+1944	Adelphi University, Garden City, NY
+1947	Santa Barbara City College, Santa Barbara, CA
+1948	Dongduk Womens University, Seoul, South Korea
+1949	Massachusetts Bay Community College, Wellesley, MA
+1950	University of Modena and Reggio Emilia.,  Emilia-Romagna, Italy
+1951	Universidad del Pais Vasco, Basque Country, Spain
+1955	George Fox University, Newberg, OR
+1961	Anthropological Survey of India, Calcutta, India
+1962	Sinclair Community College, Dayton, OH
+1966	University of Western Sydney, Penrith, NSW
+1970	Florida Institute of Technology, Melbourne, FL
+1971	Bryant University, Smithfield, RI
+1972	Community College of Rhode Island, RI
+1973	Baker University, Baldwin City, KS
+1976	Cameron University, Lawton, OK
+1981	Cultural Knowledge Consortium
+1982	Royal Tropical Institute (KIT), Amsterdam, NL
+1983	Bibliotheque Universitaire des Langues et Civilisations, Paris, France
+1984	Old Dominion University, Norfolk, VA
+1987	[deleted]
+2027	Open University of Hong Kong
+2049	East Stroudsburg University of Pennsylvania, East Stroudsburg, PA
+2056	Luther Seminary, St. Paul, MN
+2061	Cairn University, Langhorne, PA
+2062	New Jersey City University, Jersey City, NJ
+2063	Howard University, Washington, DC
+2077	Unity Institute and Seminary, Unity Village, MO
+2078	Western Connecticut State University, Danbury, CT
+2079	Minzu University of China (aka Central University for Nationalities (CUN), Beijing, China
+2080	Institute of Vertebrate Paleontology and Paleoanthropology, Beijing, China
+2091	Palm Beach Atlantic University, West Palm Beach, FL
+2092	Niigata University (Niigata Daigaku Fuzoku Toshokan), Niigata, Japan
+2093	Kwantlen Polytechnic University, British Columbia, Canada
+2104	Venezuelan Institute for Scientific Research (IVIC-Inst Ven de Invest Cientificas)
+2128	Shanghai Normal University (SHNU), Shanghai, China
+2132	Komazawa University, Tokyo, Japan
+2144	Hillcrest Christian College, Gold Coast, Queensland, Australia
+2153	Texas Lutheran University, Seguin, TX
+2155	Butler Community College, El Dorado, KS
+2181	Shandong Womens University, Jinan, Shandong, China
+2187	Columbus College of Art and Design (CCAD), Columbus, OH
+1773	RWTH Aachen University, Aachen, Germany
+1775	University of Gothenburg, Sweden
+1774	Universidad de los Andes, Bogota, Columbia
+1776	University of Southern Maine, Portland, ME
+1777	Kennesaw State University, Kennesaw, GA
+1779	National Museum of Natural Science, Taichung, Taiwan
+1780	Shenandoah University, Winchester, VA
+1782	University of New Orleans, LA
+1783	Aristotle University of Thessaloniki, Greece
+1784	Deakin University, Victoria, Australia
+1785	Palomar Community College, San Marcos, CA
+1786	University of Provence, Marseille, France
+1803	National Dong Hwa University, Taiwan
+1909	De Montfort University, Leicester, UK
+1907	Canterbury Christ Church University College, UK
+1908	Courtauld Institute of Art, London, England
+1910	Glyndwr University, Wrexham, UK
+1911	Liverpool Hope University, UK
+1912	Liverpool John Moores University, UK
+1913	Loughborough University, UK
+1914	Manchester Metropolitan University, UK
+1915	Middlesex University, UK
+1916	National Portrait Gallery, London, UK
+1917	Newman University, Birmingham, UK
+1918	Nottingham Trent University, UK
+1919	Roehampton University, UK
+1920	Royal Scottish Academy of Music and Drama, Glasgow, UK
+1921	Sheffield Hallam University, UK
+1923	The Museum of London, UK
+1924	The National Maritime Museum, UK
+1925	The University of Northampton, UK
+1926	Atlanta University Center, Atlanta, GA
+1927	Tennessee Technological University, Cookeville, TN
+1928	NC Live, Raleigh, NC
+1929	Christopher Newport University, Newport News, VA
+1932	Rock Valley College, Rockford, IL
+1930	Alma College, Alma, MI
+1931	Public Library of Cincinnati, Cincinnati, OH
+1933	Gustavus Adolphus College, Saint Peter, MN
+1934	St Ambrose University, Davenport, IA
+1935	Ewha Womans University, Seoul, South Korea
+1936	La Sierra University, Riverside, CA
+1937	Paris Dauphine University, Paris, France
+1938	Long Island University, Brookville, NY
+1954	CrossRef (operated by the Publishers International Linking Association), Lynnfield, MA
+1958	Montana Tech of the University of Montana, Butte, MT
+1959	University of Montana Western, Dillon, MT
+1960	University of Montana ??? Helena College of Technology, Helena, MT
+1974	St Christopher's School, Richmond, VA
+1993	John Brown University, Siloam Springs, AR
+1994	Charles Sturt University, Barhurst, New South Wales, Australia
+2001	Mount St Joseph University, Cincinnati, OH
+2003	Capital University of Economics and Business, Beijing, China
+2002	Cedarville College, Cedarville, OH
+2014	Pingry School, Basking Ridge
+2018	Guangxi Normal University, Guilin, Guangxi, China
+2025	University of Moncton, CA
+2026	Kalamazoo College, Kalamazoo, MI
+2028	University of South Africa (Unisa), Pretoria, Gauteng, South Africa
+2029	New College of Florida, Sarasota, FA
+2030	Eckerd College, St. Petersburg, FL
+2031	The Ensworth School, Nashville, TN
+2033	Texas A and M International University, Laredo, TX
+2034	Friends Academy, Locust Valley, NY
+2041	Qatar Faculty of Islamic Studies, Doha, Qatar
+2042	Architectural Association School of Architecture, London, England, UK
+2043	National Aquatic Resources Research  Center, Colombo, Sri Lanka
+2047	Academy of Korean Studies, Gyonggi-do, South Korea
+2065	Ashley Hall, Charleston, SC
+2066	Sardar Patel University, Vallabh Vidyanagar, Gujarat, India
+2081	Mount Saint Vincent University, Halifax, Nova Scotia, Canada
+2082	Sam Houston State University, Huntsville, TX
+2083	Chapman University, Orange, CA
+2084	Rockford University, Rockford, IL
+2094	University of Social Sciences and Humanities (Szko??a Wy??sza Psychologii Spo??ecznej aka SWPS), Warsaw, Poland
+2095	Collegium Civitas, Warsaw, Poland
+2109	University of Milan Bicocca, Italy
+2110	Indian Institute of Advanced Study, Shimla, India
+2142	Samford University, Homewood, AL
+2143	Antioch University New England, Keene, NH
+2145	Yankee Book Peddler, Inc., Contoocook, NH
+2146	The Taft School, Watertown, CT
+2151	Shanghai Academy of Social Sciences, Shanghai, China
+2152	Sichuan Normal University, Chengdu, Sichuan, China
+2180	Philadelphia University, Philadelphia, PA
+1787	University of Dundee, Scotland
+1788	Meiji Gakuin University, Tokyo, Japan
+1789	University of Salford, England
+1790	Illinois Wesleyan University, Bloomington, IL
+1791	Centro de Investigaciones y Estudios Superiores en Antropologia Social, Tlalpan, Mexico
+1792	Ehime University, Japan
+1793	Bilkent University, Ankara, Turkey
+1794	Smithsonian Tropical Research Institute, Washington, DC
+1795	Commission for the Citizenship and Equality of Gender, Portugal
+1796	University of Campinas, Brazil
+1797	National Chung Hsing University, Taiwan
+1798	State University of New York, Delhi
+1799	San Francisco Public Library, San Francisco, CA
+1800	Salisbury University, Salisbury, MD
+1801	University of Portland, OR
+1806	University of Ulster at Coleraine, Northern Ireland
+1902	European Institute for Gender Equality, Vilnius, Lithuania
+1805	National Taiwan University of Science and Technology
+1903	Umea University, Sweden
+1904	Eastern Connecticut State University, Willimantic, CT
+1953	LeMoyne-Owen College, Memphis, TN
+1999	Center for Research and Teaching in Economics (CIDE), Mexico City, Mexico
+2015	Dana Hall School, Wellesley, MA
+2016	Red Hook High School, Red Hook, NY
+2019	Texas A and M University, Kingsville, TX
+2021	International Christian University, Tokyo, Japan
+2022	Saint Norbert College, De Pere, WI
+2023	Charles University, Prague, Czech Republic
+2024	State University of New York, Fredonia, Fredonia, NY
+2037	Gottfried Wilhelm Leibniz University, Hannover, Germany
+7	University of Michigan, Ann Arbor, Guest Wireless
+2149	Staatliche Museen Zu Berlin, Berlin, Germany
+2044	National Federation of the Blind, Baltimore, MD
+2045	Tyndale University College and Seminary, Toronto, ON, CA
+2048	North Park University, Chicago, IL
+2064	Ethnological Museum, National Museums of Berlin, Germany
+2100	The University of Arts in Belgrade, Belgrade, Serbia
+2101	Flintridge Preparatory School, La Ca??ada Flintridge, CA
+2105	State University of New York at Old Westbury, NY
+2106	HEAnet, (formerly IRIS),, Dublin, Ireland
+2121	St. Mary's College of California, Moraga, CA
+2148	Casa de Oswaldo Cruz, Rio de Janeiro, Brazil
+2158	American Center of Oriental Research (ACOR), Amman, Jordan
+2159	Art Institute of Chicago, Chicago, IL
+2160	Bibliotheque Cantonale, Fribourg, Switzerland
+2161	Chungbuk National University, Cheongju, South Korea
+2162	Corning Museum of Glass, Corning, NY
+2163	Ellediemme Srl Libri Dal Mondo, Rome, Italy
+2164	Indianapolis Museum of Art, Indianapolis, IN
+2165	Institut national d histoire de l art (INHA; National Institute for Art History), Paris, France
+2166	Kyushu University, Fukuoka, Japan
+2167	Los Angeles County Museum Of Art, Los Angeles, CA
+2168	Maryville University of St. Louis, Town and Country, MO
+2169	Massachusetts College of Art and Design, Boston, MA
+2170	Milwaukee Public Library, Milwaukee, WI
+2171	National Gallery of Art, Washington, DC
+2172	National Gallery of Canada, Ottawa, ON, Canada
+2173	National Gallery of Victoria, Melbourne, Australia
+2174	National Museums of Scotland, Edinburgh, Scotland
+2175	New York State College of Ceramics, Alfred, NY
+2176	Rochester Institute of Technology, Henrietta, NY
+2177	State Library of Victoria, Melbourne, Australia
+2178	University of Bamberg, Bamberg, Germany
+2179	Virginia Museum of Fine Arts, Richmond, VA
+2185	Art Gallery of New South Wales, Sydney, Australia
+2186	National Gallery of Australia, Parkes, Australia
+1747	St. Mary-of-the-Woods College, IN
+1748	Florida Southern College, Lakeland, FL
+1749	Brescia University College, London, ON, CA
+2321	Berklee College of Music, Boston, MA
+1750	University of Oulu, Linnanmaa, Finland
+1751	Centre for Development Studies, Kerala, India
+1752	University of Hertfordshire, Hatfield, UK
+1753	Thomson Reuters, EndNote Development
+1754	Judson College, Marion, AL
+1781	Universitatsbibliothek Paderborn
+1819	Columbia College, Chicago, IL
+1820	Bishops University, Sherbrooke, Quebec, CA
+1831	Franklin College, Lugano, Switzerland
+1832	John Cabot University, Rome, Italy
+1833	American University of Paris, France
+1861	Green Mountain College, Poultney, VT
+1862	China Womens University, Beijing, China
+1863	Istanbul Bilgi University, Istanbul, Turkey
+1882	Arkansas State University, Jonesboro, AR
+1883	National Cheng Kung University, Tainan City, Taiwan
+1884	Bibliotheca Alexandrina, Alexandria, Egypt
+1885	Western Illinois University, Macomb, IL
+1945	Andover Newton Theological School, Newton, MA
+1946	College of Saint Elizabeth, Morristown, NJ
+1956	Wuhan University, Hubei, China
+1957	University of Cagliari, Italy
+1967	University of Westminster, London, UK
+1968	Southwest University of Science and Technology, Mianyang, China
+1985	Ochanomizu University, Tokyo, Japan
+1986	State University of New York, Herkimer County Community College, Herkimer, NY
+1991	Max Stern Yezreel Valley College, Yezreel Valley, Israel
+1998	Indian Institute of Technology Ropar, Punjab, India
+2004	Universidad Autonoma Metropolitana, Tlalpan, Mexico
+2010	EBSCO Discovery Service
+2039	National Academy of Chinese Theatre Arts, Beijing, China
+2032	Fondation du Roi Abdul Aziz Al Saoud, Casablanca, Morocco
+2036	The Athenaeum of Ohio, Cincinnati, OH
+2040	University of Science and Technology of Suzhou, Huqiu, Suzhou, Jiangsu, China
+2055	Chicago Theological Seminary, Chicago, IL
+2057	Seattle School of Theology and Psychology, Seattle, WA
+2085	St. Mary's University, Halifax, Nova Scotia, Canada
+2088	Emma Willard School, Troy, NY
+2089	Dankook University, Yongin and Cheonan, South Korea
+2090	Morristown-Beard School, Morristown, NJ
+2096	Germanna Community College, Locust Grove, VA
+2097	Nightingale-Bamford School, Mew York, NY
+2098	Sapir College, Israel
+2113	Montana State University, Billings, MT
+2114	Montana State University, Great Falls College, Great Falls, MT
+2115	Montana State University, Northern, Havre, MT
+2116	William Jessup University, Rocklin, CA
+2123	Spelman College, Atlanta, GA
+2124	Interdenominational Theological Center, Atlanta, GA
+2125	Clark Atlanta University, Atlanta, GA
+2126	Morehouse College, Atlanta, GA
+2127	Beijing Forestry University, China
+2130	Multnomah University, Reno, NV
+2133	University of Tennessee, Martin
+2150	New Mexico Highlands University, Las Vegas, NM
+2274	Berkeley City College, Berkeley, CA
+2275	Academy for Jewish Religion, Yonkers, NY
+2276	Shaanxi Normal Univeristy, Shaanxi, China
+2314	Institute for Doctoral Studies in the Visual Arts, Portland, ME
+2293	Columbia Theological Seminary, Decatur, GA
+2309	Bay Path University, Longmeadow, MA
+2310	Onondaga Community College, Syracuse, NY
+2315	College of the Redwoods, Eureka, CA
+2316	University of Saint Joseph, West Hartford, CT
+2317	Marlboro College, Marlboro, VT
+2318	Bob Jones Univeristy, Greenville, SC
+2320	Luther Rice College & Seminary, Lithonia, GA
+2352	Coastal Carolina University
+2323	Wesley Theological Seminary, Washington DC
+2324	University of Divinity, Melbourne, Australia
+2329	Portico
+2330	Mount Allison University, Sackville, New Brunswick, Canada
+2361	ReadCube
+2363	Cape Breton University, Nova Scotia
+2367	Guilford Technical Community College, NC
+2369	Finger Lakes Community College
+2188	Northwest State Community College, Archbold, OH
+2189	Nalanda University, Rajgir, India
+2190	The London Library, London, UK
+2194	National Heritage Board, Singapore
+2195	Shanghai Jianqiao College, Shanghai, China
+2197	Anderson University, Anderson, SC
+2201	Presbyterian College, Clinton, SC
+2202	Southeastern Bible College, Birmingham, AL
+2212	Community College of Baltimore County, MD
+2218	Medicine Hat College, Alberta, Canada
+2219	Moody Bible Institute, Chicago, IL
+2220	Sacred Heart Seminary and School of Theology, Hales Corners, WI
+2227	Johnson and Wales University, Miami, FL
+2225	Los Medanos College, Pittsburg, CA
+2226	Johnson and Wales University, Denver, CO
+2228	Rio Hondo College, Whittier, CA
+2229	Viewpoint School, Calabasas, CA
+2230	Chongqing University of Posts and Telecommunications, Chongqing, China
+2231	Zhongyuan University of Technology, Zhengzhou, China
+2234	Shantou University, Shantou, Guangdong, China
+2232	East Los Angeles College, Monterey Park, CA
+2233	North Shore Community College, Danvers, MA
+2235	Universidad San Francisco de Quito, Quito, Ecuador
+2236	Newbury College, Brookline, MA
+2237	Cambridge College, Cambridge, MA
+2238	Hangzhou Normal University, Hangzhou, China
+2239	Maclay School, Tallahassee, FL
+2250	OCLC, Dublin, OH
+2251	Clarks Summit University, South Abington Township, PA
+2253	Webb Institute, Glen Cove, NY
+2252	Hope International University, Fullerton, CA
+2255	Molloy College, Rockville Centre, NY
+2256	Calvary University, Kansas City, MO
+2257	Ankang University, Shaanxi Province, China
+2259	Beijing Union University, Beijing, China
+2260	Becker College, Worcester and Leicester, MA
+2261	SUNY Genesee Community College, Batavia, NY
+2262	The Sage Colleges, Albany and Troy, NY
+2263	Caldwell University, Caldwell, NJ
+2264	Quinebaug Valley Community College, Danielson, CT
+2265	School of Visual Arts, New York, NY
+2266	Otis College of Art and Design, Los Angeles, CA
+2267	The Masters College and Seminary, Peterborough, Ontario
+2269	Post University, Waterbury, CT
+2270	Inner Mongolia Normal University, Hohhot, China
+2271	Ningxia Normal Univeristy, Yinchuan. China
+2272	Alberta Bible College, Calgary, AB
+2273	Pasadena City College, Pasadena, CA
+2313	Bordeaux Montaigne University, Bordeaux, France
+2327	Central State University, Wilberforce, OH
+2325	North Florida Community College, Madison, FL
+2326	Hinds Community College, Raymond, MS
+2331	Nashotah House Seminary, Nashotah, WI
+2332	Southeast Asia Bible Seminary, Malang, Indonesia
+2333	Effat University, Saudi Arabia
+2345	Cushing Academy, Ashburnham, MA
+2347	The Museum of Modern Art, New York, NY
+2348	Frick Art Reference Library, New York, NY
+2349	Brooklyn Museum
+2350	Stephens College, Columbia, MO
+2354	Piedmont International University, Winston-Salem, NC
+2362	Shandong Normal University
+2364	Missouri Baptist University
+2365	Douglas College, British Columbia
+2366	Gratz College, Melrose Park, PA
+2371	Beijing Zhongke import & export ltd.
+2373	China educational publications import & export corporation ltd
+2191	German Archaeological Institute, Bonn, Germany
+2192	Sheridan College, Oakville, Ontario, Canada
+2193	Concordia Theological Seminary, Fort Wayne, IN
+2196	Chabot College, Hayward, CA
+2198	Singapore University of Technology and Design (SUTD), Singapore
+2199	Tilburg University, Tilburg, Netherlands
+2200	Gordon Conwell Theological Seminary, South Hamilton, MA
+2203	Harrison Middleton University, Tempe, AZ
+2204	Beijing Foreign Studies University, Beijing, China
+2205	Stockholm University, Stockholm, Sweden
+2206	San Diego Christian College (SDCC), Santee, CA
+2207	Hellenic College Holy Cross Greek Orthodox School of Theology, Brookline, MA
+2208	CINFO, China (HEB distributors)
+2209	OCAD University  (Ontario College of Art and Design), Toronto, Canada
+2210	Rhode Island School of Design, Providence, RI
+2214	Royal Irish Academy of Music, Dublin, Ireland
+2211	China Medical University, Shenyang, China
+2213	Wenzhou University, Wenzhou, Zhejiang, China
+2217	Crystal Springs Uplands School, Hillsborough, CA
+2215	Rivier University, Nashua, NH
+2216	Digital Theological Library, Claremont, CA
+2221	Santa Fe College, Gainesville, FL & Florida Academic Library Services / Florida Virtual Campus
+2222	Trinity Lutheran Seminary, Columbus, Ohio
+2224	Goshen College, Goshen, IN
+2240	Columbus State University, Columbus, GA
+2241	Dordt College, Sioux Center, IA
+2242	Communication University of China, Beijing, China
+2245	Zhejiang International Studies University, Hangzhou, Zhejiang, China
+2243	MiraCosta College, Oceanside, CA
+2244	Emerson College, Boston, MA
+2246	Fuyang Teachers College, Fuyang, China
+2247	Xinjiang Agricultural University, Wulumuqi, Xinjiang, China
+2248	Northeast Catholic College, Warner, NH
+2249	Worcester Polytechnic Institute, Worcester, MA
+2254	State University of New York, Clinton Community College, Plattsburgh, NY
+2290	Pierce College, Los Angeles, CA
+2258	Chinese Academy of Governance, Beijing, China
+2268	Trevecca Nazarene University, Nashville, TN
+2291	United Lutheran Seminary, Gettysburg, PA
+2292	Dominican University of California, San Rafael, CA
+2294	Institute of Classical Studies, University of London, UK
+2295	Angelo State University, San Angelo, TX
+2296	Anabaptist Mennonite Biblical Seminary, Elkhart, IN
+2297	Azusa Pacific University, Azusa, CA
+2298	St. Patrick's Seminary & University, Menlo Park, CA
+2299	SOAS, University of London, UK
+2300	Elizabethtown College, Elizabethtown, PA
+2301	Western Theological Seminary, Holland, MI
+2302	Lamar University, Beaumont, TX
+2305	Fashion Institute of Technology, New York, NY
+2303	St. Edward's University, Austin, TX
+2304	Pacific Union College, Angwin, CA
+2306	Moore College of Art and Design, Philadelphia, PA
+2307	Singapore University of Social Sciences, Singapore
+2308	Dallas County Community College District, TX
+2319	Arizona Christian University, Phoenix, AZ
+2328	Central Ohio Technical College, Newark, OH
+2334	LOCKSS/CLOCKSS
+2335	Open University of Israel
+2336	New Era University College, Malaysia
+2337	Blinn College District, TX
+2338	Coker College, Hartsville, SC
+2339	Lincoln University, Jefferson City, MO
+2340	Missouri Valley College, Marshall, MO
+2341	Missouri Western State University, Saint Joseph, MO
+2342	Westminster College, Fulton, MO
+2343	Fontbonne University, Clayton, MO
+2344	Aga Khan Library, London
+2346	University of Lincoln, UK
+2351	Winthrop University, Rock Hill, SC
+2353	Zhengzhou University of Light Industry
+2355	The Master's Universtiy, Santa Clarita, CA
+2356	Sonlight Bible College, Haiti
+2357	Liaoning Normal University, Dalian, China
+2358	Changzhou University
+2359	University of Graz, Austria
+2360	St. Dominic Savio Catholic High School, Austin, TX
+2368	Austin Presbyterian Theological Seminary
+2370	China international book trading corporation
+2372	China national sci-tech information imp & exp corporation
+2374	Fuller Theological Seminary, Pasadena, CA
+2375	St. John's College, Annopolis, MD
+2376	Duquesne University
