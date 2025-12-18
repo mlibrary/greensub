@@ -55,6 +55,8 @@ when 'list_components'
   puts product.list_components
 when 'list_institutions'
   puts product.list_institutions
+when 'list_licenses'
+  puts product.list_licenses
 when 'list_individuals'
   output = product.list_individuals
   output.each do |i|
