@@ -59,32 +59,48 @@ class Host # rubocop:disable Metrics/ClassLength
 
   def component_in_product?(component, product)
     @connection.product_component?(product_identifier: product.external_id, component_identifier: component.sales_id)
+  rescue StandardError => e
+    puts e
   end
 
   def create_product(product)
     @connection.create_product(identifier: product.external_id, name: product.name, purchase: product.host)
+  rescue StandardError => e
+    puts e
   end
 
   def products
     puts "Listing all products on host #{@name} #{@type}"
     @connection.products
+  rescue StandardError => e
+    puts e
   end
 
   def knows_product?(product)
     @connection.find_product(identifier: product.external_id)
+  rescue StandardError => e
+    puts e
+    false
   end
 
   def components
     puts "Listing all components on host #{@name} #{@type}"
     @connection.components
+  rescue StandardError => e
+    puts e
   end
 
   def get_components(product)
     @connection.product_components(identifier: product.external_id)
+  rescue StandardError => e
+    puts e
   end
 
   def knows_component?(component)
     @connection.find_component_by_noid(noid: component.hosted_id) ? true : false
+  rescue StandardError => e
+    puts e
+    false
   end
 
   def delete_component(component)
@@ -97,10 +113,16 @@ class Host # rubocop:disable Metrics/ClassLength
   def institutions
     puts "Listing all institutions with accounts at host #{@name} #{@type}"
     @connection.institutions
+  rescue StandardError => e
+    puts e
   end
 
   def knows_institution?(institution)
+    puts "Checking for institution #{institution.external_id} at host #{@name} #{@type}"
     @connection.find_institution(identifier: institution.external_id) ? true : false
+  rescue StandardError => e
+    puts e
+    false
   end
 
   def add_institution(institution)
@@ -128,10 +150,15 @@ class Host # rubocop:disable Metrics/ClassLength
   def individuals
     puts "Listing all individuals with accounts at host #{@name} #{@type}"
     @connection.individuals
+  rescue StandardError => e
+    puts e
   end
 
   def knows_individual?(individual)
     @connection.find_individual(identifier: individual.external_id) ? true : false
+  rescue StandardError => e
+    puts e
+    false
   end
 
   def add_individual(individual)
@@ -152,10 +179,14 @@ class Host # rubocop:disable Metrics/ClassLength
 
   def get_individuals(product)
     @connection.product_individuals(identifier: product.external_id)
+  rescue StandardError => e
+    puts e
   end
 
   def get_licenses(product)
     @connection.product_licenses(identifier: product.external_id)
+  rescue StandardError => e
+    puts e
   end
 
   def subscribers

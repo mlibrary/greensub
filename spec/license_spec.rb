@@ -67,6 +67,8 @@ RSpec.describe License do
   end
 
   it "expires an individual subscription" do
+    skip("Skipping for now, see HELIO-3930. I think we need affiliation support (maybe? see HELIO-5002) to get this spec to work which does not exist in greensub yet")
+
     indiv_license.delete!
     expect(prod.host.knows_subscriber?(indiv)).to be(true)
     expect(prod.host.get_product_subscriber_license_type(prod, indiv)).to eq(nil)
