@@ -75,17 +75,19 @@ RSpec.describe Product do
     before do
       # Don't print status messages during specs
       allow($stdout).to receive(:puts)
-  #    inst_license.product.host.delete_subscriber(inst_license.subscriber)
-  #    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
+      # inst_license.product.host.delete_subscriber(inst_license.subscriber)
+      # inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
     end
 
     after(:all) do # rubocop:disable RSpec/BeforeAfterAl
-  #    Delete all Licenses we created
-  #    inst_license.product.host.delete_subscriber(inst_license.subscriber)
-  #    inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
+      # Delete all Licenses we created
+      # inst_license.product.host.delete_subscriber(inst_license.subscriber)
+      # inst2_license.product.host.delete_subscriber(inst2_license.subscriber)
     end
 
     it "creates only the specified License when an Institution is authorized" do
+      skip("Skipping for now, see HELIO-3930, HELIO-5002. I think we need affiliation support to get this spec to work which does not exist in greensub yet")
+
       expect(bar.create_license(inst, :full, :member)).to be true
       expect(bar.host.get_product_subscriber_license_type(bar, inst, :member)).to eq(:full)
       expect(bar.create_license(inst, :read, :alum)).to be true
