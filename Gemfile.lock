@@ -1,16 +1,26 @@
 GIT
   remote: https://github.com/mlibrary/turnsole
-  revision: d466dcbe276e63a1d1932863f91347bec2528903
-  ref: d466dcbe276e63a1d1932863f91347bec2528903
+  revision: bc24b67d7ae8fa416cb78891b8b7077c049b8c1b
+  ref: bc24b67d7ae8fa416cb78891b8b7077c049b8c1b
   specs:
     turnsole (0.1.0)
       faraday
       faraday_middleware
 
+GIT
+  remote: https://github.com/ragalie/lisbn
+  revision: a93096a1a75a448c7c2f75c95ee278d22339fe2d
+  ref: a93096a1a75a448c7c2f75c95ee278d22339fe2d
+  specs:
+    lisbn (0.3.2)
+      nokogiri
+      nori (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    bigdecimal (4.0.1)
     diff-lcs (1.4.4)
     faraday (0.17.4)
       multipart-post (>= 1.2, < 3)
@@ -18,19 +28,21 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     keycard (0.3.4)
       sequel
-    lisbn (0.3.1)
-      nokogiri
-      nori (~> 2.0)
-    mini_portile2 (2.8.1)
+    mini_portile2 (2.8.9)
     multipart-post (2.1.1)
-    nokogiri (1.14.3)
-      mini_portile2 (~> 2.8.0)
+    net-protocol (0.2.2)
+      timeout
+    net-smtp (0.5.1)
+      net-protocol
+    nokogiri (1.19.0)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nori (2.6.0)
+    nori (2.7.1)
+      bigdecimal
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
-    racc (1.6.2)
+    racc (1.8.1)
     rainbow (3.0.0)
     regexp_parser (2.1.1)
     rexml (3.4.2)
@@ -64,6 +76,7 @@ GEM
     ruby-progressbar (1.11.0)
     sequel (5.47.0)
     slop (4.9.1)
+    timeout (0.6.0)
     unicode-display_width (2.0.0)
 
 PLATFORMS
@@ -73,7 +86,8 @@ DEPENDENCIES
   faraday (~> 0.15)
   faraday_middleware (~> 0.12)
   keycard (~> 0.2)
-  lisbn
+  lisbn!
+  net-smtp
   rspec (~> 3.0)
   rubocop (~> 1.20)
   rubocop-rspec (~> 2.4)

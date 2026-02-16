@@ -15,7 +15,7 @@ class Host # rubocop:disable Metrics/ClassLength
   end
 
   def fetch_data
-    data = YAML.load_file('config/hosts.yaml')
+    data = YAML.safe_load(File.read('config/hosts.yaml'))
     @base_uri = data[@name.to_s][@type.to_s]["base_uri"]
     @token = data[@name.to_s][@type.to_s]["token"]
   rescue StandardError => e

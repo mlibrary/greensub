@@ -17,7 +17,7 @@ class Product
 
   def fetch_data
     # encapsulated here to allow for other possibilies later...
-    data = YAML.load_file('config/products.yaml')
+    data = YAML.safe_load(File.read('config/products.yaml'))
     @config = data[@id.to_s]
     @external_id = @config["external_id"]
     @name = @config["name"]
