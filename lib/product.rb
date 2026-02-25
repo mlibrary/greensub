@@ -98,7 +98,7 @@ class Product
     END_OF_MESSAGE
 
     begin
-      Net::SMTP.start(opts[:server]) do |smtp|
+      Net::SMTP.start(opts[:server], tls_verify: false) do |smtp|
         smtp.send_message msg, opts[:from], to, opts[:bcc]
       end
       puts "Sent email to #{to}"
