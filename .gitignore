@@ -4,7 +4,8 @@
 /log/
 /bin/test.rb
 /.config
-/config/
+/config/hosts.yaml
+/config/leasefeeds.yaml
 /coverage/
 /data/
 /InstalledFiles

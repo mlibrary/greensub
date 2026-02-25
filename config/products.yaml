@@ -1,0 +1,431 @@
+test:
+  external_id: 'test'
+  name: 'Test Collection'
+  host: 'heliotrope'
+newprairiepress:
+  external_id: 'newprairiepress'
+  name: 'New Priaire Press'
+  host: 'heliotrope'
+boydellandbrewer_african_studies:
+  external_id: 'boydellandbrewer_african_studies'
+  name: 'Boydell & Brewer African Studies Collection'
+  host: 'heliotrope'
+boydellandbrewer_medieval_history:
+  external_id: 'boydellandbrewer_medieval_history'
+  name: 'Boydell & Brewer Medieval History Collection'
+  host: 'heliotrope'
+boydellandbrewer_medieval_literature:
+  external_id: 'boydellandbrewer_medieval_literature'
+  name: 'Boydell & Brewer Medieval Literature Collection'
+  host: 'heliotrope'
+boydellandbrewer_music:
+  external_id: 'boydellandbrewer_music'
+  name: 'Boydell & Brewer Music Collection'
+  host: 'heliotrope'
+boydellandbrewer_performing_arts:
+  external_id: 'boydellandbrewer_performing_arts'
+  name: 'Boydell & Brewer Performing Arts Collection'
+  host: 'heliotrope'
+livedplaces_complete:
+  external_id: 'livedplaces_complete'
+  name: 'Lived Places Publishing'
+  host: 'heliotrope'
+livedplaces:
+  external_id: 'livedplaces_complete'
+  name: 'Lived Places Publishing'
+  host: 'heliotrope'
+lpp:
+  external_id: 'livedplaces_complete'
+  name: 'Lived Places Publishing'
+  host: 'heliotrope'
+livedplaces_oa:
+  external_id: 'livedplaces_oa'
+  name: 'Lived Places Publishing Open Access'
+  host: 'heliotrope'
+lpp_oa:
+  external_id: 'livedplaces_oa'
+  name: 'Lived Places Publishing Open Access'
+  host: 'heliotrope'
+livedplaces_2023:
+  external_id: 'livedplaces_2023'
+  name: 'Lived Places Publishing 2023'
+  host: 'heliotrope'
+livedplaces_2024:
+  external_id: 'livedplaces_2024'
+  name: 'Lived Places Publishing 2024'
+  host: 'heliotrope'
+livedplaces_2025:
+  external_id: 'livedplaces_2025'
+  name: 'Lived Places Publishing 2025'
+  host: 'heliotrope'
+livedplaces_2026:
+  external_id: 'livedplaces_2026'
+  name: 'Lived Places Publishing 2026'
+  host: 'heliotrope'
+lpp_2023:
+  external_id: 'livedplaces_2023'
+  name: 'Lived Places Publishing 2023'
+  host: 'heliotrope'
+lpp_2024:
+  external_id: 'livedplaces_2024'
+  name: 'Lived Places Publishing 2024'
+  host: 'heliotrope'
+lpp_2025:
+  external_id: 'livedplaces_2025'
+  name: 'Lived Places Publishing 2025'
+  host: 'heliotrope'
+lpp_2026:
+  external_id: 'livedplaces_2026'
+  name: 'Lived Places Publishing 2026'
+  host: 'heliotrope'
+westminster:
+  external_id: 'westminster'
+  name: 'University of Westminster Press'
+  host: 'heliotrope'
+vermont:
+  external_id: 'vermont'
+  name: 'University of Vermont Press'
+  host: 'heliotrope'
+aberdeen:
+  external_id: 'aberdeen'
+  name: 'Aberdeen University Press Books'
+  host: 'heliotrope'
+League_preview:
+  external_id: 'League_preview'
+  name: 'Temp preview prodcut for Panayotis League'
+  host: 'heliotrope'
+michelt:
+  external_id: 'michelt'
+  name: 'Michigan English Language Teaching'
+  host: 'heliotrope'
+bigten_experiences:
+  external_id: 'bigten_experiences'
+  name: 'Big Ten Open Books: African-, Asian-, and Hispanic American Experiences'
+  host: 'heliotrope'
+bigten_experience:
+  external_id: 'bigten_experiences'
+  name: 'Big Ten Open Books: African-, Asian-, and Hispanic American Experiences'
+  host: 'heliotrope'
+bigten_health:
+  external_id: 'bigten_health'
+  name: 'Big Ten Open Books: Health Disparities and Disability Culture'
+  host: 'heliotrope'
+bigten_environment:
+  external_id: 'bigten_environment'
+  name: 'Big Ten Open Books: Human Environmental Impact'
+  host: 'heliotrope'
+bigten_indigenous:
+  external_id: 'bigten_indigenous'
+  name: 'Big Ten Open Books American Indian, First Peoples, Indigenous Studies Backlist Collection'
+  host: 'heliotrope'
+bigten_2023:
+  external_id: 'bigten_gender_and_sexuality_studies'
+  name: 'Big Ten Open Books Gender & Sexuality Studies Collection'
+  host: 'heliotrope'
+bigten_gender_and_sexuality_studies:
+  external_id: 'bigten_gender_and_sexuality_studies'
+  name: 'Big Ten Open Books Gender & Sexuality Studies Collection'
+  host: 'heliotrope'
+bigten:
+  external_id: 'bigten'
+  name: 'Big Ten Open Books'
+  host: 'heliotrope'
+ebc_election:
+  external_id: 'ebc_election'
+  name: 'UMPEBC Election Year Promotional Collection'
+  host: 'heliotrope'
+ebc_oa:
+  external_id: 'ebc_oa'
+  name: 'EBC OA'
+  host: 'heliotrope'
+ebc_removed_2019-04-02:
+  external_id: 'ebc_removed_2019-04-02'
+  name: 'EBC titles removed on April 2, 2019 (maintained for purchasers of perpetual access)'
+  host: 'heliotrope'
+ebc_free_to_read:
+  external_id: 'ebc_free_to_read'
+  name: 'EBC Free to Read'
+  host: 'heliotrope'
+ebc_free:
+  external_id: 'ebc_free_to_read'
+  name: 'EBC Free to Read'
+  host: 'heliotrope'
+ebc_2027:
+  external_id: 'ebc_2027'
+  name: 'EBC 2027'
+  host: 'heliotrope'
+ebc_2026:
+  external_id: 'ebc_2026'
+  name: 'EBC 2026'
+  host: 'heliotrope'
+ebc_2025:
+  external_id: 'ebc_2025'
+  name: 'EBC 2025'
+  host: 'heliotrope'
+ebc_2024:
+  external_id: 'ebc_2024'
+  name: 'EBC 2024'
+  host: 'heliotrope'
+ebc_2023:
+  external_id: 'ebc_2023'
+  name: 'EBC 2023'
+  host: 'heliotrope'
+ebc_2022:
+  external_id: 'ebc_2022'
+  name: 'EBC 2022'
+  host: 'heliotrope'
+ebc_2021:
+  external_id: 'ebc_2021'
+  name: 'EBC 2021'
+  host: 'heliotrope'
+ebc_2020:
+  external_id: 'ebc_2020'
+  name: 'EBC 2020'
+  host: 'heliotrope'
+ebc_2019:
+  external_id: 'ebc_2019'
+  name: 'EBC 2019'
+  host: 'heliotrope'
+ebc_2018:
+  external_id: 'ebc_2018'
+  name: 'EBC 2018'
+  host: 'heliotrope'
+ebc_2017:
+  external_id: 'ebc_2017'
+  name: 'EBC 2017'
+  host: 'heliotrope'
+ebc_2016:
+  external_id: 'ebc_2016'
+  name: 'EBC 2016'
+  host: 'heliotrope'
+ebc_2015:
+  external_id: 'ebc_2015'
+  name: 'EBC 2015'
+  host: 'heliotrope'
+ebc_2014:
+  external_id: 'ebc_2014'
+  name: 'EBC 2014'
+  host: 'heliotrope'
+ebc_2013:
+  external_id: 'ebc_2013'
+  name: 'EBC 2013'
+  host: 'heliotrope'
+ebc_2012:
+  external_id: 'ebc_2012'
+  name: 'EBC 2012'
+  host: 'heliotrope'
+ebc_2011pre:
+  external_id: 'ebc_2011pre'
+  name: 'EBC Archive (2011 and prior)'
+  host: 'heliotrope'
+ebc_complete:
+  external_id: 'ebc_complete'
+  name: 'EBC Complete'
+  host: 'heliotrope'
+ebc_backlist:
+  external_id: 'ebc_complete'
+  name: 'EBC Complete'
+  host: 'heliotrope'
+ebc_temp:
+  external_id: 'ebc_temp'
+  name: 'EBC temp'
+  host: 'heliotrope'
+ebc_asian_studies_backlist_bundle:
+  external_id: 'ebc_asian_studies_backlist_bundle'
+  name: 'UMPEBC Asian Studies Backlist Bundle'
+  host: 'heliotrope'
+product1:
+  external_id: 'product1'
+  name: 'Test Product 1'
+  host: 'heliotrope'
+product2:
+  external_id: 'product2'
+  name: 'Test Product 2'
+  host: 'heliotrope'
+bar_pre:
+  external_id: 'bar_pre2020_collection'
+  name: 'BAR: British Archaeological Reports pre-2020'
+  host: 'heliotrope'
+bar_pre_int:
+  external_id: 'bar_pre2020_collection_int'
+  name: 'BAR: British Archaeological Reports International Series pre-2020'
+  host: 'heliotrope'
+bar_pre_brit:
+  external_id: 'bar_pre2020_collection_brit'
+  name: 'BAR: British Archaeological Reports British Series pre-2020'
+  host: 'heliotrope'
+bar_2020_annual:
+  external_id: 'bar_2020_annual'
+  name: 'BAR: British Archaeological Reports 2020'
+  host: 'heliotrope'
+bar_2020:
+  external_id: 'bar_2020_annual'
+  name: 'BAR: British Archaeological Reports 2020'
+  host: 'heliotrope'
+bar_2020_int:
+  external_id: 'bar_2020_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2020'
+  host: 'heliotrope'
+bar_2020_brit:
+  external_id: 'bar_2020_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2020'
+  host: 'heliotrope'
+bar_2021:
+  external_id: 'bar_2021_annual'
+  name: 'BAR: British Archaeological Reports 2021'
+  host: 'heliotrope'
+bar_2021_int:
+  external_id: 'bar_2021_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2021'
+  host: 'heliotrope'
+bar_2021_brit:
+  external_id: 'bar_2021_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2021'
+  host: 'heliotrope'
+bar_2022:
+  external_id: 'bar_2022_annual'
+  name: 'BAR: British Archaeological Reports 2022'
+  host: 'heliotrope'
+bar_2022_int:
+  external_id: 'bar_2022_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2022'
+  host: 'heliotrope'
+bar_2022_brit:
+  external_id: 'bar_2022_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2022'
+  host: 'heliotrope'
+bar_2023:
+  external_id: 'bar_2023_annual'
+  name: 'BAR: British Archaeological Reports 2023'
+  host: 'heliotrope'
+bar_2023_int:
+  external_id: 'bar_2023_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2023'
+  host: 'heliotrope'
+bar_2023_brit:
+  external_id: 'bar_2023_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2023'
+  host: 'heliotrope'
+bar_2024:
+  external_id: 'bar_2024_annual'
+  name: 'BAR: British Archaeological Reports 2024'
+  host: 'heliotrope'
+bar_2024_int:
+  external_id: 'bar_2024_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2024'
+  host: 'heliotrope'
+bar_2024_brit:
+  external_id: 'bar_2024_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2024'
+  host: 'heliotrope'  
+bar_2025:
+  external_id: 'bar_2025_annual'
+  name: 'BAR: British Archaeological Reports 2025'
+  host: 'heliotrope'
+bar_2025_int:
+  external_id: 'bar_2025_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2025'
+  host: 'heliotrope'
+bar_2025_brit:
+  external_id: 'bar_2025_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2025'
+  host: 'heliotrope'
+bar_2026:
+  external_id: 'bar_2026_annual'
+  name: 'BAR: British Archaeological Reports 2026'
+  host: 'heliotrope'
+bar_2026_int:
+  external_id: 'bar_2026_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2026'
+  host: 'heliotrope'
+bar_2026_brit:
+  external_id: 'bar_2026_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2026'
+  host: 'heliotrope'
+bar_historical_reprints:
+  external_id: 'bar_historical_reprints'
+  name: 'BAR Historical Reprints'
+  host: 'heliotrope'
+bar_historical_reprints_int:
+  external_id: 'bar_historical_reprints_int'
+  name: 'BAR Historical Reprints International Series'
+  host: 'heliotrope'
+bar_historical_reprints_brit:
+  external_id: 'bar_historical_reprints_brit'
+  name: 'BAR Historical Reprints British Series'
+  host: 'heliotrope'
+bar_pre2020_collection:
+  external_id: 'bar_pre2020_collection'
+  name: 'BAR: British Archaeological Reports pre-2020'
+  host: 'heliotrope'
+bar_pre2020__collection_int:
+  external_id: 'bar_pre2020_collection_int'
+  name: 'BAR: British Archaeological Reports International Series pre-2020'
+  host: 'heliotrope'
+bar_pre2020_collection_brit:
+  external_id: 'bar_pre2020_collection_brit'
+  name: 'BAR: British Archaeological Reports British Series pre-2020'
+  host: 'heliotrope'
+bar_2020_annual:
+  external_id: 'bar_2020_annual'
+  name: 'BAR: British Archaeological Reports 2020'
+  host: 'heliotrope'
+bar_2020_annual_int:
+  external_id: 'bar_2020_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2020'
+  host: 'heliotrope'
+bar_2020_annual_brit:
+  external_id: 'bar_2020_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2020'
+  host: 'heliotrope'
+bar_2021_annual:
+  external_id: 'bar_2021_annual'
+  name: 'BAR: British Archaeological Reports 2021'
+  host: 'heliotrope'
+bar_2021_annual_int:
+  external_id: 'bar_2021_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2021'
+  host: 'heliotrope'
+bar_2021_annual_brit:
+  external_id: 'bar_2021_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2021'
+  host: 'heliotrope'
+gabii:
+  external_id: '9780472999002'
+  name: 'Gabii Series'
+  host: 'heliotrope'
+macpra:
+  external_id: 'macpra'
+  name: 'MACPRA: Michigan/Great Lakes titles in UMMAA'
+  host: 'heliotrope'
+test_bar_pre2020_collection:
+  external_id: 'test_bar_pre2020_collection'
+  name: 'test_bar_pre2020_collection'
+  host: 'heliotrope'
+heb_oa:
+  external_id: 'heb_oa'
+  name: 'ACLS Humanities E-Book Open Access'
+  host: 'heliotrope'
+heb:
+  external_id: 'heb'
+  name: 'ACLS Humanities E-Book'
+  host: 'heliotrope'
+  instructions:
+    from: 'hebook-subscription@umich.edu'
+    from_alias: 'Humanities E-Book Subscriptions'
+    bcc: 'jgmorse@umich.edu'
+    subject: 'ACLS Humanities E-Book account information'
+    body: | #Literal-style multilne string
+       Your ACLS Humanities E-Book account (www.humanitiesebook.org) is ready to be activated. In order to access the site, you must first create a UM Friend account.
+       Please follow these instructions to create your account:
+       
+       <a href="https://teamdynamix.umich.edu/TDClient/30/Portal/KB/ArticleDet?ID=14529">Create a New Friend Account</a>
+       
+       Important: Make sure to enter your e-mail address exactly as it appears in the TO: field of this email or your account may not be authorized to access the collection.
+       (The authorization system is case sensitive.)Once you have completed the steps to create your account, you can now use your Friend account login to access the
+       ACLS Humanities E-Book site at https://www.fulcrum.org/heb. You can skip the section ‘Request Service Authorization’ as your access to HEB has been pre-authorized.
+       
+       If you have any questions, please email: info@hebook.org.
+       
+       Thank you for subscribing!
+
