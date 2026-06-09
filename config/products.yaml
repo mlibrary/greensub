@@ -78,6 +78,14 @@ lpp_2026:
   external_id: 'livedplaces_2026'
   name: 'Lived Places Publishing 2026'
   host: 'heliotrope'
+livedplaces_disability_2025:
+  external_id: 'livedplaces_disability_2025'
+  name: 'Lived Places Publishing 2025 Disability Studies Collection'
+  host: 'heliotrope'
+lpp_disability:
+  external_id: 'livedplaces_disability_2025'
+  name: 'Lived Places Publishing 2025 Disability Studies Collection'
+  host: 'heliotrope'
 westminster:
   external_id: 'westminster'
   name: 'University of Westminster Press'
