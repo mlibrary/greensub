@@ -20,7 +20,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    bigdecimal (4.0.1)
     diff-lcs (1.4.4)
     faraday (0.17.4)
       multipart-post (>= 1.2, < 3)
@@ -37,8 +36,7 @@ GEM
     nokogiri (1.19.1)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nori (2.7.1)
-      bigdecimal
+    nori (2.6.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
