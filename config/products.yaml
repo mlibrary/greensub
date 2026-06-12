@@ -410,10 +410,6 @@ test_bar_pre2020_collection:
   external_id: 'test_bar_pre2020_collection'
   name: 'test_bar_pre2020_collection'
   host: 'heliotrope'
-heb_oa:
-  external_id: 'heb_oa'
-  name: 'ACLS Humanities E-Book Open Access'
-  host: 'heliotrope'
 heb:
   external_id: 'heb'
   name: 'ACLS Humanities E-Book'
