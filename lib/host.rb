@@ -129,6 +129,8 @@ class Host # rubocop:disable Metrics/ClassLength
     if institution.id && !institution.name.nil?
       @connection.create_institution(identifier: institution.external_id, name: institution.name, entity_id: institution.entity_id)
       @connection.create_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :member)
+      @connection.create_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :alum)
+      @connection.create_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :walk_in)
     else
       abort "Institution name required; use --name"
     end
@@ -138,6 +140,8 @@ class Host # rubocop:disable Metrics/ClassLength
 
   def delete_institution(institution)
     @connection.delete_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :member)
+    @connection.delete_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :alum)
+    @connection.delete_institution_affiliation(identifier: institution.external_id, dlps_institution_id: institution.external_id, affiliation: :walk_in)
     @connection.delete_institution(identifier: institution.external_id)
   rescue StandardError => e
     puts e
