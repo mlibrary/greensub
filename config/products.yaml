@@ -2,6 +2,10 @@ test:
   external_id: 'test'
   name: 'Test Collection'
   host: 'heliotrope'
+atg:
+  external_id: 'atg'
+  name: 'ATGMedia: The Voice of the Charleston Conference'
+  host: 'heliotrope'
 newprairiepress:
   external_id: 'newprairiepress'
   name: 'New Priaire Press'
@@ -62,6 +66,10 @@ livedplaces_2026:
   external_id: 'livedplaces_2026'
   name: 'Lived Places Publishing 2026'
   host: 'heliotrope'
+livedplaces_2027:
+  external_id: 'livedplaces_2027'
+  name: 'Lived Places Publishing 2027'
+  host: 'heliotrope'
 lpp_2023:
   external_id: 'livedplaces_2023'
   name: 'Lived Places Publishing 2023'
@@ -77,6 +85,10 @@ lpp_2025:
 lpp_2026:
   external_id: 'livedplaces_2026'
   name: 'Lived Places Publishing 2026'
+  host: 'heliotrope'
+lpp_2027:
+  external_id: 'livedplaces_2027'
+  name: 'Lived Places Publishing 2027'
   host: 'heliotrope'
 livedplaces_disability_2025:
   external_id: 'livedplaces_disability_2025'
@@ -349,6 +361,18 @@ bar_2026_int:
 bar_2026_brit:
   external_id: 'bar_2026_annual_brit'
   name: 'BAR: British Archaeological Reports British Series 2026'
+  host: 'heliotrope'
+bar_2027:
+  external_id: 'bar_2027_annual'
+  name: 'BAR: British Archaeological Reports 2027'
+  host: 'heliotrope'
+bar_2027_int:
+  external_id: 'bar_2027_annual_int'
+  name: 'BAR: British Archaeological Reports International Series 2027'
+  host: 'heliotrope'
+bar_2027_brit:
+  external_id: 'bar_2027_annual_brit'
+  name: 'BAR: British Archaeological Reports British Series 2027'
   host: 'heliotrope'
 bar_historical_reprints:
   external_id: 'bar_historical_reprints'
